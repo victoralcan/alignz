@@ -6,7 +6,7 @@ import PageNotFound from './shared/error/page-not-found';
 function Routes() {
     return (
         <Switch>
-            <ErrorBoundaryRoute exact path="/" component={() => <div>INICIAL</div>} />
+            <ErrorBoundaryRoute exact path="/" component={() => <div>CONTEUDO</div>} />
             <ErrorBoundaryRoute path="/" component={PageNotFound} />
         </Switch>
     );
