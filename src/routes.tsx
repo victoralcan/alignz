@@ -1,10 +1,11 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+import ErrorBoundaryRoute from './shared/error/error-boundary-route';
 
 function Routes() {
     return (
         <Switch>
-            <Route exact path="/" render={(props) => <div {...props}>INICIAL</div>} />
+            <ErrorBoundaryRoute exact path="/" component={() => <div>INICIAL</div>} />
         </Switch>
     );
 }
