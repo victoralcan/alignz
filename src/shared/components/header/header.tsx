@@ -1,10 +1,12 @@
 import React from 'react';
-import 'styles/header.css';
+import 'styles/header.scss';
 import { Link } from 'react-router-dom';
+import { Brand } from './header-components';
 
 function Header() {
     return (
         <div className="header-container">
+            <Brand />
             <Link className="header-option" to="/" style={{ textDecoration: 'none' }}>
                 Aparelho Invisível
             </Link>
