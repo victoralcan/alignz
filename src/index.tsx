@@ -5,6 +5,7 @@ import initStore from './config/store';
 import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorBoundary from './shared/error/error-boundary';
+import 'styles/global.css';
 
 const store = initStore();
 
