@@ -1,7 +1,7 @@
 .header-container {
     display: flex;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--header);
     padding: 11px 16px;
 }
 
@@ -10,8 +10,9 @@
     width: 100%;
     color: var(--header-option);
     font-size: large;
+    font-weight: bold;
 }
 
 .header-option:hover {
-    color: #ff9500
+    color: #dddcda
 }
