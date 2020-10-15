@@ -7,16 +7,16 @@ function Header() {
     return (
         <div className="header-container">
             <Brand />
-            <Link className="header-option" to="/" style={{ textDecoration: 'none' }}>
+            <Link className="header-option" to="/aparelho-invisivel" style={{ textDecoration: 'none' }}>
                 Aparelho Invisível
             </Link>
-            <Link className="header-option" to="/" style={{ textDecoration: 'none' }}>
+            <Link className="header-option" to="/clareamento" style={{ textDecoration: 'none' }}>
                 Clareamento
             </Link>
-            <Link className="header-option" to="/" style={{ textDecoration: 'none' }}>
+            <Link className="header-option" to="/preco" style={{ textDecoration: 'none' }}>
                 Saiba o Preço
             </Link>
-            <Link className="header-option" to="/" style={{ textDecoration: 'none' }}>
+            <Link className="header-option" to="/agenda" style={{ textDecoration: 'none' }}>
                 Agendar pré-avaliação
             </Link>
         </div>
