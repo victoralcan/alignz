@@ -1,6 +1,5 @@
-.card-body > a {
+.card-body a {
   color: #21192f;
-  padding-bottom: 100px;
 }
 
 .card-header {
@@ -13,4 +12,8 @@
 
 .card-deck {
   background-color: var(--footer);
+}
+
+.card-text {
+  margin-bottom: 8px;
 }
