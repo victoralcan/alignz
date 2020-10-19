@@ -1,10 +1,11 @@
 import React from 'react';
+import { Row } from 'reactstrap';
 
 function Preco() {
     return (
-        <div>
+        <Row>
             <div>Preco</div>
-        </div>
+        </Row>
     );
 }
 
