@@ -30,5 +30,5 @@ ul {
     --orange: #f9826c;
     --other-language: #8257e5;
     --header-option: #f3f2ef;
-    --header: #c97d02;
+    --header: rgba(252,192,148,0.95);
 }
