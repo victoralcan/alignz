@@ -1,8 +1,5 @@
 .header-container {
-  display: flex;
-  align-items: center;
   background-color: var(--header);
-  padding: 20px 16px;
 }
 
 .header-option {
@@ -11,10 +8,10 @@
   color: var(--header-option);
   font-size: large;
   font-weight: bold;
-}
 
-.header-option:hover {
-  color: #dddcda
+  &:hover {
+    color: #dddcda
+  }
 }
 
 .brand-logo {
