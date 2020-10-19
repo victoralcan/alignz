@@ -2,10 +2,11 @@ import React from 'react';
 import 'styles/header.scss';
 import { Link } from 'react-router-dom';
 import { Brand } from './header-components';
+import { Navbar } from 'reactstrap';
 
 function Header() {
     return (
-        <div className="header-container">
+        <Navbar expand="lg" className="header-container">
             <Brand />
             <Link className="header-option" to="/aparelho-invisivel" style={{ textDecoration: 'none' }}>
                 Aparelho Invisível
@@ -19,7 +20,7 @@ function Header() {
             <Link className="header-option" to="/agenda" style={{ textDecoration: 'none' }}>
                 Agendar pré-avaliação
             </Link>
-        </div>
+        </Navbar>
     );
 }
 
