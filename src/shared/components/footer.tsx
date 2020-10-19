@@ -1,126 +1,111 @@
 import React from 'react';
 import '../../styles/footer.scss';
-import { Row, Col, CardDeck, Card, CardHeader, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardDeck, CardHeader, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 function Footer() {
     const cardClassName = 'mb-3 mt-3 ml-1 mr-1 border-0';
     const cardHeaderClassName = 'border-0 font-weight-bold';
-    const backgroundColor = '#FBF8F5';
     const textDecoration = 'none';
-    const linkColor = '#000';
     return (
         <Row>
             <Col lg={12} md={12} sm={12}>
                 <CardDeck className="m-1" style={{ backgroundColor: '#FBF8F5' }}>
                     <Card className={cardClassName}>
-                        <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-                            Alignz
-                        </CardHeader>
-                        <CardBody style={{ backgroundColor }}>
-                            <Link to="/aparelho-invisivel" style={{ textDecoration, color: linkColor }}>
+                        <CardHeader className={cardHeaderClassName}>Alignz</CardHeader>
+                        <CardBody>
+                            <Link to="/aparelho-invisivel" style={{ textDecoration }}>
                                 Aparelho Invisivel
                             </Link>
                             <br />
-                            <Link to="/clareamento" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/clareamento" style={{ textDecoration }}>
                                 Clareamento
                             </Link>
                             <br />
-                            <Link to="/preco" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/preco" style={{ textDecoration }}>
                                 Saiba o Preço
                             </Link>
                             <br />
-                            <Link to="/avaliacao" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/avaliacao" style={{ textDecoration }}>
                                 Agendar pré avaliação
                             </Link>
                         </CardBody>
                     </Card>
                     <Card className={cardClassName}>
-                        <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-                            Informações
-                        </CardHeader>
-                        <CardBody style={{ backgroundColor }}>
-                            <Link to="/depoimentos" style={{ textDecoration, color: linkColor }}>
+                        <CardHeader className={cardHeaderClassName}>Informações</CardHeader>
+                        <CardBody>
+                            <Link to="/depoimentos" style={{ textDecoration }}>
                                 Depoimentos
                             </Link>
                             <br />
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Dúvidas?
                             </Link>
                             <br />
-                            <Link to="/onde-estamos" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/onde-estamos" style={{ textDecoration }}>
                                 Onde estamos
                             </Link>
                         </CardBody>
                     </Card>
                     <Card className={cardClassName}>
-                        <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-                            Casos
-                        </CardHeader>
-                        <CardBody style={{ backgroundColor }}>
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                        <CardHeader className={cardHeaderClassName}>Casos</CardHeader>
+                        <CardBody>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Apinhamento
                             </Link>
                             <br />
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Diastema
                             </Link>
                             <br />
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Sobremordida
                             </Link>
                             <br />
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Mordida Cruzada
                             </Link>
                         </CardBody>
                     </Card>
                     <Card className={cardClassName}>
-                        <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
+                        <CardHeader className={cardHeaderClassName}>
                             <br />
                         </CardHeader>
-                        <CardBody style={{ backgroundColor }}>
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                        <CardBody>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Mordida Aberta
                             </Link>
                             <br />
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Progmatismo
                             </Link>
                             <br />
-                            <Link to="/duvidas" style={{ textDecoration, color: linkColor }}>
+                            <Link to="/duvidas" style={{ textDecoration }}>
                                 Overjet
                             </Link>
                         </CardBody>
                     </Card>
                     <Card className={cardClassName}>
-                        <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-                            <CardTitle>Contatos</CardTitle>
-                        </CardHeader>
-                        <CardBody style={{ backgroundColor }}>
-                            <span>Aparelho Invisivel</span>
+                        <CardHeader className={cardHeaderClassName}>Contatos</CardHeader>
+                        <CardBody>
+                            <span>Telefone</span>
                             <br />
-                            <span>Aparelho Invisivel</span>
+                            <small>horarios</small>
                             <br />
-                            <span>Aparelho Invisivel</span>
+                            <span>Whatsapp</span>
                             <br />
-                            <span>Aparelho Invisivel</span>
+                            <small>horarios</small>
                             <br />
                         </CardBody>
                     </Card>
                     <Card className={cardClassName}>
-                        <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-                            <CardTitle>Social</CardTitle>
-                        </CardHeader>
-                        <CardBody style={{ backgroundColor }}>
-                            <span>Aparelho Invisivel</span>
+                        <CardHeader className={cardHeaderClassName}>Social</CardHeader>
+                        <CardBody>
+                            <span>Facebook</span>
                             <br />
-                            <span>Aparelho Invisivel</span>
+                            <span>Instagram</span>
                             <br />
-                            <span>Aparelho Invisivel</span>
-                            <br />
-                            <span>Aparelho Invisivel</span>
-                            <br />
+                            <span>Youtube</span>
                         </CardBody>
                     </Card>
                 </CardDeck>
