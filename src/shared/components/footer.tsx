@@ -33,7 +33,7 @@ function Footer() {
                             </CardText>
                             <div className="clear" />
                             <CardText>
-                                <Link to="/avaliacao" style={{ textDecoration }}>
+                                <Link to="/agenda" style={{ textDecoration }}>
                                     Agendar pré avaliação
                                 </Link>
                             </CardText>
@@ -65,25 +65,25 @@ function Footer() {
                         <CardHeader className={cardHeaderClassName}>Casos</CardHeader>
                         <CardBody>
                             <CardText>
-                                <Link to="/duvidas" style={{ textDecoration }}>
+                                <Link to="/apinhamento" style={{ textDecoration }}>
                                     Apinhamento
                                 </Link>
                             </CardText>
                             <div className="clear" />
                             <CardText>
-                                <Link to="/duvidas" style={{ textDecoration }}>
+                                <Link to="/diastema" style={{ textDecoration }}>
                                     Diastema
                                 </Link>
                             </CardText>
                             <div className="clear" />
                             <CardText>
-                                <Link to="/duvidas" style={{ textDecoration }}>
+                                <Link to="/sobremordida" style={{ textDecoration }}>
                                     Sobremordida
                                 </Link>
                             </CardText>
                             <div className="clear" />
                             <CardText>
-                                <Link to="/duvidas" style={{ textDecoration }}>
+                                <Link to="/mordida-cruzada" style={{ textDecoration }}>
                                     Mordida Cruzada
                                 </Link>
                             </CardText>
@@ -95,19 +95,19 @@ function Footer() {
                         </CardHeader>
                         <CardBody>
                             <CardText>
-                                <Link to="/duvidas" style={{ textDecoration }}>
+                                <Link to="/mordida-aberta" style={{ textDecoration }}>
                                     Mordida Aberta
                                 </Link>
                             </CardText>
                             <div className="clear" />
                             <CardText>
-                                <Link to="/duvidas" style={{ textDecoration }}>
+                                <Link to="/progmatismo" style={{ textDecoration }}>
                                     Progmatismo
                                 </Link>
                             </CardText>
                             <div className="clear" />
                             <CardText>
-                                <Link to="/duvidas" style={{ textDecoration }}>
+                                <Link to="/overjet" style={{ textDecoration }}>
                                     Overjet
                                 </Link>
                             </CardText>
