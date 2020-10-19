@@ -8,8 +8,8 @@ function Footer() {
     const cardHeaderClassName = 'border-0 font-weight-bold';
     const textDecoration = 'none';
     return (
-        <Row>
-            <Col lg={12} md={12} sm={12}>
+        <Row className="mr-0">
+            <Col lg={12} md={12} sm={12} className="pr-0">
                 <CardDeck className="m-1">
                     <Card className={cardClassName}>
                         <CardHeader className={cardHeaderClassName}>Alignz</CardHeader>
