@@ -27,6 +27,18 @@ ul {
     overflow: hidden;
 }
 
+.row {
+    margin: 0;
+}
+
+.col {
+    padding: 0;
+}
+
+div[class*='col-'] {
+    padding: 0;
+}
+
 :root {
     --primary: #fff;
     --black: #1b1f23;
