@@ -60,6 +60,28 @@ div[class*='col-'] {
     border: 0;
 }
 
+.general-button {
+  color: #FFF;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+
+  padding: 8px 18px;
+
+  background-color: #F48472;
+  border-color: #F48472;
+  border-radius: 25px;
+  border-width: 2px;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.general-button:hover {
+  color: #F48472;
+  background-color: #FFF;
+  border-color: #F48472;
+}
+
 :root {
     --primary: #fff;
     --black: #1b1f23;
