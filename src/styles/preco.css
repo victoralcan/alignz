@@ -1,0 +1,15 @@
+h1 {
+    color: #77C1CD;
+}
+
+input {
+    border-radius: 20px !important;
+    border: 0 !important;
+    padding: 20px !important;
+    width: 50% !important;
+    margin: auto !important;
+}
+
+button {
+    border-radius: 20px !important;
+}
