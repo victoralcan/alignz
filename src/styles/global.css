@@ -44,6 +44,11 @@ div[class*='col-'] {
     margin-bottom: 10vh;
 }
 
+.infoContainerSmall {
+    height: 50vh;
+    margin-bottom: 10vh;
+}
+
 .card {
     border: 0;
 }
