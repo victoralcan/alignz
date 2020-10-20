@@ -19,26 +19,26 @@ import Progmatismo from './pages/progmatismo';
 import Overjet from './pages/overjet';
 
 function Routes() {
-    return (
-        <Switch>
-            <ErrorBoundaryRoute exact path="/" component={Home} />
-            <ErrorBoundaryRoute path="/aparelho-invisivel" component={AparelhoInvisivel} />
-            <ErrorBoundaryRoute path="/clareamento" component={Clareamento} />
-            <ErrorBoundaryRoute path="/preco" component={Preco} />
-            <ErrorBoundaryRoute path="/agenda" component={Agenda} />
-            <ErrorBoundaryRoute path="/depoimentos" component={Depoimentos} />
-            <ErrorBoundaryRoute path="/duvidas" component={Duvidas} />
-            <ErrorBoundaryRoute path="/onde-estamos" component={OndeEstamos} />
-            <ErrorBoundaryRoute path="/apinhamento" component={Apinhamento} />
-            <ErrorBoundaryRoute path="/diastema" component={Diastema} />
-            <ErrorBoundaryRoute path="/sobremordida" component={Sobremordida} />
-            <ErrorBoundaryRoute path="/mordida-cruzada" component={MordidaCruzada} />
-            <ErrorBoundaryRoute path="/mordida-aberta" component={MordidaAberta} />
-            <ErrorBoundaryRoute path="/progmatismo" component={Progmatismo} />
-            <ErrorBoundaryRoute path="/overjet" component={Overjet} />
-            <ErrorBoundaryRoute path="/" component={PageNotFound} />
-        </Switch>
-    );
+  return (
+    <Switch>
+      <ErrorBoundaryRoute exact path="/" component={Home} />
+      <ErrorBoundaryRoute path="/aparelho-invisivel" component={AparelhoInvisivel} />
+      <ErrorBoundaryRoute path="/clareamento" component={Clareamento} />
+      <ErrorBoundaryRoute path="/preco" component={Preco} />
+      <ErrorBoundaryRoute path="/agenda" component={Agenda} />
+      <ErrorBoundaryRoute path="/depoimentos" component={Depoimentos} />
+      <ErrorBoundaryRoute path="/duvidas" component={Duvidas} />
+      <ErrorBoundaryRoute path="/onde-estamos" component={OndeEstamos} />
+      <ErrorBoundaryRoute path="/apinhamento" component={Apinhamento} />
+      <ErrorBoundaryRoute path="/diastema" component={Diastema} />
+      <ErrorBoundaryRoute path="/sobremordida" component={Sobremordida} />
+      <ErrorBoundaryRoute path="/mordida-cruzada" component={MordidaCruzada} />
+      <ErrorBoundaryRoute path="/mordida-aberta" component={MordidaAberta} />
+      <ErrorBoundaryRoute path="/progmatismo" component={Progmatismo} />
+      <ErrorBoundaryRoute path="/overjet" component={Overjet} />
+      <ErrorBoundaryRoute path="/" component={PageNotFound} />
+    </Switch>
+  );
 }
 
 export default Routes;

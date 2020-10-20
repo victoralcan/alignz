@@ -10,12 +10,12 @@ import 'styles/global.css';
 const store = initStore();
 
 ReactDOM.render(
-    <ErrorBoundary>
-        <Provider store={store}>
-            <React.StrictMode>
-                <App />
-            </React.StrictMode>
-        </Provider>
-    </ErrorBoundary>,
-    document.getElementById('root'),
+  <ErrorBoundary>
+    <Provider store={store}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>
+  </ErrorBoundary>,
+  document.getElementById('root'),
 );
