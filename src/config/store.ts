@@ -7,6 +7,6 @@ const defaultMiddlewares = [thunkMiddleware, promiseMiddleware];
 const composedMiddlewares = (middlewares) => compose(applyMiddleware(...defaultMiddlewares, ...middlewares));
 
 const initialize = (initialState?: IRootState, middlewares = []) =>
-    createStore(reducer, initialState, composedMiddlewares(middlewares));
+  createStore(reducer, initialState, composedMiddlewares(middlewares));
 
 export default initialize;
