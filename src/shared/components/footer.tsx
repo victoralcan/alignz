@@ -7,12 +7,15 @@ function Footer() {
   const cardClassName = 'mb-3 mt-3 ml-1 mr-1 border-0';
   const cardHeaderClassName = 'border-0 font-weight-bold';
   const textDecoration = 'none';
+  const backgroundColor = '#FBF8F5';
   return (
     <Row>
       <Col lg={12} md={12} sm={12}>
         <CardDeck className="m-1">
           <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName}>Alignz</CardHeader>
+            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
+              Alignz
+            </CardHeader>
             <CardBody>
               <CardText>
                 <Link to="/aparelho-invisivel" style={{ textDecoration }}>
@@ -40,7 +43,9 @@ function Footer() {
             </CardBody>
           </Card>
           <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName}>Informações</CardHeader>
+            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
+              Informações
+            </CardHeader>
             <CardBody>
               <CardText>
                 <Link to="/depoimentos" style={{ textDecoration }}>
@@ -62,7 +67,9 @@ function Footer() {
             </CardBody>
           </Card>
           <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName}>Casos</CardHeader>
+            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
+              Casos
+            </CardHeader>
             <CardBody>
               <CardText>
                 <Link to="/apinhamento" style={{ textDecoration }}>
@@ -90,7 +97,7 @@ function Footer() {
             </CardBody>
           </Card>
           <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName}>
+            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
               <br />
             </CardHeader>
             <CardBody>
@@ -114,7 +121,9 @@ function Footer() {
             </CardBody>
           </Card>
           <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName}>Contatos</CardHeader>
+            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
+              Contatos
+            </CardHeader>
             <CardBody>
               <span>Telefone</span>
               <div className="clear" />
@@ -127,7 +136,9 @@ function Footer() {
             </CardBody>
           </Card>
           <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName}>Social</CardHeader>
+            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
+              Social
+            </CardHeader>
             <CardBody>
               <span>Facebook</span>
               <div className="clear" />
