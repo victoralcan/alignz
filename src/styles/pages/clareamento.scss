@@ -1,0 +1,29 @@
+#banner-section {
+  background-color: #e4cabd;
+  // background: url('../content/images/clareamento.jpg') no-repeat;
+}
+
+#banner-section .content-col {
+  display: flex;
+  align-items: center;
+}
+
+#banner-section .content-col .info {
+  width: 100%;
+  height: fit-content;
+}
+
+#banner-section .content-col .info h1 {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 800;
+
+  margin-bottom: 40px;
+}
+
+#banner-section .content-col .info h3 {
+  color: #545454;
+  font-size: 32px;
+
+  margin-bottom: 40px;
+}
