@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorBoundary from './shared/error/error-boundary';
 import 'styles/global.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const store = initStore();
 
