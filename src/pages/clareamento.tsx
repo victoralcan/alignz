@@ -6,7 +6,6 @@ import ClareamentoBanner from 'content/images/clareamento.jpg';
 
 import 'styles/pages/clareamento.scss';
 
-
 function Clareamento() {
   return (
     <>
@@ -22,19 +21,14 @@ function Clareamento() {
                 alinhamento + clareamento
               </h1>
               <h3>
-                clareie seus dentes durante <br />
-                o tratamento de aparelho invisível!
+                clareie seus dentes durante <br />o tratamento de aparelho invisível!
               </h3>
-              <Button className="general-button">
-                agendar pré-avaliação
-              </Button>
+              <Button className="general-button">agendar pré-avaliação</Button>
             </div>
           </Col>
         </Row>
       </section>
-      <section className="info-container tratamento-section">
-        
-      </section>
+      <section className="info-container tratamento-section"></section>
     </>
   );
 }

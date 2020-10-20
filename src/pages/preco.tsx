@@ -20,9 +20,7 @@ function Preco() {
             <CardBody style={{ backgroundColor }}>
               <Input placeholder="Insira seu email" className="mb-3" />
               <div className="d-flex justify-content-center">
-                <Button style={{ backgroundColor: '#F48472' }} className="border-0 btn-lg">
-                  Solicitar o Preço
-                </Button>
+                <Button className="general-button">Solicitar o Preço</Button>
               </div>
             </CardBody>
           </Card>
