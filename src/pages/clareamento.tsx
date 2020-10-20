@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Button, Col } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
 
-import ClareamentoBanner from 'content/images/clareamento.jpg';
+import ClareamentoBanner from 'content/images/pages/clareamento/clareamento.jpg';
 
 import 'styles/pages/clareamento.scss';
 
