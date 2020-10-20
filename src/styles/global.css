@@ -44,6 +44,22 @@ div[class*='col-'] {
     margin-bottom: 10vh;
 }
 
+.card {
+    border: 0;
+}
+
+.card-body {
+    border: 0;
+}
+
+.card-deck {
+    border: 0;
+}
+
+.card-text {
+    border: 0;
+}
+
 :root {
     --primary: #fff;
     --black: #1b1f23;

@@ -4,7 +4,7 @@ import { Card, CardBody, CardDeck, CardHeader, CardText, Col, Row } from 'reacts
 import { Link } from 'react-router-dom';
 
 function Footer() {
-  const cardClassName = 'mb-3 mt-3 ml-1 mr-1 border-0';
+  const cardClassName = 'mb-3 mt-3 ml-1 mr-1';
   const cardHeaderClassName = 'border-0 font-weight-bold';
   const textDecoration = 'none';
   const backgroundColor = '#FBF8F5';
