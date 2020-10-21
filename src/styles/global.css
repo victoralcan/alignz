@@ -94,6 +94,18 @@ div[class*='col-'] {
   border-color: #F48472;
 }
 
+.general-button:active {
+    color: #F48472 !important;
+    background-color: #FFF !important;
+    border-color: #F48472 !important;
+}
+
+.general-button:focus {
+    color: #FFF;
+    background-color: #F48472;
+    border-color: #F48472;
+}
+
 :root {
     --primary: #fff;
     --black: #1b1f23;
