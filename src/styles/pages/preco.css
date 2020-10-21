@@ -43,10 +43,6 @@ ul li p {
     font-size: large;
 }
 
-.flex-direction-col {
-    flex-direction: column;
-}
-
 #combo-smile {
     background-color: var(--footer);
     display: flex;
