@@ -41,17 +41,17 @@ div[class*='col-'] {
 
 .infoContainer {
     height: 85vh;
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
 }
 
 .infoContainerSmall {
     height: 50vh;
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
 }
 
 .infoContainerFlex {
-    min-height: 40vh;
-    margin-bottom: 10vh;
+    min-height: 30vh;
+    margin-bottom: 8vh;
 }
 
 .card {
