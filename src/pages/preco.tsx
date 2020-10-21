@@ -132,6 +132,29 @@ function Preco() {
           </Col>
         </Row>
       </section>
+      <section className="infoContainer d-flex align-items-center justify-content-center">
+        <h1>DUVIDAS FREQUENTES</h1>
+      </section>
+      <section className="infoContainerSmall d-flex">
+        <Row id="last-section" className="m-auto justify-content-center">
+          <ul>
+            <li className="mt-4 mb-4 text-center">
+              <h1 style={{ color: '#F48472' }}>
+                sorriso leve, inclusive <br /> para o seu bolso
+              </h1>
+            </li>
+            <li className="mt-4 mb-5">
+              <h2>Receba agora o preço do aparelho invisível</h2>
+            </li>
+            <li className="mt-5 mb-4">
+              <Input placeholder="Insira seu email" className="mb-3" />
+            </li>
+            <li className="d-flex mt-4">
+              <Button className="general-button m-auto">Solicitar o Preço</Button>
+            </li>
+          </ul>
+        </Row>
+      </section>
     </>
   );
 }
