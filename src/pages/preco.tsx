@@ -6,6 +6,7 @@ import Preco1 from 'content/images/pages/preco/preco1.jpg';
 import Preco2 from 'content/images/pages/preco/preco2.png';
 import Preco3 from 'content/images/pages/preco/preco3.png';
 import '../styles/pages/preco.css';
+import { Link } from 'react-router-dom';
 
 function Preco() {
   const backgroundColor = '#fee0cc';
@@ -73,7 +74,9 @@ function Preco() {
                   <p>Atendimento 7 dias por semana</p>
                 </li>
               </ul>
-              <Button className="general-button">Agendar Avaliação</Button>
+              <Button tag={Link} to="/agenda" className="general-button">
+                Agendar pré-avaliação
+              </Button>
             </div>
           </Col>
           <Col className="d-flex h-100 align-items-center" md={6}>
@@ -103,7 +106,9 @@ function Preco() {
             </Slider>
           </Row>
           <Row className="d-flex">
-            <Button className="general-button m-auto">Depoimentos</Button>
+            <Button tag={Link} to="/depoimentos" className="general-button m-auto">
+              Depoimentos
+            </Button>
           </Row>
         </div>
       </section>
@@ -131,7 +136,9 @@ function Preco() {
                   <span>e conquiste seu melhor sorriso.</span>
                 </li>
               </ul>
-              <Button className="general-button">Agendar pré-avaliação</Button>
+              <Button tag={Link} to="/agenda" className="general-button">
+                Agendar pré-avaliação
+              </Button>
             </div>
           </Col>
         </Row>
