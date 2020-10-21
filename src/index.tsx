@@ -8,6 +8,9 @@ import ErrorBoundary from './shared/error/error-boundary';
 import 'styles/global.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { loadIcons } from './config/icon-loader';
+
+loadIcons();
 
 const store = initStore();
 
