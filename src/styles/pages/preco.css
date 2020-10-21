@@ -43,7 +43,7 @@ ul li p {
     font-size: large;
 }
 
-.depoimento {
+.flex-direction-col {
     flex-direction: column;
 }
 
@@ -64,4 +64,11 @@ ul li p {
     height: 80%;
 }
 
+.togglerDuvida {
+    color: #77C1CD;
+}
+
+.togglerDuvida:hover {
+    text-decoration: underline;
+}
 

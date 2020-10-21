@@ -49,6 +49,11 @@ div[class*='col-'] {
     margin-bottom: 10vh;
 }
 
+.infoContainerFlex {
+    min-height: 40vh;
+    margin-bottom: 10vh;
+}
+
 .card {
     border: 0;
 }

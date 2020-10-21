@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, Col, Input, Row } from 'reactstrap';
+import { Button, Card, CardBody, CardHeader, Col, Input, Row, UncontrolledCollapse } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
 import Slider from 'react-slick';
 import Preco1 from 'content/images/pages/preco/preco1.jpg';
@@ -21,6 +21,7 @@ function Preco() {
     autoplay: true,
     adaptiveHeight: true,
   };
+
   return (
     <>
       <section className="infoContainer">
@@ -88,11 +89,11 @@ function Preco() {
           <br />
           <Row className="h-50">
             <Slider {...settings} className="w-100 h-75">
-              <div className="h-100 d-flex align-items-center depoimento">
+              <div className="h-100 d-flex align-items-center flex-direction-col">
                 <p>Foi um dos melhores investimentos que fiz, indico pra todos.</p>
                 <h4>Nicole R.</h4>
               </div>
-              <div className="h-100 d-flex align-items-center depoimento">
+              <div className="h-100 d-flex align-items-center flex-direction-col">
                 <p>Adorei minha expericência com o aparelho. Não sinto mais medo de sorrir!</p>
                 <h4>Laura A.</h4>
               </div>
@@ -132,8 +133,52 @@ function Preco() {
           </Col>
         </Row>
       </section>
-      <section className="infoContainer d-flex align-items-center justify-content-center">
-        <h1>DUVIDAS FREQUENTES</h1>
+      <section className="infoContainerFlex d-flex flex-direction-col">
+        <h1 className="text-dark pb-5 mr-auto ml-auto">Dúvidas Frequentes</h1>
+        <div className="mr-auto ml-auto w-50">
+          <h4 id="toggler0" className="togglerDuvida pb-3">
+            <span className="font-weight-bold togglerDuvida">como funciona</span> o tratamento de aparelho invisível
+            AlignerZ?
+          </h4>
+          <UncontrolledCollapse toggler="#toggler0" className="w-75 mr-auto ml-auto">
+            <p>
+              após digitalizar a sua boca, nossos ortodontistas planejam a movimentação dos seus dentes e você recebe
+              uma sequência de alinhadores transparentes feitos sob medida. use cada fase de alinhadores por 2 semanas e
+              volte para uma consulta de acompanhamento a cada 2 meses, até chegar no sorriso que você ama.
+            </p>
+          </UncontrolledCollapse>
+          <h4 id="toggler1" className="togglerDuvida pb-3">
+            como eu sei se o tratamento de aparelho invisível AlignerZ&nbsp;
+            <span className="font-weight-bold togglerDuvida">funciona para mim?</span>
+          </h4>
+          <UncontrolledCollapse toggler="#toggler1" className="w-75 mr-auto ml-auto">
+            <p>
+              o aparelho invisível AlignerZ é focado em casos estéticos, de alinhamento e espaçamento dos dentes, que
+              podem durar entre 3 e 9 meses. a melhor forma de saber se funciona para você é agendando uma avaliação
+              presencial em uma das nossas lojas. até lá, pode responder ao nosso teste online aqui!
+            </p>
+          </UncontrolledCollapse>
+          <h4 id="toggler2" className="togglerDuvida pb-3">
+            como eu sei se funciona mesmo?
+          </h4>
+          <UncontrolledCollapse toggler="#toggler2" className="w-75 mr-auto ml-auto">
+            <p>
+              A tecnologia por trás dos aparelhos invisíveis já existe há mais de 20 anos e é clinicamente comprovada.
+              Além disso, por conta do planejamento digital, podemos prever cada etapa do tratamento, o que deixa o
+              resultado mais assertivo.
+            </p>
+          </UncontrolledCollapse>
+          <h4 id="toggler3" className="togglerDuvida pb-3">
+            o tratamento de aparelho invisível AlignerZ substitui o aparelho fixo?
+          </h4>
+          <UncontrolledCollapse toggler="#toggler3" className="w-75 mr-auto ml-auto">
+            <p>
+              Nosso aparelho invisível substitui o aparelho fixo para casos estéticos, que podem durar entre 3 e 9
+              meses. É um tratamento mais rápido, pois os alinhadores aplicam uma força mais exata nos dentes,
+              direcionando melhor a movimentação.
+            </p>
+          </UncontrolledCollapse>
+        </div>
       </section>
       <section className="infoContainerSmall d-flex">
         <Row id="last-section" className="m-auto justify-content-center">
