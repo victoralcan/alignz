@@ -4,6 +4,7 @@ import FittedImage from 'react-fitted-image';
 import Slider from 'react-slick';
 import Preco1 from 'content/images/pages/preco/preco1.jpg';
 import Preco2 from 'content/images/pages/preco/preco2.png';
+import Preco3 from 'content/images/pages/preco/preco3.png';
 import '../styles/pages/preco.css';
 
 function Preco() {
@@ -101,6 +102,35 @@ function Preco() {
             <Button className="general-button m-auto">Depoimentos</Button>
           </Row>
         </div>
+      </section>
+      <section className="infoContainer">
+        <Row className="h-100">
+          <Col md={6} className="h-100">
+            <div className="h-100" id="preco3-photo">
+              <FittedImage fit="cover" src={Preco3} />
+            </div>
+          </Col>
+          <Col className="d-flex h-100 align-items-center" md={6}>
+            <div id="combo-smile" className="w-100 position-absolute">
+              <h1 className="font-weight-bold" style={{ color: '#F48472' }}>
+                Combo smile
+              </h1>
+              <h2 style={{ color: '#77C1CD' }}>Alinhamento + clareamento</h2>
+              <ul>
+                <li>
+                  <span>Faça os dois tratamentos de uma só vez.</span>
+                </li>
+                <li>
+                  <span>Aplique o gel clareador na plaquinha de alinhamento</span>
+                </li>
+                <li>
+                  <span>e conquiste seu melhor sorriso.</span>
+                </li>
+              </ul>
+              <Button className="general-button">Agendar pré-avaliação</Button>
+            </div>
+          </Col>
+        </Row>
       </section>
     </>
   );
