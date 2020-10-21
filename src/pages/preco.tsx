@@ -47,27 +47,30 @@ function Preco() {
       <section className="infoContainer">
         <Row className="h-100">
           <Col md={6} className="h-100">
-            <div id="left-side-box" className="h-100">
+            <div id="left-side-box" className="h-100 justify-content-center">
               <h1 className="font-weight-bold">O que está incluso?</h1>
               <h2>nosso tratamento já vem com tudo para te fazer sorrir</h2>
-              <ul>
-                <li>
+              <ul className="d-flex flex-column">
+                <li className="mr-auto ml-auto">
                   <p>Exames da avaliação</p>
                 </li>
-                <li>
-                  <p>Exames da avaliação</p>
+                <li className="mr-auto ml-auto">
+                  <p>Simulação do sorriso final</p>
                 </li>
-                <li>
-                  <p>Exames da avaliação</p>
+                <li className="mr-auto ml-auto">
+                  <p>Par de placas de contenção</p>
                 </li>
-                <li>
-                  <p>Exames da avaliação</p>
+                <li className="mr-auto ml-auto">
+                  <p>Limpeza antes de começar</p>
                 </li>
-                <li>
-                  <p>Exames da avaliação</p>
+                <li className="mr-auto ml-auto">
+                  <p>Todas as etapas de alinhadores</p>
                 </li>
-                <li>
-                  <p>Exames da avaliação</p>
+                <li className="mr-auto ml-auto">
+                  <p>Consultas de acompanhamento</p>
+                </li>
+                <li className="mr-auto ml-auto">
+                  <p>Atendimento 7 dias por semana</p>
                 </li>
               </ul>
               <Button className="general-button">Agendar Avaliação</Button>
@@ -89,11 +92,11 @@ function Preco() {
           <br />
           <Row className="h-50">
             <Slider {...settings} className="w-100 h-75">
-              <div className="h-100 d-flex align-items-center flex-direction-col">
+              <div className="h-100 d-flex align-items-center flex-column">
                 <p>Foi um dos melhores investimentos que fiz, indico pra todos.</p>
                 <h4>Nicole R.</h4>
               </div>
-              <div className="h-100 d-flex align-items-center flex-direction-col">
+              <div className="h-100 d-flex align-items-center flex-column">
                 <p>Adorei minha expericência com o aparelho. Não sinto mais medo de sorrir!</p>
                 <h4>Laura A.</h4>
               </div>
@@ -133,7 +136,7 @@ function Preco() {
           </Col>
         </Row>
       </section>
-      <section className="infoContainerFlex d-flex flex-direction-col">
+      <section className="infoContainerFlex d-flex flex-column">
         <h1 className="text-dark pb-5 mr-auto ml-auto">Dúvidas Frequentes</h1>
         <div className="mr-auto ml-auto w-50">
           <h4 id="toggler0" className="togglerDuvida pb-3">
