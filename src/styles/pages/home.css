@@ -18,3 +18,8 @@
     position: relative;
     z-index: 2;
 }
+
+.border-image {
+    border-radius: 50px;
+    overflow: hidden;
+}

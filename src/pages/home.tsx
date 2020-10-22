@@ -43,10 +43,14 @@ class Home extends React.Component {
         {/*Solicitar preço*/}
         <section className="infoContainer">
           <Row className="h-100">
-            <Col md={6} className="h-100">
+            <Col md={6} className="h-100 border-image">
               <FittedImage fit="cover" src={Preco4} />
             </Col>
-            <Col className="d-flex justify-content-center align-items-center" md={6} style={{ backgroundColor }}>
+            <Col
+              className="d-flex justify-content-center align-items-center border-image h-75 mt-auto mb-auto"
+              md={6}
+              style={{ backgroundColor }}
+            >
               <Card style={{ backgroundColor, margin: '0px 100px 0px 100px' }}>
                 <CardHeader className="text-center border-0" style={{ backgroundColor }}>
                   <h1 className="font-weight-bold" style={{ color: '#fff' }}>
