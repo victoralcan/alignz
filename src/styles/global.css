@@ -120,6 +120,18 @@ div[class*='col-'] {
     font-size: xx-large;
 }
 
+.title-pink {
+    color: var(--pink) !important;
+}
+
+.title-black {
+    color: var(--black) !important;
+}
+
+.text-black {
+    color: var(--black) !important;
+}
+
 :root {
     --white: #fff;
     --white-dirty: #dddcda;
