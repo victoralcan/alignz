@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, Card, CardBody, CardHeader, Col, Input, Row, Collapse } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
-import Slider from 'react-slick';
 import Preco1 from 'content/images/pages/preco/preco1.jpg';
 import Preco2 from 'content/images/pages/preco/preco2.png';
 import Preco3 from 'content/images/pages/preco/preco3.png';
 import '../styles/pages/preco.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Depoimentos from '../shared/components/depoimentos';
 
 interface IPrecoState {
   collapseControl: boolean[];
@@ -21,7 +21,7 @@ class Preco extends React.Component<any, IPrecoState> {
     };
   }
 
-  toggleDepoimento = (index: number) => {
+  toggleDuvida = (index: number) => {
     const { collapseControl } = this.state;
     collapseControl.splice(index, 1, !collapseControl[index]);
     this.setState(() => {
@@ -34,18 +34,6 @@ class Preco extends React.Component<any, IPrecoState> {
   render() {
     const { collapseControl } = this.state;
     const backgroundColor = '#fee0cc';
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      arrows: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      initialSlide: 0,
-      autoplay: true,
-      adaptiveHeight: true,
-    };
     return (
       <>
         <section className="infoContainer">
@@ -110,33 +98,7 @@ class Preco extends React.Component<any, IPrecoState> {
             </Col>
           </Row>
         </section>
-        <section className="infoContainerSmall">
-          <div className="w-100 h-100">
-            <Row className="d-flex h-25">
-              <h1 className="m-auto">Sorrisos tem muito a dizer</h1>
-            </Row>
-            <br />
-            <Row className="h-50">
-              <Slider {...settings} className="w-100 h-75">
-                <div className="h-100 d-flex align-items-center flex-column">
-                  <p className="font-size-bigger">Foi um dos melhores investimentos que fiz, indico pra todos.</p>
-                  <h4 className="font-size-big">Nicole R.</h4>
-                </div>
-                <div className="h-100 d-flex align-items-center flex-column">
-                  <p className="font-size-bigger">
-                    Adorei minha expericência com o aparelho. Não sinto mais medo de sorrir!
-                  </p>
-                  <h4 className="font-size-big">Laura A.</h4>
-                </div>
-              </Slider>
-            </Row>
-            <Row className="d-flex">
-              <Button tag={Link} to="/depoimentos" className="general-button m-auto">
-                Depoimentos
-              </Button>
-            </Row>
-          </div>
-        </section>
+        <Depoimentos />
         <section className="infoContainer">
           <Row className="h-100">
             <Col md={6} className="h-100">
@@ -171,7 +133,7 @@ class Preco extends React.Component<any, IPrecoState> {
         <section className="infoContainerFlex d-flex flex-column">
           <h1 className="text-dark pb-5 mr-auto ml-auto">Dúvidas Frequentes</h1>
           <div className="mr-auto ml-auto w-50">
-            <h4 onClick={() => this.toggleDepoimento(0)} className="togglerDuvida pb-3">
+            <h4 onClick={() => this.toggleDuvida(0)} className="togglerDuvida pb-3">
               <FontAwesomeIcon icon={collapseControl[0] ? 'plus' : 'minus'} />
               &nbsp;&nbsp;
               <span className="font-weight-bold togglerDuvida">como funciona</span> o tratamento de aparelho invisível
@@ -184,7 +146,7 @@ class Preco extends React.Component<any, IPrecoState> {
                 e volte para uma consulta de acompanhamento a cada 2 meses, até chegar no sorriso que você ama.
               </p>
             </Collapse>
-            <h4 onClick={() => this.toggleDepoimento(1)} className="togglerDuvida pb-3">
+            <h4 onClick={() => this.toggleDuvida(1)} className="togglerDuvida pb-3">
               <FontAwesomeIcon icon={collapseControl[1] ? 'plus' : 'minus'} />
               &nbsp;&nbsp;como eu sei se o tratamento de aparelho invisível AlignerZ&nbsp;
               <span className="font-weight-bold togglerDuvida">funciona para mim?</span>
@@ -196,7 +158,7 @@ class Preco extends React.Component<any, IPrecoState> {
                 presencial em uma das nossas lojas. até lá, pode responder ao nosso teste online aqui!
               </p>
             </Collapse>
-            <h4 onClick={() => this.toggleDepoimento(2)} className="togglerDuvida pb-3">
+            <h4 onClick={() => this.toggleDuvida(2)} className="togglerDuvida pb-3">
               <FontAwesomeIcon icon={collapseControl[2] ? 'plus' : 'minus'} />
               &nbsp;&nbsp; como eu sei se funciona mesmo?
             </h4>
@@ -207,7 +169,7 @@ class Preco extends React.Component<any, IPrecoState> {
                 resultado mais assertivo.
               </p>
             </Collapse>
-            <h4 onClick={() => this.toggleDepoimento(3)} className="togglerDuvida pb-3">
+            <h4 onClick={() => this.toggleDuvida(3)} className="togglerDuvida pb-3">
               <FontAwesomeIcon icon={collapseControl[3] ? 'plus' : 'minus'} />
               &nbsp;&nbsp; o tratamento de aparelho invisível AlignerZ substitui o aparelho fixo?
             </h4>
