@@ -1,18 +1,23 @@
 import React from 'react';
 import { Button, Card, CardBody, CardHeader, Col, Input, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import FittedImage from 'react-fitted-image';
+
 import Preco2 from 'content/images/pages/preco/preco2.png';
 import Preco4 from 'content/images/pages/preco/preco4.jpg';
 import Agenda1 from 'content/images/agenda1.png';
-import Home2 from 'content/images/home2.png';
-import { Link } from 'react-router-dom';
-import Depoimentos from '../shared/components/Depoimentos';
-import Duvidas from '../shared/components/Duvidas';
-import '../styles/pages/home.css';
-import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
+import Home2 from 'content/images/pages/home/home2.png';
 import Swipe1 from '../content/images/pages/home/swipe1.gif';
 import Swipe2 from '../content/images/pages/home/swipe2.gif';
 import Swipe3 from '../content/images/pages/home/swipe3.gif';
+import Video1 from '../content/images/pages/home/video1.jpg';
+
+import Depoimentos from '../shared/components/Depoimentos';
+import Duvidas from '../shared/components/Duvidas';
+import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
+import VideoModal from '../shared/components/VideoModal';
+
+import '../styles/pages/home.css';
 
 class Home extends React.Component {
   render() {
@@ -136,7 +141,7 @@ class Home extends React.Component {
           </Row>
         </section>
         {/*Video*/}
-        <section className="infoContainer d-flex justify-content-center align-items-center">Video</section>
+        <VideoModal videoId="0xyxtzD54rM" photo={Video1} />
         {/*Agende ja*/}
         <section className="infoContainerBig">
           <Row className="h-100">
