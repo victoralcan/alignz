@@ -2,12 +2,13 @@ import React from 'react';
 import '../../styles/footer.scss';
 import { Card, CardBody, CardDeck, CardHeader, CardText, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { ColorPallet } from '../model/enum/colors';
 
 function Footer() {
   const cardClassName = 'mb-3 mt-3 ml-1 mr-1';
   const cardHeaderClassName = 'border-0 font-weight-bold';
   const textDecoration = 'none';
-  const backgroundColor = '#FBF8F5';
+  const backgroundColor = ColorPallet.whiteDirty;
   return (
     <Row>
       <Col lg={12} md={12} sm={12}>

@@ -8,10 +8,11 @@ import '../styles/pages/preco.css';
 import { Link } from 'react-router-dom';
 import Depoimentos from '../shared/components/Depoimentos';
 import Duvidas from '../shared/components/Duvidas';
+import { ColorPallet } from '../shared/model/enum/colors';
 
 class Preco extends React.Component {
   render() {
-    const backgroundColor = '#fee0cc';
+    const backgroundColor = ColorPallet.white;
     return (
       <>
         <section className="infoContainer">
@@ -19,13 +20,17 @@ class Preco extends React.Component {
             <Col md={6} className="h-100">
               <FittedImage fit="cover" src={Preco1} />
             </Col>
-            <Col className="d-flex justify-content-center align-items-center" md={6} style={{ backgroundColor }}>
+            <Col className="d-flex justify-content-center align-items-center" md={6}>
               <Card style={{ backgroundColor, margin: '0px 100px 0px 100px' }}>
                 <CardHeader className="text-center border-0" style={{ backgroundColor }}>
                   <h1 className="font-weight-bold">Receba o preço do nosso aparelho invisível ;)</h1>
                 </CardHeader>
                 <CardBody style={{ backgroundColor }}>
-                  <Input placeholder="Insira seu email" className="mb-3" />
+                  <Input
+                    placeholder="Insira seu email"
+                    style={{ backgroundColor: ColorPallet.whiteDirty }}
+                    className="mb-3"
+                  />
                   <div className="d-flex justify-content-center">
                     <Button className="general-button">Solicitar o Preço</Button>
                   </div>
@@ -86,9 +91,7 @@ class Preco extends React.Component {
             </Col>
             <Col className="d-flex h-100 align-items-center" md={6}>
               <div id="combo-smile" className="w-100 position-absolute">
-                <h1 className="font-weight-bold" style={{ color: '#F48472' }}>
-                  Combo smile
-                </h1>
+                <h1 className="font-weight-bold">Combo smile</h1>
                 <h2 style={{ color: '#77C1CD' }}>Alinhamento + clareamento</h2>
                 <ul>
                   <li>
@@ -110,10 +113,10 @@ class Preco extends React.Component {
         </section>
         <Duvidas />
         <section className="infoContainerSmall d-flex">
-          <Row id="last-section" className="m-auto justify-content-center">
+          <Row className="m-auto justify-content-center">
             <ul>
               <li className="mt-4 mb-4 text-center">
-                <h1 style={{ color: '#F48472' }}>
+                <h1>
                   sorriso leve, inclusive <br /> para o seu bolso
                 </h1>
               </li>

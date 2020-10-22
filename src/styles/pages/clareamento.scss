@@ -1,5 +1,5 @@
 #banner-section {
-  background-color: #e4cabd;
+  background-color: var(--pink-light);
   // background: url('../content/images/clareamento.jpg') no-repeat;
 }
 
@@ -29,14 +29,14 @@
 }
 
 #tratamento-section {
-  
+
   .tratamento-content {
     text-align: center;
-  
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     width: 80%;
     margin: auto;
 
@@ -44,23 +44,23 @@
       width: 100%;
       margin-top: 80px;
       margin-bottom: 80px;
-  
+
       h2 {
         color: #77c1cd;
         font-weight: 800;
       }
     }
-  
+
     .cards-container {
       width: 100%;
     }
-  
+
     .tratamento-card {
-      background-color: #f5f5f5;
-  
+      background-color: var(--white-dirty);
+
       border-radius: 20px;
       overflow: hidden;
-  
+
       h4 {
         padding: 20px;
         font-size: 25px;
