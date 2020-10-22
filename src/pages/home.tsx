@@ -72,7 +72,7 @@ class Home extends React.Component {
           </Row>
         </section>
         {/*Sorrir é facil como começar*/}
-        <section>SORRIR</section>
+        <section className="infoContainer d-flex justify-content-center align-items-center">Sorrir</section>
         {/*O que está incluso*/}
         <section className="infoContainer">
           <Row className="h-100">
