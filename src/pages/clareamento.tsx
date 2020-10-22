@@ -11,7 +11,6 @@ import ClareamentoPratico from 'content/images/pages/clareamento/clareamento-pra
 import ComboClareamento from 'content/images/pages/clareamento/combo-clareamento.jpg';
 import VideoClareamento from 'content/images/pages/clareamento/video-clareamento.jpg';
 
-import 'swiper/swiper.scss';
 import 'styles/pages/clareamento.scss';
 
 function Clareamento() {
@@ -43,10 +42,7 @@ function Clareamento() {
             <h3>veja como funciona nosso clareamento dental com gel</h3>
           </div>
           <div className="cards-container">
-            <Swiper
-              spaceBetween={120}
-              slidesPerView={3}
-              >
+            <Swiper spaceBetween={120} slidesPerView={3}>
               <SwiperSlide>
                 <div className="tratamento-card">
                   <FittedImage fit="contain" src={Tratamento1} />
@@ -98,9 +94,8 @@ function Clareamento() {
             <h2>combo smile</h2>
             <h3>alinhamento + clareamento</h3>
             <p>
-              faça os dois tratamentos de uma só vez. <br/>
-              aplique o gel clareador na plaquinha de alinhamento <br/>
-              e conquiste seu melhor sorriso.
+              faça os dois tratamentos de uma só vez. <br />
+              aplique o gel clareador na plaquinha de alinhamento <br />e conquiste seu melhor sorriso.
             </p>
             <Button className="general-button">saiba mais</Button>
           </Col>
