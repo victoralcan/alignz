@@ -1,5 +1,5 @@
 #sorriso-alegre {
-    background-color: #FDE4E0;
+    background-color: var(--pink-light);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -16,6 +16,7 @@ import Depoimentos from '../shared/components/Depoimentos';
 import Duvidas from '../shared/components/Duvidas';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 import VideoModal from '../shared/components/VideoModal';
+import { ColorPallet } from '../shared/model/enum/colors';
 
 import '../styles/pages/home.css';
 
@@ -36,7 +37,7 @@ class Home extends React.Component {
           'Durante a jornada, use cada fase de alinhadores por 2 semanas e faça o acompanhamento a cada 2 meses',
       },
     ];
-    const backgroundColor = '#C6D6E7';
+    const backgroundColor = ColorPallet.white;
     return (
       <>
         {/*agendar pre avaliação*/}
@@ -47,9 +48,7 @@ class Home extends React.Component {
           <div className="z-index-2 h-100">
             <div id="agendar" className="h-100 col-6">
               <div className="m-auto">
-                <h1 className="font-weight-bold" style={{ color: '#F48472' }}>
-                  Seu sorriso é unico
-                </h1>
+                <h1 className="font-weight-bold">Seu sorriso é unico</h1>
                 <ul>
                   <li>
                     <span>
@@ -70,23 +69,19 @@ class Home extends React.Component {
             <Col md={6} className="h-100 border-image">
               <FittedImage fit="cover" src={Preco4} />
             </Col>
-            <Col
-              className="d-flex justify-content-center align-items-center border-image h-75 mt-auto mb-auto"
-              md={6}
-              style={{ backgroundColor }}
-            >
+            <Col className="d-flex justify-content-center align-items-center border-image h-75 mt-auto mb-auto" md={6}>
               <Card style={{ backgroundColor, margin: '0px 100px 0px 100px' }}>
-                <CardHeader className="text-center border-0" style={{ backgroundColor }}>
-                  <h1 className="font-weight-bold" style={{ color: '#fff' }}>
-                    Moderno e acessível
-                  </h1>
+                <CardHeader style={{ backgroundColor }} className="text-center border-0">
+                  <h1 className="font-weight-bold">Moderno e acessível</h1>
                   <br />
-                  <h1 className="font-weight-bold" style={{ color: '#545454' }}>
-                    Receba o preço do nosso aparelho invisível ;)
-                  </h1>
+                  <h1 className="font-weight-bold">Receba o preço do nosso aparelho invisível ;)</h1>
                 </CardHeader>
                 <CardBody style={{ backgroundColor }}>
-                  <Input placeholder="Insira seu email" className="mb-3" />
+                  <Input
+                    placeholder="Insira seu email"
+                    style={{ backgroundColor: ColorPallet.whiteDirty }}
+                    className="mb-3"
+                  />
                   <div className="d-flex justify-content-center">
                     <Button className="general-button">Solicitar o Preço</Button>
                   </div>
@@ -137,9 +132,7 @@ class Home extends React.Component {
           <Row className="h-100">
             <Col className="d-flex align-items-center" md={6}>
               <div id="sorriso-alegre" className="w-100 h-75">
-                <h1 className="font-weight-bold" style={{ color: '#F48472' }}>
-                  Seu sorriso é unico
-                </h1>
+                <h1 className="font-weight-bold">Seu sorriso é unico</h1>
                 <ul>
                   <li>
                     <span>

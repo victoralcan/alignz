@@ -79,15 +79,15 @@ div[class*='col-'] {
 }
 
 .general-button {
-  color: #FFF;
+  color: var(--white);
   font-weight: 600;
   font-size: 24px;
   line-height: 26px;
 
   padding: 8px 18px;
 
-  background-color: #F48472;
-  border-color: #F48472;
+  background-color: var(--pink);
+  border-color: var(--pink);
   border-radius: 25px;
   border-width: 2px;
 
@@ -95,21 +95,21 @@ div[class*='col-'] {
 }
 
 .general-button:hover {
-  color: #F48472;
+  color: var(--pink);
   background-color: #FFF;
-  border-color: #F48472;
+  border-color: var(--pink);
 }
 
 .general-button:active {
-    color: #F48472 !important;
-    background-color: #FFF !important;
-    border-color: #F48472 !important;
+    color: var(--pink) !important;
+    background-color: var(--white) !important;
+    border-color: var(--pink) !important;
 }
 
 .general-button:focus {
-    color: #FFF;
-    background-color: #F48472;
-    border-color: #F48472;
+    color: var(--white);
+    background-color: var(--pink);
+    border-color: var(--pink);
 }
 
 .font-size-big {
@@ -121,14 +121,11 @@ div[class*='col-'] {
 }
 
 :root {
-    --primary: #fff;
-    --black: #1b1f23;
-    --gray: #586069;
-    --gray-light: #6a737d;
-    --gray-dark: #24292e;
-    --orange: #f9826c;
-    --other-language: #8257e5;
-    --header-option: #f3f2ef;
-    --header: rgba(252,192,148,0.95);
-    --footer: #FBF8F5;
+    --white: #fff;
+    --white-dirty: #dddcda;
+    --orange: #ffa100;
+    --gray: #424242;
+    --pink: #d35e7b;
+    --black: #000;
+    --pink-light: #F9DAD0;
 }

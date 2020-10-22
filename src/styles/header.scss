@@ -1,16 +1,16 @@
 .header-container {
-  background-color: var(--header);
+  background-color: var(--orange);
 }
 
 .header-option {
   padding-left: 16px;
   width: 100%;
-  color: var(--header-option);
+  color: var(--white);
   font-size: large;
   font-weight: bold;
 
   &:hover {
-    color: #dddcda
+    color: var(--white-dirty);
   }
 }
 
