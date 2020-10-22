@@ -1,16 +1,17 @@
 import React from 'react';
 import { Button, Card, CardBody, CardHeader, Col, Input, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
-import Preco1 from 'content/images/pages/preco/preco1.jpg';
 import Preco2 from 'content/images/pages/preco/preco2.png';
-import '../styles/pages/preco.css';
+import Preco4 from 'content/images/pages/preco/preco4.jpg';
+import Agenda1 from 'content/images/agenda1.png';
 import { Link } from 'react-router-dom';
 import Depoimentos from '../shared/components/depoimentos';
 import Duvidas from '../shared/components/duvidas';
+import '../styles/pages/home.css';
 
 class Home extends React.Component {
   render() {
-    const backgroundColor = '#fee0cc';
+    const backgroundColor = '#C6D6E7';
     return (
       <>
         {/*agendar pre avaliação*/}
@@ -19,12 +20,18 @@ class Home extends React.Component {
         <section className="infoContainer">
           <Row className="h-100">
             <Col md={6} className="h-100">
-              <FittedImage fit="cover" src={Preco1} />
+              <FittedImage fit="cover" src={Preco4} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center" md={6} style={{ backgroundColor }}>
               <Card style={{ backgroundColor, margin: '0px 100px 0px 100px' }}>
                 <CardHeader className="text-center border-0" style={{ backgroundColor }}>
-                  <h1 className="font-weight-bold">Receba o preço do nosso aparelho invisível ;)</h1>
+                  <h1 className="font-weight-bold" style={{ color: '#fff' }}>
+                    Moderno e acessível
+                  </h1>
+                  <br />
+                  <h1 className="font-weight-bold" style={{ color: '#545454' }}>
+                    Receba o preço do nosso aparelho invisível ;)
+                  </h1>
                 </CardHeader>
                 <CardBody style={{ backgroundColor }}>
                   <Input placeholder="Insira seu email" className="mb-3" />
@@ -82,9 +89,34 @@ class Home extends React.Component {
           </Row>
         </section>
         {/*Video*/}
-        <section>Video</section>
+        <section className="infoContainer d-flex justify-content-center align-items-center">Video</section>
         {/*Agende ja*/}
-        <section>Agende ja</section>
+        <section className="infoContainerBig">
+          <Row className="h-100">
+            <Col className="d-flex align-items-center" md={6}>
+              <div id="sorriso-alegre" className="w-100 h-75">
+                <h1 className="font-weight-bold" style={{ color: '#F48472' }}>
+                  Seu sorriso é unico
+                </h1>
+                <ul>
+                  <li>
+                    <span>
+                      faça sua pré-avaliação virtual e conheça <br /> nosso tratamento sem sair de casa
+                    </span>
+                  </li>
+                </ul>
+                <Button tag={Link} to="/agenda" className="general-button">
+                  Agende já
+                </Button>
+              </div>
+            </Col>
+            <Col md={6} className="h-100">
+              <div className="h-100" id="preco3-photo">
+                <FittedImage fit="cover" src={Agenda1} />
+              </div>
+            </Col>
+          </Row>
+        </section>
         {/*Depoimentos*/}
         <Depoimentos />
         {/*Dúvidas*/}
