@@ -119,12 +119,14 @@ class Preco extends React.Component<any, IPrecoState> {
             <Row className="h-50">
               <Slider {...settings} className="w-100 h-75">
                 <div className="h-100 d-flex align-items-center flex-column">
-                  <p>Foi um dos melhores investimentos que fiz, indico pra todos.</p>
-                  <h4>Nicole R.</h4>
+                  <p className="font-size-bigger">Foi um dos melhores investimentos que fiz, indico pra todos.</p>
+                  <h4 className="font-size-big">Nicole R.</h4>
                 </div>
                 <div className="h-100 d-flex align-items-center flex-column">
-                  <p>Adorei minha expericência com o aparelho. Não sinto mais medo de sorrir!</p>
-                  <h4>Laura A.</h4>
+                  <p className="font-size-bigger">
+                    Adorei minha expericência com o aparelho. Não sinto mais medo de sorrir!
+                  </p>
+                  <h4 className="font-size-big">Laura A.</h4>
                 </div>
               </Slider>
             </Row>

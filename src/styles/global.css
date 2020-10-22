@@ -106,6 +106,14 @@ div[class*='col-'] {
     border-color: #F48472;
 }
 
+.font-size-big {
+    font-size: large;
+}
+
+.font-size-bigger {
+    font-size: xx-large;
+}
+
 :root {
     --primary: #fff;
     --black: #1b1f23;
