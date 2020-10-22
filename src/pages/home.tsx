@@ -9,9 +9,28 @@ import { Link } from 'react-router-dom';
 import Depoimentos from '../shared/components/Depoimentos';
 import Duvidas from '../shared/components/Duvidas';
 import '../styles/pages/home.css';
+import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
+import Swipe1 from '../content/images/pages/home/swipe1.gif';
+import Swipe2 from '../content/images/pages/home/swipe2.gif';
+import Swipe3 from '../content/images/pages/home/swipe3.gif';
 
 class Home extends React.Component {
   render() {
+    const slides: ISlide[] = [
+      {
+        photo: Swipe1,
+        description: 'Faça a pré-avaliação virtual com nossas dentistas sem sair de casa',
+      },
+      {
+        photo: Swipe2,
+        description: 'Confirme o diagnostico com os exames presenciais - scan 3D, raio-X e fotos em apenas 30 minutos',
+      },
+      {
+        photo: Swipe3,
+        description:
+          'Durante a jornada, use cada fase de alinhadores por 2 semanas e faça o acompanhamento a cada 2 meses',
+      },
+    ];
     const backgroundColor = '#C6D6E7';
     return (
       <>
@@ -72,7 +91,7 @@ class Home extends React.Component {
           </Row>
         </section>
         {/*Sorrir é facil como começar*/}
-        <section className="infoContainer d-flex justify-content-center align-items-center">Sorrir</section>
+        <SwiperPhoto slides={slides} title="Sorrir é fácil" subtitle="Como começar" />
         {/*O que está incluso*/}
         <section className="infoContainer">
           <Row className="h-100">

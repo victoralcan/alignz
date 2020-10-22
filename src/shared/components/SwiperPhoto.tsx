@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import FittedImage from 'react-fitted-image';
 
 export interface ISlide {
-  photo: TexImageSource;
+  photo: TexImageSource | string;
   description: string;
 }
 
@@ -17,7 +17,7 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
   render() {
     const { slides, title, subtitle } = this.props;
     return (
-      <section id="tratamento-section" className="infoContainer">
+      <section id="tratamento-section" className="infoContainerFlex">
         <div className="tratamento-content">
           <div className="tratamento-title">
             <h2>{title}</h2>
