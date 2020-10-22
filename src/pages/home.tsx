@@ -4,6 +4,7 @@ import FittedImage from 'react-fitted-image';
 import Preco2 from 'content/images/pages/preco/preco2.png';
 import Preco4 from 'content/images/pages/preco/preco4.jpg';
 import Agenda1 from 'content/images/agenda1.png';
+import Home2 from 'content/images/home2.png';
 import { Link } from 'react-router-dom';
 import Depoimentos from '../shared/components/depoimentos';
 import Duvidas from '../shared/components/duvidas';
@@ -15,7 +16,30 @@ class Home extends React.Component {
     return (
       <>
         {/*agendar pre avaliação*/}
-        <section>AGENDAR</section>
+        <section className="infoContainer">
+          <div className="position-absolute">
+            <FittedImage src={Home2} fit="cover" />
+          </div>
+          <div className="z-index-2 h-100">
+            <div id="agendar" className="h-100 col-6">
+              <div className="m-auto">
+                <h1 className="font-weight-bold" style={{ color: '#F48472' }}>
+                  Seu sorriso é unico
+                </h1>
+                <ul>
+                  <li>
+                    <span>
+                      faça sua pré-avaliação virtual e conheça <br /> nosso tratamento sem sair de casa
+                    </span>
+                  </li>
+                </ul>
+                <Button tag={Link} to="/agenda" className="general-button">
+                  Agende já
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
         {/*Solicitar preço*/}
         <section className="infoContainer">
           <Row className="h-100">
