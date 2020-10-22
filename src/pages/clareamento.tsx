@@ -1,7 +1,6 @@
 import React from 'react';
-import { Row, Button, Col } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import ClareamentoBanner from 'content/images/pages/clareamento/clareamento.jpg';
 import Tratamento1 from 'content/images/pages/clareamento/clareamento1.jpg';
@@ -12,8 +11,23 @@ import ComboClareamento from 'content/images/pages/clareamento/combo-clareamento
 import VideoClareamento from 'content/images/pages/clareamento/video-clareamento.jpg';
 
 import 'styles/pages/clareamento.scss';
+import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 
 function Clareamento() {
+  const slides: ISlide[] = [
+    {
+      photo: Tratamento1,
+      description: 'você recebe o kit de clareamento na primeira consulta do aparelho invisível',
+    },
+    {
+      photo: Tratamento2,
+      description: 'comece o clareamento quando quiser, reservando 21 dias seguidos para uso do gel',
+    },
+    {
+      photo: Tratamento3,
+      description: 'aplique o gel clareador na placa de alinhamento e use no período noturno ;)',
+    },
+  ];
   return (
     <>
       <section id="banner-section" className="infoContainer">
@@ -35,36 +49,11 @@ function Clareamento() {
           </Col>
         </Row>
       </section>
-      <section id="tratamento-section" className="infoContainer">
-        <div className="tratamento-content">
-          <div className="tratamento-title">
-            <h2>clarear é fácil</h2>
-            <h3>veja como funciona nosso clareamento dental com gel</h3>
-          </div>
-          <div className="cards-container">
-            <Swiper spaceBetween={120} slidesPerView={3}>
-              <SwiperSlide>
-                <div className="tratamento-card">
-                  <FittedImage fit="contain" src={Tratamento1} />
-                  <h4>você recebe o kit de clareamento na primeira consulta do aparelho invisível</h4>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="tratamento-card">
-                  <FittedImage fit="contain" src={Tratamento2} />
-                  <h4>comece o clareamento quando quiser, reservando 21 dias seguidos para uso do gel</h4>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="tratamento-card">
-                  <FittedImage fit="contain" src={Tratamento3} />
-                  <h4>aplique o gel clareador na placa de alinhamento e use no período noturno ;)</h4>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
-      </section>
+      <SwiperPhoto
+        slides={slides}
+        title="clarear é fácil"
+        subtitle="veja como funciona nosso clareamento dental com gel"
+      />
       <section id="video-section" className="infoContainer">
         <FittedImage fit="cover" src={VideoClareamento} />
         <div>veja como começar nosso clareamento</div>
