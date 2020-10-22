@@ -6,8 +6,8 @@ import Preco4 from 'content/images/pages/preco/preco4.jpg';
 import Agenda1 from 'content/images/agenda1.png';
 import Home2 from 'content/images/home2.png';
 import { Link } from 'react-router-dom';
-import Depoimentos from '../shared/components/depoimentos';
-import Duvidas from '../shared/components/duvidas';
+import Depoimentos from '../shared/components/Depoimentos';
+import Duvidas from '../shared/components/Duvidas';
 import '../styles/pages/home.css';
 
 class Home extends React.Component {

@@ -6,8 +6,8 @@ import Preco2 from 'content/images/pages/preco/preco2.png';
 import Preco3 from 'content/images/pages/preco/preco3.png';
 import '../styles/pages/preco.css';
 import { Link } from 'react-router-dom';
-import Depoimentos from '../shared/components/depoimentos';
-import Duvidas from '../shared/components/duvidas';
+import Depoimentos from '../shared/components/Depoimentos';
+import Duvidas from '../shared/components/Duvidas';
 
 class Preco extends React.Component {
   render() {

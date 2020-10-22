@@ -2,7 +2,7 @@ import './error.scss';
 
 import React from 'react';
 import { Alert, Button } from 'reactstrap';
-import Prism from 'shared/components/prism';
+import Prism from 'shared/components/Prism';
 
 interface IErrorBoundaryProps {
   readonly children: JSX.Element | JSX.Element[];
