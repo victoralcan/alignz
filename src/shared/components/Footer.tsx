@@ -19,14 +19,8 @@ function Footer() {
             </CardHeader>
             <CardBody>
               <CardText>
-                <Link to="/aparelho-invisivel" style={{ textDecoration }}>
-                  Aparelho Invisivel
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/clareamento" style={{ textDecoration }}>
-                  Clareamento
+                <Link to="/como-funciona" style={{ textDecoration }}>
+                  Como funciona
                 </Link>
               </CardText>
               <div className="clear" />
@@ -63,60 +57,6 @@ function Footer() {
               <CardText>
                 <Link to="/onde-estamos" style={{ textDecoration }}>
                   Onde estamos
-                </Link>
-              </CardText>
-            </CardBody>
-          </Card>
-          <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              Casos
-            </CardHeader>
-            <CardBody>
-              <CardText>
-                <Link to="/apinhamento" style={{ textDecoration }}>
-                  Apinhamento
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/diastema" style={{ textDecoration }}>
-                  Diastema
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/sobremordida" style={{ textDecoration }}>
-                  Sobremordida
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/mordida-cruzada" style={{ textDecoration }}>
-                  Mordida Cruzada
-                </Link>
-              </CardText>
-            </CardBody>
-          </Card>
-          <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              <br />
-            </CardHeader>
-            <CardBody>
-              <CardText>
-                <Link to="/mordida-aberta" style={{ textDecoration }}>
-                  Mordida Aberta
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/progmatismo" style={{ textDecoration }}>
-                  Progmatismo
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/overjet" style={{ textDecoration }}>
-                  Overjet
                 </Link>
               </CardText>
             </CardBody>

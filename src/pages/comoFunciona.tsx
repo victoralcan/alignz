@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AparelhoInvisivel() {
+function ComoFunciona() {
   return (
     <div>
       <div>Aparelho Invisivel</div>
@@ -8,4 +8,4 @@ function AparelhoInvisivel() {
   );
 }
 
-export default AparelhoInvisivel;
+export default ComoFunciona;
