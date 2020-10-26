@@ -1,13 +1,4 @@
-#sorriso-alegre {
-    background-color: var(--pink-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-}
-
-#agendar {
+.center-elements {
     display: flex;
     flex-direction: column;
     align-items: center;
