@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './App';
 import initStore from './config/store';
-import { Provider } from 'react-redux';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ErrorBoundary from './shared/error/error-boundary';
+import { loadIcons } from './config/icon-loader';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'styles/global.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'react-modal-video/scss/modal-video.scss';
 import 'swiper/swiper.scss';
-import { loadIcons } from './config/icon-loader';
 
 loadIcons();
 
