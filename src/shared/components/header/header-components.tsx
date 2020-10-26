@@ -7,7 +7,7 @@ import Logo from 'content/images/logo-alignz-mono-black-removebg.png';
 
 export const BrandIcon = (props) => (
   <div {...props} className="brand-icon">
-    <img src={Logo} alt="AlignZ" />
+    <img src={Logo} alt="AlignerZ" />
   </div>
 );
 
