@@ -15,7 +15,7 @@ function Footer() {
         <CardDeck className="m-1">
           <Card className={cardClassName}>
             <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              Alignz
+              AlignerZ
             </CardHeader>
             <CardBody>
               <CardText>
