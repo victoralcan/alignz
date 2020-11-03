@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+    font-family: 'Spartan';
+    src: local('Spartan'), url(../fonts/LeagueSpartan.otf) format('opentype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +16,11 @@ html {
     background: var(--primary);
 }
 
+
 *, button, input {
     border: 0;
     background: none;
-    font-family: 'Sansita Swashed', cursive;
+    font-family: "Spartan", cursive;
     color: var(--black);
     transition: color .2s ease-out;
 }
@@ -57,9 +63,9 @@ div[class*='col-'] {
 }
 
 .infoContainerBig {
-     min-height: 100vh;
-     margin-bottom: 6vh;
- }
+    min-height: 100vh;
+    margin-bottom: 6vh;
+}
 
 
 .card {
@@ -79,37 +85,37 @@ div[class*='col-'] {
 }
 
 .general-button {
-  color: var(--white);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 26px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
 
-  padding: 8px 18px;
+    padding: 8px 18px;
 
-  background-color: var(--pink);
-  border-color: var(--pink);
-  border-radius: 25px;
-  border-width: 2px;
+    background-color: var(--orange);
+    border-color: var(--orange);
+    border-radius: 25px;
+    border-width: 2px;
 
-  transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .general-button:hover {
-  color: var(--pink);
-  background-color: #FFF;
-  border-color: var(--pink);
+    color: var(--orange-opac);
+    background-color: #FFF;
+    border-color: var(--orange-opac);
 }
 
 .general-button:active {
-    color: var(--pink) !important;
-    background-color: var(--white) !important;
-    border-color: var(--pink) !important;
+    color: var(--orange-opac) !important;
+    background-color: var(--orange-opac) !important;
+    border-color: var(--orange-opac) !important;
 }
 
 .general-button:focus {
-    color: var(--white);
-    background-color: var(--pink);
-    border-color: var(--pink);
+    color: var(--orange-opac);
+    background-color: var(--orange-opac);
+    border-color: var(--orange-opac);
 }
 
 .font-size-big {
@@ -136,6 +142,7 @@ div[class*='col-'] {
     --white: #fff;
     --white-dirty: #dddcda;
     --orange: #ffa100;
+    --orange-opac: rgba(255, 161, 0, 0.6);
     --gray: #424242;
     --pink: #d35e7b;
     --black: #000;
