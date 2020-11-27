@@ -119,6 +119,70 @@ class Home extends React.Component {
           title="Porque o alinhador AlignerZ?"
           subtitle="Aqui estão as três grandes razões. Mas a real pergunta é: Por que não?"
         />
+        {/*Mais motivos para usar AlignerZ*/}
+        <section className="infoContainerFlex d-flex flex-column w-75 m-auto">
+          <div className="m-auto w-50">
+            <h1 className="text-center big">Mais razões para usar o AlignerZ:</h1>
+          </div>
+          <br />
+          <Row>
+            <Col md={6} className="h-100 border-image">
+              <FittedImage fit="cover" src={Preco4} />
+            </Col>
+            <div className="col-6 center-elements">
+              <div className="m-auto w-75">
+                <h1 className="font-weight-bold">Fácil de Limpar</h1>
+                <ul>
+                  <li>
+                    <span>
+                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
+                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    </span>
+                    <div className="clear" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Row>
+          <Row>
+            <div className="col-6 center-elements">
+              <div className="m-auto w-75">
+                <h1 className="font-weight-bold">Fácil de colocar e retirar</h1>
+                <ul>
+                  <li>
+                    <span>
+                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
+                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    </span>
+                    <div className="clear" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <Col md={6} className="h-100 border-image">
+              <FittedImage fit="cover" src={Preco4} />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6} className="h-100 border-image">
+              <FittedImage fit="cover" src={Preco4} />
+            </Col>
+            <div className="col-6 center-elements">
+              <div className="m-auto w-75">
+                <h1 className="font-weight-bold">Coma o que quiser</h1>
+                <ul>
+                  <li>
+                    <span>
+                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
+                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    </span>
+                    <div className="clear" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Row>
+        </section>
         {/*Depoimentos*/}
         <Depoimentos />
         {/*Produto*/}

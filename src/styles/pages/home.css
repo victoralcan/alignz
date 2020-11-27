@@ -14,3 +14,9 @@
     border-radius: 50px;
     overflow: hidden;
 }
+
+@media (min-width: 768px) {
+    .big {
+        font-size: 60px !important;
+    }
+}
