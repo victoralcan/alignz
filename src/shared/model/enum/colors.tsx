@@ -1,12 +1,12 @@
 export enum ColorPallet {
   white = '#fff',
-  whiteDirty = '#dddcda',
-  whiteDirtyOpac = 'rgba(221,220,218, 0.4)',
-  orange = '#ffa100',
-  orangeOpac = 'rgba(255,161,0,0.6)',
+  pastel = '#fdf0ee',
+  pastelOpac = 'rgba(253, 240, 238, 0.4)',
+  orange = '#e76034',
+  orangeOpac = 'rgba(231, 96, 52, 0.6)',
   gray = '#424242',
   grayOpac = 'rgba(66, 66, 66, 0.6)',
-  pink = '#d35e7b',
+  pink = '#c85c74',
   black = '#000',
   pinkLight = '#F9DAD0',
 }

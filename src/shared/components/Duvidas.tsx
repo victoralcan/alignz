@@ -28,10 +28,7 @@ class Duvidas extends React.Component<any, IDuvidasState> {
   render() {
     const { collapseControl } = this.state;
     return (
-      <section
-        className="infoContainerFlex d-flex flex-column p-4"
-        style={{ backgroundColor: ColorPallet.whiteDirtyOpac }}
-      >
+      <section className="infoContainerFlex d-flex flex-column p-4" style={{ backgroundColor: ColorPallet.pastelOpac }}>
         <h1 className="text-dark pb-5 mr-auto ml-auto">Dúvidas Frequentes</h1>
         <div className="mr-auto ml-auto w-50">
           <h4 onClick={() => this.toggleDuvida(0)} className="togglerDuvida pb-3">

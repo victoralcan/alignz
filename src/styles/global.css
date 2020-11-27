@@ -140,13 +140,13 @@ div[class*='col-'] {
 
 :root {
     --white: #fff;
-    --white-dirty: #dddcda;
-    --white-dirty-opac: rgba(221, 220, 218, 0.4);
-    --orange: #ffa100;
-    --orange-opac: rgba(255, 161, 0, 0.6);
+    --pastel: #fdf0ee;
+    --pastel-opac: rgba(253, 240, 238, 0.4);
+    --orange: #e76034;
+    --orange-opac: rgba(231, 96, 52, 0.6);
     --gray: #424242;
     --gray-opac: rgba(66, 66, 66, 0.6);
-    --pink: #d35e7b;
+    --pink: #c85c74;
     --black: #000;
     --pink-light: #F9DAD0;
 }
