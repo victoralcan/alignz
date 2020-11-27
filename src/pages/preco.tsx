@@ -28,7 +28,7 @@ class Preco extends React.Component {
                 <CardBody style={{ backgroundColor }}>
                   <Input
                     placeholder="Insira seu email"
-                    style={{ backgroundColor: ColorPallet.whiteDirty }}
+                    style={{ backgroundColor: ColorPallet.pastel }}
                     className="mb-3"
                   />
                   <div className="d-flex justify-content-center">
@@ -126,7 +126,7 @@ class Preco extends React.Component {
               <li className="mt-5 mb-4">
                 <Input
                   placeholder="Insira seu email"
-                  style={{ backgroundColor: ColorPallet.whiteDirty }}
+                  style={{ backgroundColor: ColorPallet.pastel }}
                   className="mb-3"
                 />
               </li>
