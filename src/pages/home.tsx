@@ -8,11 +8,11 @@ import Slide2 from '../content/images/pages/home/slide2.svg';
 import Slide3 from '../content/images/pages/home/slide3.svg';
 import Aparelho from '../content/images/pages/home/aparelho.png';
 import Alinhador from '../content/images/pages/home/alinhador.png';
-import Depoimentos from '../shared/components/Depoimentos';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 
 import '../styles/pages/home.css';
 import { Link } from 'react-router-dom';
+import Duvidas from '../shared/components/Duvidas';
 
 class Home extends React.Component {
   render() {
@@ -67,7 +67,7 @@ class Home extends React.Component {
           </div>
         </section>
         {/*Comparação alinhador aparelho*/}
-        <section className="infoContainerFlex d-flex flex-column w-75 m-auto">
+        <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
           <div className="m-auto">
             <h1 className="font-weight-bold text-center">Qual alinhador é o certo para você?</h1>
           </div>
@@ -120,7 +120,7 @@ class Home extends React.Component {
           subtitle="Aqui estão as três grandes razões. Mas a real pergunta é: Por que não?"
         />
         {/*Mais motivos para usar AlignerZ*/}
-        <section className="infoContainerFlex d-flex flex-column w-75 m-auto">
+        <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
           <div className="m-auto w-50">
             <h1 className="text-center big">Mais razões para usar o AlignerZ:</h1>
           </div>
@@ -183,8 +183,8 @@ class Home extends React.Component {
             </div>
           </Row>
         </section>
-        {/*Depoimentos*/}
-        <Depoimentos />
+        {/*Duvidas*/}
+        <Duvidas />
         {/*Produto*/}
         <section className="infoContainerFlex">
           <Row>
