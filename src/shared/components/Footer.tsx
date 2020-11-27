@@ -3,6 +3,11 @@ import '../../styles/footer.scss';
 import { Card, CardBody, CardDeck, CardHeader, CardText, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { ColorPallet } from '../model/enum/colors';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
 
 function Footer() {
   const cardClassName = 'mb-3 mt-3 ml-1 mr-1';
@@ -66,11 +71,17 @@ function Footer() {
               Contatos
             </CardHeader>
             <CardBody>
-              <span>Telefone</span>
+              <span>
+                <FontAwesomeIcon icon="phone" />
+                &nbsp;&nbsp;Telefone
+              </span>
               <div className="clear" />
               <small>horarios</small>
               <div className="clear" />
-              <span>Whatsapp</span>
+              <span>
+                <FontAwesomeIcon icon={faWhatsapp} />
+                &nbsp;&nbsp;Whatsapp
+              </span>
               <div className="clear" />
               <small>horarios</small>
               <div className="clear" />
@@ -81,11 +92,20 @@ function Footer() {
               Social
             </CardHeader>
             <CardBody>
-              <span>Facebook</span>
+              <span>
+                <FontAwesomeIcon icon={faFacebook} />
+                &nbsp;&nbsp;Facebook
+              </span>
               <div className="clear" />
-              <span>Instagram</span>
+              <span>
+                <FontAwesomeIcon icon={faInstagram} />
+                &nbsp;&nbsp;Instagram
+              </span>
               <div className="clear" />
-              <span>Youtube</span>
+              <span>
+                <FontAwesomeIcon icon={faYoutube} />
+                &nbsp;&nbsp;Youtube
+              </span>
             </CardBody>
           </Card>
         </CardDeck>
