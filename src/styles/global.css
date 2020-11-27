@@ -16,7 +16,6 @@ html {
     background: var(--primary);
 }
 
-
 *, button, input {
     border: 0;
     background: none;
@@ -45,6 +44,19 @@ ul {
 
 div[class*='col-'] {
     padding: 0;
+}
+
+h1 {
+    color: var(--orange);
+}
+
+.vl {
+    border-left: 1px solid black;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
 }
 
 .infoContainer {

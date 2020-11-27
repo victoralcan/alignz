@@ -6,7 +6,8 @@ import Home2 from 'content/images/pages/home/home2.png';
 import Swipe1 from '../content/images/pages/home/swipe1.gif';
 import Swipe2 from '../content/images/pages/home/swipe2.gif';
 import Swipe3 from '../content/images/pages/home/swipe3.gif';
-
+import Aparelho from '../content/images/pages/home/aparelho.png';
+import Alinhador from '../content/images/pages/home/alinhador.png';
 import Depoimentos from '../shared/components/Depoimentos';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 
@@ -40,13 +41,14 @@ class Home extends React.Component {
           <div className="z-index-2 h-100">
             <div className="h-100 col-6 center-elements">
               <div className="m-auto w-50">
-                <h1 className="font-weight-bold">Escolha seu sorriso.</h1>
+                <h1 className="font-weight-bold">Conheça o futuro.</h1>
                 <ul>
                   <li>
                     <span>
-                      Seu sorriso é uma ferramenta poderosa quando se trata de mudar sua mente e corpo. Este pequeno
-                      espaço de orelha a orelha oferece muito controle. Continue lendo para saber como você pode
-                      controlar o que está sentindo escolhendo sorrir.
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                      the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                      type and scrambled it to make a type specimen book. It has survived not only five centuries, but
+                      also the leap into electronic typesetting, remaining essentially uncha
                     </span>
                     <div className="clear" />
                   </li>
@@ -55,64 +57,49 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        {/*Beneficios de sorrir*/}
-        <section className="infoContainerFlex">
-          <Row>
-            <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Preco4} />
+        <section className="infoContainerFlex d-flex flex-column w-75 m-auto">
+          <div className="m-auto">
+            <h1 className="font-weight-bold text-center">Qual alinhador é o certo para você?</h1>
+          </div>
+          <h6>
+            Maybe you want your new smile in time for a special event 4-6 months from now. Or maybe timing isn’t as
+            important as wearing your aligners only at night. Either way, we’ve got you covered.
+          </h6>
+          <br />
+          <Row className="m-auto justify-content-center">
+            <Col sm={6} md={6} lg={6}>
+              <Row className="h-100">
+                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
+                  <ul>
+                    <li>
+                      <FittedImage src={Alinhador} style={{ width: '78px', height: '64px' }} />
+                    </li>
+                    <li>Alinhadores Alignerz</li>
+                    <li>Horas:</li>
+                    <li>22h por dia</li>
+                    <li>Preço</li>
+                    <li>1000$</li>
+                  </ul>
+                </Col>
+                <div className="vl" />
+                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
+                  <ul>
+                    <li>
+                      <FittedImage src={Aparelho} style={{ width: '72px', height: '64px' }} />
+                    </li>
+                    <li>Aparelhos Convencionais</li>
+                    <li>Horas:</li>
+                    <li>24/7</li>
+                    <li>365 dias por ano</li>
+                    <li>Preço</li>
+                    <li>6000$</li>
+                  </ul>
+                </Col>
+              </Row>
             </Col>
-            <div className="col-6 center-elements">
-              <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Mais sorrisos = mais felicidade</h1>
-                <ul>
-                  <li>
-                    <span>
-                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
-                    </span>
-                    <div className="clear" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </Row>
-          <Row>
-            <div className="col-6 center-elements">
-              <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Mais sorrisos = mais felicidade</h1>
-                <ul>
-                  <li>
-                    <span>
-                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
-                    </span>
-                    <div className="clear" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Preco4} />
+            <Col sm={6} md={6} lg={6}>
+              <FittedImage src={Home2} fit="cover" />
             </Col>
-          </Row>
-          <Row>
-            <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Preco4} />
-            </Col>
-            <div className="col-6 center-elements">
-              <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Mais sorrisos = mais felicidade</h1>
-                <ul>
-                  <li>
-                    <span>
-                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
-                    </span>
-                    <div className="clear" />
-                  </li>
-                </ul>
-              </div>
-            </div>
           </Row>
         </section>
         {/*Sorrir é facil como começar*/}
