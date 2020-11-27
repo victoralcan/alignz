@@ -48,6 +48,7 @@ div[class*='col-'] {
 
 h1 {
     color: var(--orange);
+    font-weight: bold;
 }
 
 .vl {
