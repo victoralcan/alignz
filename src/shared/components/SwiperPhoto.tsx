@@ -20,7 +20,7 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
       <section id="tratamento-section" className="infoContainerFlex">
         <div className="tratamento-content">
           <div className="tratamento-title">
-            <h2>{title}</h2>
+            <h1>{title}</h1>
             <h3>{subtitle}</h3>
           </div>
           <div className="cards-container">
