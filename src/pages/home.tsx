@@ -3,9 +3,9 @@ import { Button, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
 import Preco4 from 'content/images/pages/preco/preco4.jpg';
 import Home2 from 'content/images/pages/home/home2.png';
-import Swipe1 from '../content/images/pages/home/swipe1.gif';
-import Swipe2 from '../content/images/pages/home/swipe2.gif';
-import Swipe3 from '../content/images/pages/home/swipe3.gif';
+import Slide1 from '../content/images/pages/home/slide1.svg';
+import Slide2 from '../content/images/pages/home/slide2.svg';
+import Slide3 from '../content/images/pages/home/slide3.svg';
 import Aparelho from '../content/images/pages/home/aparelho.png';
 import Alinhador from '../content/images/pages/home/alinhador.png';
 import Depoimentos from '../shared/components/Depoimentos';
@@ -16,19 +16,28 @@ import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
   render() {
-    const slidesComoFunciona: ISlide[] = [
+    const slidesVantagens: ISlide[] = [
       {
-        photo: Swipe1,
-        description: 'Faça a pré-avaliação virtual com nossas dentistas sem sair de casa',
+        photo: Slide1,
+        description: 'Conveninence',
+        description2:
+          'Our custom clear aligners are easy to wear, and they straighten your teeth much faster than braces.',
+        photoHeight: '200px',
+        photoWidth: '200px',
       },
       {
-        photo: Swipe2,
-        description: 'Confirme o diagnostico com os exames presenciais - scan 3D, raio-X e fotos em apenas 30 minutos',
+        photo: Slide2,
+        description: 'Affordabilioty',
+        description2: 'Our custom clear aligners are up to 60% less than braces.',
+        photoHeight: '200px',
+        photoWidth: '200px',
       },
       {
-        photo: Swipe3,
-        description:
-          'Durante a jornada, use cada fase de alinhadores por 2 semanas e faça o acompanhamento a cada 2 meses',
+        photo: Slide3,
+        description: 'Confidence',
+        description2: 'Go ahead and take that selfie – our custom clear aligners are almost invisible.',
+        photoHeight: '200px',
+        photoWidth: '200px',
       },
     ];
     return (
@@ -57,6 +66,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
+        {/*Comparação alinhador aparelho*/}
         <section className="infoContainerFlex d-flex flex-column w-75 m-auto">
           <div className="m-auto">
             <h1 className="font-weight-bold text-center">Qual alinhador é o certo para você?</h1>
@@ -104,7 +114,11 @@ class Home extends React.Component {
           </Row>
         </section>
         {/*Sorrir é facil como começar*/}
-        <SwiperPhoto slides={slidesComoFunciona} title="Sorrir é fácil" subtitle="Como começar" />
+        <SwiperPhoto
+          slides={slidesVantagens}
+          title="Porque o alinhador AlignerZ?"
+          subtitle="Aqui estão as três grandes razões. Mas a real pergunta é: Por que não?"
+        />
         {/*Depoimentos*/}
         <Depoimentos />
         {/*Produto*/}
