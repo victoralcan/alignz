@@ -61,6 +61,7 @@ class Home extends React.Component {
           <div className="m-auto">
             <h1 className="font-weight-bold text-center">Qual alinhador é o certo para você?</h1>
           </div>
+          <br />
           <h6>
             Maybe you want your new smile in time for a special event 4-6 months from now. Or maybe timing isn’t as
             important as wearing your aligners only at night. Either way, we’ve got you covered.
