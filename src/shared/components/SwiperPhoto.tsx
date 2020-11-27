@@ -5,6 +5,9 @@ import FittedImage from 'react-fitted-image';
 export interface ISlide {
   photo: TexImageSource | string;
   description: string;
+  description2?: string;
+  photoHeight?: string;
+  photoWidth?: string;
 }
 
 interface ISwiperPhotoProps {
@@ -29,8 +32,20 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
                 return (
                   <SwiperSlide key={i}>
                     <div className="tratamento-card">
-                      <FittedImage fit="contain" src={slide.photo} />
+                      <FittedImage
+                        fit="contain"
+                        src={slide.photo}
+                        style={
+                          slide.photoHeight
+                            ? {
+                                height: slide.photoHeight,
+                                width: slide.photoWidth,
+                              }
+                            : {}
+                        }
+                      />
                       <h4>{slide.description}</h4>
+                      {slide.description2 ? <h6>{slide.description2}</h6> : ''}
                     </div>
                   </SwiperSlide>
                 );

@@ -61,22 +61,22 @@ h1 {
 
 .infoContainer {
     height: 85vh;
-    margin-bottom: 6vh;
+    margin-bottom: 10vh;
 }
 
 .infoContainerSmall {
     height: 50vh;
-    margin-bottom: 6vh;
+    margin-bottom: 10vh;
 }
 
 .infoContainerFlex {
     min-height: 30vh;
-    margin-bottom: 6vh;
+    margin-bottom: 10vh;
 }
 
 .infoContainerBig {
     min-height: 100vh;
-    margin-bottom: 6vh;
+    margin-bottom: 10vh;
 }
 
 

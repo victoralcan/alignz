@@ -43,12 +43,7 @@
     .tratamento-title {
       width: 100%;
       margin-top: 80px;
-      margin-bottom: 80px;
-
-      h2 {
-        color: #77c1cd;
-        font-weight: 800;
-      }
+      margin-bottom: 40px;
     }
 
     .cards-container {
@@ -56,20 +51,15 @@
     }
 
     .tratamento-card {
-      background-color: var(--pastel);
-
       border-radius: 20px;
       overflow: hidden;
 
       h4 {
+        color: var(--orange);
         padding: 20px;
         font-size: 25px;
         font-weight: normal;
-        min-height: 185px;
       }
     }
   }
-
-
-
 }
