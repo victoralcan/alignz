@@ -124,7 +124,11 @@ class Preco extends React.Component {
                 <h2>Receba agora o preço do aparelho invisível</h2>
               </li>
               <li className="mt-5 mb-4">
-                <Input placeholder="Insira seu email" className="mb-3" />
+                <Input
+                  placeholder="Insira seu email"
+                  style={{ backgroundColor: ColorPallet.whiteDirty }}
+                  className="mb-3"
+                />
               </li>
               <li className="d-flex mt-4">
                 <Button className="general-button m-auto">Solicitar o Preço</Button>
