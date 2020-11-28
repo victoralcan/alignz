@@ -5,7 +5,7 @@ import { Button } from 'reactstrap';
 class PageNotFound extends React.Component {
   render() {
     return (
-      <section className="infoContainerBig d-flex justify-content-center align-items-center ">
+      <section className="infoContainerBig d-flex justify-content-center align-items-center">
         <div className="row justify-content-center">
           <div className="text-center">
             <img src="/content/assets/images/maintenance/404.png" alt="" className="img-fluid" />
