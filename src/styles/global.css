@@ -60,6 +60,14 @@ h1 {
     top: 0;
 }
 
+.w-60 {
+    width: 60% !important;
+}
+
+.w-65 {
+    width: 65% !important;
+}
+
 .infoContainer {
     height: 85vh;
     margin-bottom: 10vh;
