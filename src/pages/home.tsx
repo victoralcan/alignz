@@ -42,7 +42,7 @@ class Home extends React.Component {
     ];
     return (
       <>
-        {/*Choose smile*/}
+        {/*Conheça o Futuro*/}
         <section className="infoContainer">
           <div className="position-absolute">
             <FittedImage src={Home2} fit="cover" />
@@ -62,6 +62,11 @@ class Home extends React.Component {
                     <div className="clear" />
                   </li>
                 </ul>
+                <div className="d-flex">
+                  <Button tag={Link} to="/chatbot" className="general-button m-auto">
+                    Sou um candidato?
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
