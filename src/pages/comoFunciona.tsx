@@ -5,6 +5,7 @@ import Preco4 from '../content/images/pages/preco/preco4.jpg';
 import Passo1 from '../content/images/pages/como-funciona/passo1.png';
 import Duvidas from '../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
+import ReadySetSmile from '../shared/components/readySetSmile';
 
 function ComoFunciona() {
   return (
@@ -160,6 +161,8 @@ function ComoFunciona() {
       </section>
       {/*Duvidas*/}
       <Duvidas />
+      {/*Ready Set Smile*/}
+      <ReadySetSmile />
     </>
   );
 }
