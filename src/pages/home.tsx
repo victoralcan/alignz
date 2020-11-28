@@ -13,6 +13,7 @@ import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 import '../styles/pages/home.css';
 import { Link } from 'react-router-dom';
 import Duvidas from '../shared/components/Duvidas';
+import ReadySetSmile from '../shared/components/readySetSmile';
 
 class Home extends React.Component {
   render() {
@@ -190,34 +191,36 @@ class Home extends React.Component {
         </section>
         {/*Duvidas*/}
         <Duvidas />
+        {/*Ready Set Smile*/}
+        <ReadySetSmile />
         {/*Produto*/}
-        <section className="infoContainerFlex">
-          <Row>
-            <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Preco4} />
-            </Col>
-            <div className="col-6 center-elements">
-              <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Nosso Produto</h1>
-                <ul>
-                  <li>
-                    <span>
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                      the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make a type specimen book. It has survived not only five centur
-                    </span>
-                    <div className="clear" />
-                  </li>
-                </ul>
-                <div className="d-flex">
-                  <Button tag={Link} to="/como-funciona" className="general-button m-auto">
-                    Saiba mais
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </Row>
-        </section>
+        {/*<section className="infoContainerFlex">*/}
+        {/*  <Row>*/}
+        {/*    <Col md={6} className="h-100 border-image">*/}
+        {/*      <FittedImage fit="cover" src={Preco4} />*/}
+        {/*    </Col>*/}
+        {/*    <div className="col-6 center-elements">*/}
+        {/*      <div className="m-auto w-75">*/}
+        {/*        <h1 className="font-weight-bold">Nosso Produto</h1>*/}
+        {/*        <ul>*/}
+        {/*          <li>*/}
+        {/*            <span>*/}
+        {/*              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been*/}
+        {/*              the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of*/}
+        {/*              type and scrambled it to make a type specimen book. It has survived not only five centur*/}
+        {/*            </span>*/}
+        {/*            <div className="clear" />*/}
+        {/*          </li>*/}
+        {/*        </ul>*/}
+        {/*        <div className="d-flex">*/}
+        {/*          <Button tag={Link} to="/como-funciona" className="general-button m-auto">*/}
+        {/*            Saiba mais*/}
+        {/*          </Button>*/}
+        {/*        </div>*/}
+        {/*      </div>*/}
+        {/*    </div>*/}
+        {/*  </Row>*/}
+        {/*</section>*/}
       </>
     );
   }
