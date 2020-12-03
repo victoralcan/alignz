@@ -20,23 +20,22 @@ class Home extends React.Component {
     const slidesVantagens: ISlide[] = [
       {
         photo: Slide1,
-        description: 'Conveninence',
-        description2:
-          'Our custom clear aligners are easy to wear, and they straighten your teeth much faster than braces.',
+        description: 'Conveniência',
+        description2: 'Tratamento quase todo feito no conforto da sua casa.',
         photoHeight: '200px',
         photoWidth: '200px',
       },
       {
         photo: Slide2,
-        description: 'Affordabilioty',
-        description2: 'Our custom clear aligners are up to 60% less than braces.',
+        description: 'Acessibilidade',
+        description2: 'Muito mais acessível do que os aparelhos convencionais ou os alinhadores do mercado atual.',
         photoHeight: '200px',
         photoWidth: '200px',
       },
       {
         photo: Slide3,
-        description: 'Confidence',
-        description2: 'Go ahead and take that selfie – our custom clear aligners are almost invisible.',
+        description: 'Confiança',
+        description2: 'Casos feitos e planejados por dentistas reais, personalizados pra você.',
         photoHeight: '200px',
         photoWidth: '200px',
       },
@@ -51,14 +50,12 @@ class Home extends React.Component {
           <div className="z-index-2 h-100">
             <div className="h-100 col-6 center-elements">
               <div className="m-auto w-50">
-                <h1 className="font-weight-bold">Conheça o futuro.</h1>
+                <h1 className="font-weight-bold">Conheça o futuro do alinhamento dental</h1>
                 <ul>
                   <li>
                     <span>
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                      the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                      type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-                      also the leap into electronic typesetting, remaining essentially uncha
+                      Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes e
+                      até 3x mais rápido que os tratamentos convencionais essas plaquinhas mágicas
                     </span>
                     <div className="clear" />
                   </li>
@@ -91,11 +88,11 @@ class Home extends React.Component {
                     <li>
                       <FittedImage src={Alinhador} style={{ width: '78px', height: '64px' }} />
                     </li>
-                    <li>Alinhadores Alignerz</li>
-                    <li>Horas:</li>
+                    <li>Alinhadores transparentes</li>
                     <li>22h por dia</li>
-                    <li>Preço</li>
-                    <li>1000$</li>
+                    <li>Transparente, quase imperceptível</li>
+                    <li>Confortável, não machuca</li>
+                    <li>3x mais rápido</li>
                   </ul>
                 </Col>
                 <div className="vl" />
@@ -104,12 +101,12 @@ class Home extends React.Component {
                     <li>
                       <FittedImage src={Aparelho} style={{ width: '72px', height: '64px' }} />
                     </li>
-                    <li>Aparelhos Convencionais</li>
-                    <li>Horas:</li>
-                    <li>24/7</li>
-                    <li>365 dias por ano</li>
-                    <li>Preço</li>
-                    <li>6000$</li>
+                    <li>Aparelhos convencionais</li>
+                    <li>24/7 dias</li>
+                    <li>365 dias/ano</li>
+                    <li>Perceptível até mesmo distante</li>
+                    <li>Bráquetes incômodos, podem machucar</li>
+                    <li>Leva um tempo para conclusão...</li>
                   </ul>
                 </Col>
               </Row>
@@ -122,13 +119,13 @@ class Home extends React.Component {
         {/*Sorrir é facil como começar*/}
         <SwiperPhoto
           slides={slidesVantagens}
-          title="Porque o alinhador AlignerZ?"
-          subtitle="Aqui estão as três grandes razões. Mas a real pergunta é: Por que não?"
+          title="Porque escolher AlignerZ?"
+          subtitle="Aqui temos 3 boas razões. Mas a real pergunta é: porque não?"
         />
         {/*Mais motivos para usar AlignerZ*/}
         <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
-          <div className="m-auto w-50">
-            <h1 className="text-center big">Mais razões para usar o AlignerZ:</h1>
+          <div className="m-auto w-75">
+            <h1 className="text-center big">Mais razões para usar AlignerZ ao invés de bráquetes</h1>
           </div>
           <br />
           <Row>
@@ -141,8 +138,8 @@ class Home extends React.Component {
                 <ul>
                   <li>
                     <span>
-                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                      É só colocar embaixo de água fria e higienizar com uma escova de dentes macia. Você nem precisa
+                      usar pasta de dentes pra isso
                     </span>
                     <div className="clear" />
                   </li>
@@ -153,13 +150,10 @@ class Home extends React.Component {
           <Row>
             <div className="col-6 center-elements">
               <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Fácil de colocar e retirar</h1>
+                <h1 className="font-weight-bold">Removível, fácil de colocar e tirar</h1>
                 <ul>
                   <li>
-                    <span>
-                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
-                    </span>
+                    <span>Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal</span>
                     <div className="clear" />
                   </li>
                 </ul>
@@ -179,8 +173,8 @@ class Home extends React.Component {
                 <ul>
                   <li>
                     <span>
-                      Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                      sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                      Por serem removíveis, você não precisa se privar de comer suas comidas favoritas por ter medo de
+                      quebrar o seu aparelho
                     </span>
                     <div className="clear" />
                   </li>

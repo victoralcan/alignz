@@ -45,7 +45,7 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
                         }
                       />
                       <h4>{slide.description}</h4>
-                      {slide.description2 ? <h6>{slide.description2}</h6> : ''}
+                      {slide.description2 ? <h6 className="font-weight-light">{slide.description2}</h6> : ''}
                     </div>
                   </SwiperSlide>
                 );
