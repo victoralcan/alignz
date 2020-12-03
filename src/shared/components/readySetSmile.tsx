@@ -13,14 +13,11 @@ function ReadySetSmile() {
       <div className="z-index-2 h-100">
         <div className="h-100 col-6 center-elements">
           <div className="m-auto w-50">
-            <h1 className="font-weight-bold">Escolha sorrir.</h1>
+            <h1 className="font-weight-bold">Preparar. Apontar. Sorria!</h1>
             <ul>
               <li>
                 <span>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially uncha
+                  Faça nosso teste online e veja se você é um candidato(a) a utilizar os alinhadores transparentes
                 </span>
                 <div className="clear" />
               </li>
