@@ -119,13 +119,13 @@ class Home extends React.Component {
         {/*Sorrir é facil como começar*/}
         <SwiperPhoto
           slides={slidesVantagens}
-          title="Porque escolher AlignerZ?"
+          title="Porque escolher alignerZ?"
           subtitle="Aqui temos 3 boas razões. Mas a real pergunta é: porque não?"
         />
         {/*Mais motivos para usar AlignerZ*/}
         <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
           <div className="m-auto w-75">
-            <h1 className="text-center big">Mais razões para usar AlignerZ ao invés de bráquetes</h1>
+            <h1 className="text-center big">Mais razões para usar alignerZ ao invés de bráquetes</h1>
           </div>
           <br />
           <Row>

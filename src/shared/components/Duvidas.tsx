@@ -33,7 +33,7 @@ class Duvidas extends React.Component<any, IDuvidasState> {
         <div className="mr-auto ml-auto w-50">
           <h4 onClick={() => this.toggleDuvida(0)} className="togglerDuvida pb-3">
             <FontAwesomeIcon icon={collapseControl[0] ? 'minus' : 'plus'} />
-            &nbsp;&nbsp; O que são os alinhadores Aligner Z?
+            &nbsp;&nbsp; O que são os alinhadores alignerZ?
           </h4>
           <Collapse isOpen={collapseControl[0]} className="w-75 mr-auto ml-auto">
             <p>
@@ -44,7 +44,7 @@ class Duvidas extends React.Component<any, IDuvidasState> {
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(1)} className="togglerDuvida pb-3">
             <FontAwesomeIcon icon={collapseControl[1] ? 'minus' : 'plus'} />
-            &nbsp;&nbsp;Quanto tempo os alinhadores Aligner Z levam para endireitar o meu sorriso?
+            &nbsp;&nbsp;Quanto tempo os alinhadores alignerZ levam para endireitar o meu sorriso?
           </h4>
           <Collapse isOpen={collapseControl[1]} className="w-75 mr-auto ml-auto">
             <p>
@@ -76,7 +76,7 @@ class Duvidas extends React.Component<any, IDuvidasState> {
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(4)} className="togglerDuvida pb-3">
             <FontAwesomeIcon icon={collapseControl[4] ? 'minus' : 'plus'} />
-            &nbsp;&nbsp; Como funciona o tratamento com os alinhadores AlignerZ?
+            &nbsp;&nbsp; Como funciona o tratamento com os alinhadores alignerZ?
           </h4>
           <Collapse isOpen={collapseControl[4]} className="w-75 mr-auto ml-auto">
             <p>
@@ -87,7 +87,7 @@ class Duvidas extends React.Component<any, IDuvidasState> {
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(5)} className="togglerDuvida pb-3">
             <FontAwesomeIcon icon={collapseControl[5] ? 'minus' : 'plus'} />
-            &nbsp;&nbsp; Meus dentes vão doer enquanto eu estiver fazendo o uso dos alinhadores AlignerZ?
+            &nbsp;&nbsp; Meus dentes vão doer enquanto eu estiver fazendo o uso dos alinhadores alignerZ?
           </h4>
           <Collapse isOpen={collapseControl[5]} className="w-75 mr-auto ml-auto">
             <p>
