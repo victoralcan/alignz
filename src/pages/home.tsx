@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Row } from 'reactstrap';
+import { Button, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
 import Preco4 from 'content/images/pages/preco/preco4.jpg';
 import Home1 from 'content/images/pages/home/home1.jpg';
@@ -14,6 +14,7 @@ import '../styles/pages/home.css';
 import { Link } from 'react-router-dom';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
+import { ColorPallet } from '../shared/model/enum/colors';
 
 class Home extends React.Component {
   render() {
@@ -40,6 +41,8 @@ class Home extends React.Component {
         photoWidth: '200px',
       },
     ];
+    const cardHeaderColor = ColorPallet.orangeOpac;
+    const cardBodyColor = ColorPallet.orangeOpac2;
     return (
       <>
         {/*Conheça o Futuro*/}
@@ -81,36 +84,43 @@ class Home extends React.Component {
           </h6>
           <br />
           <Row className="m-auto justify-content-center">
-            <Col sm={6} md={6} lg={6} className="d-flex flex-column">
+            <Col sm={6} md={6} lg={6} className="d-flex flex-column pr-1">
               <div className="mr-auto ml-auto">
                 <FittedImage src={AparelhoXalinhador} style={{ width: '350px', height: '136px' }} className="pr-3" />
               </div>
               <Row>
                 <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
-                  <ul>
-                    <li>Aparelhos convencionais</li>
-                    <li>24/7 dias</li>
-                    <li>365 dias/ano</li>
-                    <li>Perceptível até mesmo distante</li>
-                    <li>Bráquetes incômodos, podem machucar</li>
-                    <li>Leva um tempo para conclusão...</li>
-                  </ul>
+                  <Card>
+                    <CardHeader style={{ backgroundColor: cardHeaderColor }}>
+                      <span className="font-weight-bold">Aparelhos convencionais</span>
+                    </CardHeader>
+                    <CardBody style={{ backgroundColor: cardBodyColor }}>
+                      <ul style={{ listStyle: 'inherit' }} className="pl-2">
+                        <li>24/7 dias</li>
+                        <li>365 dias/ano</li>
+                        <li>Perceptível até mesmo distante</li>
+                        <li>Bráquetes incômodos, podem machucar</li>
+                        <li>Leva um tempo para conclusão...</li>
+                      </ul>
+                    </CardBody>
+                  </Card>
                 </Col>
-                <div className="vl" />
-                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center pl-4 pr-2">
-                  <ul>
-                    <li>Alinhadores transparentes</li>
-                    <li>22h por dia</li>
-                    <li>Transparente, quase imperceptível</li>
-                    <li>Confortável, não machuca</li>
-                    <li>3x mais rápido</li>
-                    <li>
-                      <br />
-                    </li>
-                    <li>
-                      <br />
-                    </li>
-                  </ul>
+                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
+                  <Card>
+                    <CardHeader style={{ backgroundColor: cardHeaderColor }}>
+                      <span className="font-weight-bold">Alinhadores transparentes</span>
+                    </CardHeader>
+                    <CardBody style={{ backgroundColor: cardBodyColor }}>
+                      <ul style={{ listStyle: 'inherit' }} className="pl-2">
+                        <li>22h por dia</li>
+                        <li>Transparente, quase imperceptível</li>
+                        <li>Confortável, não machuca</li>
+                        <li>3x mais rápido</li>
+                        <br />
+                        <br />
+                      </ul>
+                    </CardBody>
+                  </Card>
                 </Col>
               </Row>
             </Col>
