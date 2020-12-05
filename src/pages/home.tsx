@@ -2,12 +2,12 @@ import React from 'react';
 import { Button, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
 import Preco4 from 'content/images/pages/preco/preco4.jpg';
-import Home2 from 'content/images/pages/home/home2.png';
+import Home1 from 'content/images/pages/home/home1.jpg';
 import Slide1 from '../content/images/pages/home/slide1.svg';
 import Slide2 from '../content/images/pages/home/slide2.svg';
 import Slide3 from '../content/images/pages/home/slide3.svg';
-import Aparelho from '../content/images/pages/home/aparelho.png';
-import Alinhador from '../content/images/pages/home/alinhador.png';
+import Comparacao from '../content/images/pages/home/comparacao.jpg';
+import AparelhoXalinhador from '../content/images/pages/home/aparelhoXalinhador.png';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 
 import '../styles/pages/home.css';
@@ -44,8 +44,8 @@ class Home extends React.Component {
       <>
         {/*Conheça o Futuro*/}
         <section className="infoContainer">
-          <div className="position-absolute">
-            <FittedImage src={Home2} fit="cover" />
+          <div className="position-absolute w-100">
+            <FittedImage src={Home1} style={{ height: '85vh' }} fit="cover" />
           </div>
           <div className="z-index-2 h-100">
             <div className="h-100 col-6 center-elements">
@@ -81,26 +81,13 @@ class Home extends React.Component {
           </h6>
           <br />
           <Row className="m-auto justify-content-center">
-            <Col sm={6} md={6} lg={6}>
-              <Row className="h-100">
+            <Col sm={6} md={6} lg={6} className="d-flex flex-column">
+              <div className="mr-auto ml-auto">
+                <FittedImage src={AparelhoXalinhador} style={{ width: '350px', height: '136px' }} className="pr-3" />
+              </div>
+              <Row>
                 <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
                   <ul>
-                    <li>
-                      <FittedImage src={Alinhador} style={{ width: '78px', height: '64px' }} />
-                    </li>
-                    <li>Alinhadores transparentes</li>
-                    <li>22h por dia</li>
-                    <li>Transparente, quase imperceptível</li>
-                    <li>Confortável, não machuca</li>
-                    <li>3x mais rápido</li>
-                  </ul>
-                </Col>
-                <div className="vl" />
-                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
-                  <ul>
-                    <li>
-                      <FittedImage src={Aparelho} style={{ width: '72px', height: '64px' }} />
-                    </li>
                     <li>Aparelhos convencionais</li>
                     <li>24/7 dias</li>
                     <li>365 dias/ano</li>
@@ -109,10 +96,26 @@ class Home extends React.Component {
                     <li>Leva um tempo para conclusão...</li>
                   </ul>
                 </Col>
+                <div className="vl" />
+                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center pl-4 pr-2">
+                  <ul>
+                    <li>Alinhadores transparentes</li>
+                    <li>22h por dia</li>
+                    <li>Transparente, quase imperceptível</li>
+                    <li>Confortável, não machuca</li>
+                    <li>3x mais rápido</li>
+                    <li>
+                      <br />
+                    </li>
+                    <li>
+                      <br />
+                    </li>
+                  </ul>
+                </Col>
               </Row>
             </Col>
             <Col sm={6} md={6} lg={6}>
-              <FittedImage src={Home2} fit="cover" />
+              <FittedImage src={Comparacao} fit="cover" />
             </Col>
           </Row>
         </section>
