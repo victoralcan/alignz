@@ -4,6 +4,8 @@ import Preco1 from 'content/images/pages/preco/preco1.jpg';
 import '../styles/pages/preco.css';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
+import { Button, Col, Input, Row } from 'reactstrap';
+import { ColorPallet } from '../shared/model/enum/colors';
 
 class Preco extends React.Component {
   render() {
@@ -26,6 +28,59 @@ class Preco extends React.Component {
               </div>
             </div>
           </div>
+        </section>
+        <section className="infoContainerFlex d-flex flex-column">
+          <div className="m-auto">
+            <h1 className="font-weight-bold text-center">Quer saber se você é um candidato?</h1>
+          </div>
+          <Row>
+            <Col md={5}>
+              <ul>
+                <li>
+                  <div className="d-flex">
+                    <h2 className="mr-auto ml-auto pb-4">Preencha seu e-mail</h2>
+                  </div>
+                </li>
+                <li>
+                  <Input
+                    placeholder="Insira seu email"
+                    style={{ backgroundColor: ColorPallet.pastel }}
+                    className="mb-3"
+                  />
+                </li>
+                <li>
+                  <div className="d-flex">
+                    <Button className="general-button w-50 mr-auto ml-auto">Solicitar o Preço</Button>
+                  </div>
+                </li>
+              </ul>
+            </Col>
+            <Col md={2} className="d-flex align-items-center">
+              <div className="m-auto">
+                <h2>OU</h2>
+              </div>
+            </Col>
+            <Col md={5}>
+              <ul>
+                <li>
+                  <div className="d-flex">
+                    <h2 className="mr-auto ml-auto pb-4">faça nosso teste online</h2>
+                  </div>
+                </li>
+                <li>
+                  <br />
+                </li>
+                <li>
+                  <br />
+                </li>
+                <li>
+                  <div className="d-flex">
+                    <Button className="general-button w-50 mr-auto ml-auto">Sou um candidato?</Button>
+                  </div>
+                </li>
+              </ul>
+            </Col>
+          </Row>
         </section>
         <ReadySetSmile />
         <Duvidas />
