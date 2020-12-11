@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
-import Preco4 from 'content/images/pages/preco/preco4.jpg';
+import Motivo1 from 'content/images/pages/home/motivo1.png';
+import Motivo2 from 'content/images/pages/home/motivo2.jpg';
+import Motivo3 from 'content/images/pages/home/motivo3.jpg';
 import Home1 from 'content/images/pages/home/home1.jpg';
 import Slide1 from '../content/images/pages/home/slide1.svg';
 import Slide2 from '../content/images/pages/home/slide2.svg';
@@ -143,7 +145,7 @@ class Home extends React.Component {
           <br />
           <Row>
             <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Preco4} />
+              <FittedImage fit="cover" src={Motivo1} />
             </Col>
             <div className="col-6 center-elements">
               <div className="m-auto w-75">
@@ -173,12 +175,12 @@ class Home extends React.Component {
               </div>
             </div>
             <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Preco4} />
+              <FittedImage fit="cover" src={Motivo2} />
             </Col>
           </Row>
           <Row>
             <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Preco4} />
+              <FittedImage fit="cover" src={Motivo3} />
             </Col>
             <div className="col-6 center-elements">
               <div className="m-auto w-75">
