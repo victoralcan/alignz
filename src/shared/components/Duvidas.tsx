@@ -7,7 +7,11 @@ interface IDuvidasState {
   collapseControl: boolean[];
 }
 
-class Duvidas extends React.Component<any, IDuvidasState> {
+interface IDuvidasProps {
+  title?: string;
+}
+
+class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,9 +31,10 @@ class Duvidas extends React.Component<any, IDuvidasState> {
 
   render() {
     const { collapseControl } = this.state;
+    const { title } = this.props;
     return (
       <section className="infoContainerFlex d-flex flex-column p-4" style={{ backgroundColor: ColorPallet.pastelOpac }}>
-        <h1 className="pb-5 mr-auto ml-auto">Dúvidas Frequentes</h1>
+        <h1 className="pb-5 mr-auto ml-auto">{title ? title : 'Dúvidas Frequentes'}</h1>
         <div className="mr-auto ml-auto w-50">
           <h4 onClick={() => this.toggleDuvida(0)} className="togglerDuvida pb-3">
             <FontAwesomeIcon icon={collapseControl[0] ? 'minus' : 'plus'} />
