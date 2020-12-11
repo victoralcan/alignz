@@ -1,8 +1,12 @@
 import React from 'react';
 import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.png';
 import { Col, Row } from 'reactstrap';
-import Preco4 from '../content/images/pages/preco/preco4.jpg';
-import Passo1 from '../content/images/pages/como-funciona/passo1.png';
+import Passo1 from '../content/images/pages/como-funciona/passo1.jpg';
+import Passo2 from '../content/images/pages/como-funciona/passo2.jpg';
+import Passo3 from '../content/images/pages/como-funciona/passo3.jpg';
+import Beneficio1 from '../content/images/pages/como-funciona/beneficio1.jpg';
+import Beneficio2 from '../content/images/pages/como-funciona/beneficio2.jpg';
+import Beneficio3 from '../content/images/pages/como-funciona/beneficio3.jpg';
 import Duvidas from '../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
 import ReadySetSmile from '../shared/components/readySetSmile';
@@ -11,7 +15,7 @@ function ComoFunciona() {
   return (
     <>
       {/*Escolha Sorrir*/}
-      <section className="infoContainer mb-0">
+      <section className="infoContainer80 mb-0">
         <div className="position-absolute">
           <FittedImage src={ChooseSmile} fit="cover" />
         </div>
@@ -22,10 +26,9 @@ function ComoFunciona() {
               <ul>
                 <li>
                   <span>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially uncha
+                    O sorriso é uma poderosa ferramenta na nossa vida. Esse pequeno espaço de orelha a orelha pode te
+                    trazer muita confiança. Continue rolando e saiba como você pode mudar completamente a forma que você
+                    se vê quando você escolhe sorrir :)
                   </span>
                   <div className="clear" />
                 </li>
@@ -35,19 +38,18 @@ function ComoFunciona() {
         </div>
       </section>
       {/*Beneficios*/}
-      <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
+      <section className="infoContainerFlex d-flex flex-column w-60 mr-auto ml-auto">
         <Row>
           <Col md={6} className="h-100">
-            <FittedImage fit="cover" src={Preco4} />
+            <FittedImage fit="cover" src={Beneficio1} />
           </Col>
           <div className="col-6 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Fácil de Limpar</h1>
               <ul>
                 <li>
                   <span>
-                    Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                    sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    Sorrir libera dopamina, endorfinas e serotonina em seu cérebro. Essas substâncias atuam como um
+                    analgésico natural e elevam o humor, que, consequentemente, melhora seu bem-estar de forma geral.
                   </span>
                   <div className="clear" />
                 </li>
@@ -58,11 +60,10 @@ function ComoFunciona() {
         <Row>
           <div className="col-6 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Fácil de colocar e retirar</h1>
               <ul>
                 <li>
                   <span>
-                    Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
+                    O seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
                     sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
                   </span>
                   <div className="clear" />
@@ -71,21 +72,21 @@ function ComoFunciona() {
             </div>
           </div>
           <Col md={6} className="h-100">
-            <FittedImage fit="cover" src={Preco4} />
+            <FittedImage fit="cover" src={Beneficio2} />
           </Col>
         </Row>
         <Row>
           <Col md={6} className="h-100">
-            <FittedImage fit="cover" src={Preco4} />
+            <FittedImage fit="cover" src={Beneficio3} />
           </Col>
           <div className="col-6 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Coma o que quiser</h1>
               <ul>
                 <li>
                   <span>
-                    Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                    sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    Sorrir por 30 segundos algumas vezes ao dia mantém você animado e com energia, ajuda a evitar o
+                    esgotamento psicológico e garante que sua perspectiva permaneça positiva. O sorriso realmente é uma
+                    pequena coisa capaz de mudar todo um universo.
                   </span>
                   <div className="clear" />
                 </li>
@@ -96,9 +97,8 @@ function ComoFunciona() {
       </section>
       {/*Sorria em 3 passos*/}
       <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
-        <div className="w-50">
-          <h6>Como funciona</h6>
-          <h1>Sorria em três passos.</h1>
+        <div>
+          <h1>3 SIMPLES PASSOS PARA A MUDANÇA</h1>
         </div>
         <br />
         <Row>
@@ -107,12 +107,12 @@ function ComoFunciona() {
           </div>
           <div className="col-5 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Fácil de Limpar</h1>
+              <h1 className="font-weight-bold">Primeiro, as imagens</h1>
               <ul>
                 <li>
                   <span>
-                    Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                    sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    Para começar, você pode visitar nosso espaço AlignerZ físico para fazer o escaneamento dos seus
+                    dentes e tirar algumas fotos para registro.
                   </span>
                   <div className="clear" />
                 </li>
@@ -123,12 +123,12 @@ function ComoFunciona() {
         <Row>
           <div className="col-5 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Fácil de Limpar</h1>
+              <h1 className="font-weight-bold">Daí, vem o seu planejamento</h1>
               <ul>
                 <li>
                   <span>
-                    Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                    sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    Fazemos uma imagem 3D do seu sorriso, que nos mostrará o que está acontecendo. Então, um de nossos
+                    dentistas monta, analisa e aprova seu plano de tratamento totalmente personalizado.
                   </span>
                   <div className="clear" />
                 </li>
@@ -136,21 +136,21 @@ function ComoFunciona() {
             </div>
           </div>
           <div className="col-7 border-image">
-            <FittedImage fit="cover" src={Passo1} />
+            <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
           </div>
         </Row>
         <Row>
           <div className="col-7 border-image">
-            <FittedImage fit="cover" src={Passo1} />
+            <FittedImage fit="cover" src={Passo3} />
           </div>
           <div className="col-5 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Fácil de Limpar</h1>
+              <h1 className="font-weight-bold">E então, você pode começar sua jornada!</h1>
               <ul>
                 <li>
                   <span>
-                    Seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
-                    sorriso, mais substâncias químicas seu cérebro libera e mais feliz você fica.
+                    Compartilhamos uma prévia da transformação de sorriso e, com a sua aprovação, criamos seus
+                    alinhadores personalizados. Pode ser que você complete sua jornada em menos de 6 meses, acredita?
                   </span>
                   <div className="clear" />
                 </li>
@@ -160,7 +160,7 @@ function ComoFunciona() {
         </Row>
       </section>
       {/*Duvidas*/}
-      <Duvidas />
+      <Duvidas title="Ainda tem dúvidas?" />
       {/*Ready Set Smile*/}
       <ReadySetSmile />
     </>
