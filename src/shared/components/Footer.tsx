@@ -8,19 +8,28 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
+import Logo from '../../content/images/logo-alignz-removebg.png';
 
 function Footer() {
   const cardClassName = 'mb-3 mt-3 ml-1 mr-1';
   const cardHeaderClassName = 'border-0 font-weight-bold';
   const textDecoration = 'none';
-  const backgroundColor = ColorPallet.pastelOpac;
+  const backgroundColor = ColorPallet.pastel2Opac;
   return (
     <Row>
       <Col lg={12} md={12} sm={12}>
         <CardDeck className="m-1">
           <Card className={cardClassName}>
+            <CardHeader className="border-0 font-weight-bold d-flex flex-column" style={{ backgroundColor }}>
+              <div className="m-auto" style={{ width: 'auto', display: 'inline-block' }}>
+                <img src={Logo} alt="AlignerZ" />
+              </div>
+              <h4 className="text-center">Alguma frase impacto</h4>
+            </CardHeader>
+          </Card>
+          <Card className={cardClassName}>
             <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              AlignerZ
+              Informações
             </CardHeader>
             <CardBody>
               <CardText>
@@ -40,28 +49,10 @@ function Footer() {
                   Agendar pré avaliação
                 </Link>
               </CardText>
-            </CardBody>
-          </Card>
-          <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              Informações
-            </CardHeader>
-            <CardBody>
-              <CardText>
-                <Link to="/depoimentos" style={{ textDecoration }}>
-                  Depoimentos
-                </Link>
-              </CardText>
               <div className="clear" />
               <CardText>
                 <Link to="/duvidas" style={{ textDecoration }}>
                   Dúvidas?
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/onde-estamos" style={{ textDecoration }}>
-                  Onde estamos
                 </Link>
               </CardText>
             </CardBody>
