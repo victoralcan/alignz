@@ -6,6 +6,7 @@ import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
 import { Button, Col, Input, Row } from 'reactstrap';
 import { ColorPallet } from '../shared/model/enum/colors';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Preco extends React.Component {
   render() {
@@ -82,8 +83,28 @@ class Preco extends React.Component {
             </Col>
           </Row>
         </section>
+        <section className="infoContainerFlex d-flex flex-column" style={{ backgroundColor: ColorPallet.pastelOpac }}>
+          <div className="d-flex flex-column w-75 mr-auto ml-auto align-items-center pt-3 pb-2">
+            <h1 className="text-center">
+              Trabalhamos da fábrica diretamente com os pacientes, evitando custos desnecessários :)
+            </h1>
+            <br />
+            <h2 className="font-weight-light">Como funciona?</h2>
+            <br />
+            <br />
+            <h3>Nos mostre seu sorriso</h3>
+            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
+            <h3>Fazemos o seu planejamento 3D</h3>
+            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
+            <h3>Fabricamos seus alinhadores personalizados</h3>
+            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
+            <h3>Acompanhamos o seu passo a passo</h3>
+            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
+            <h3>Contenções finais</h3>
+          </div>
+        </section>
         <ReadySetSmile />
-        <Duvidas />
+        <Duvidas title="Ainda tem dúvidas?" />
       </>
     );
   }

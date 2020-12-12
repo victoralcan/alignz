@@ -172,6 +172,8 @@ h1 {
     --white: #fff;
     --pastel: #fdf0ee;
     --pastel-opac: rgba(253, 240, 238, 0.4);
+    --pastel2: rgba(254, 250, 249, 1);
+    --pastel2-opac: rgba(254, 250, 249, 0.4);
     --orange: #e76034;
     --orange-opac: rgba(231, 96, 52, 0.6);
     --orange-opac2: rgba(231, 96, 52, 0.2);
