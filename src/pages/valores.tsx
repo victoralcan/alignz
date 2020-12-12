@@ -1,14 +1,14 @@
 import React from 'react';
 import FittedImage from 'react-fitted-image';
-import Preco1 from 'content/images/pages/preco/preco1.jpg';
-import '../styles/pages/preco.css';
+import Preco1 from 'content/images/pages/valores/valores1.jpg';
+import '../styles/pages/valores.css';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
 import { Button, Col, Input, Row } from 'reactstrap';
 import { ColorPallet } from '../shared/model/enum/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-class Preco extends React.Component {
+class Valores extends React.Component {
   render() {
     return (
       <>
@@ -110,4 +110,4 @@ class Preco extends React.Component {
   }
 }
 
-export default Preco;
+export default Valores;
