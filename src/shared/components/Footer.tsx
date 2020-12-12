@@ -14,7 +14,7 @@ function Footer() {
   const cardClassName = 'mb-3 mt-3 ml-1 mr-1';
   const cardHeaderClassName = 'border-0 font-weight-bold';
   const textDecoration = 'none';
-  const backgroundColor = ColorPallet.pastel2Opac;
+  const backgroundColor = ColorPallet.pastel2;
   return (
     <Row>
       <Col lg={12} md={12} sm={12}>
