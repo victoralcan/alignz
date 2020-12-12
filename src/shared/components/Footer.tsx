@@ -39,8 +39,8 @@ function Footer() {
               </CardText>
               <div className="clear" />
               <CardText>
-                <Link to="/preco" style={{ textDecoration }}>
-                  Saiba o Preço
+                <Link to="/valores" style={{ textDecoration }}>
+                  Valores
                 </Link>
               </CardText>
               <div className="clear" />

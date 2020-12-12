@@ -11,8 +11,8 @@ function Header() {
       <Link className="header-option" to="/como-funciona" style={{ textDecoration: 'none' }}>
         Como funciona
       </Link>
-      <Link className="header-option" to="/preco" style={{ textDecoration: 'none' }}>
-        Saiba o Preço
+      <Link className="header-option" to="/valores" style={{ textDecoration: 'none' }}>
+        Valores
       </Link>
       <Link className="header-option" to="/agenda" style={{ textDecoration: 'none' }}>
         Agendar pré-avaliação
