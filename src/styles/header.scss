@@ -1,8 +1,9 @@
 .header-container {
   background-color: var(--white);
+  padding: 25px !important;
   position: fixed;
-  top:0;
-  left: 0;
+  top: -2% !important;
+  left: -2% !important;
 }
 
 .header-option {
