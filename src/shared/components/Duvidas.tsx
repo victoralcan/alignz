@@ -1,7 +1,6 @@
 import React from 'react';
 import { Collapse } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ColorPallet } from '../model/enum/colors';
 
 interface IDuvidasState {
   collapseControl: boolean[];
@@ -33,13 +32,14 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
     const { collapseControl } = this.state;
     const { title } = this.props;
     return (
-      <section className="infoContainerFlex d-flex flex-column p-4" style={{ backgroundColor: ColorPallet.pastelOpac }}>
+      <section className="infoContainerFlex d-flex flex-column p-4">
         <h1 className="pb-5 mr-auto ml-auto">{title ? title : 'Dúvidas Frequentes'}</h1>
         <div className="mr-auto ml-auto w-50">
-          <h4 onClick={() => this.toggleDuvida(0)} className="togglerDuvida pb-3">
+          <h4 onClick={() => this.toggleDuvida(0)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[0] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;O que são os alinhadores alignerZ?
           </h4>
+          <hr />
           <Collapse isOpen={collapseControl[0]} className="w-75 mr-auto ml-auto">
             <p>
               São o que chamamos de terapia de alinhamento. Nela, são inclusos vários conjuntos de plaquinhas, feitas de
@@ -47,20 +47,22 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               que eles deveriam estar.
             </p>
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(1)} className="togglerDuvida pb-3">
+          <h4 onClick={() => this.toggleDuvida(1)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[1] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Quanto tempo os alinhadores alignerZ levam para endireitar o meu sorriso?
           </h4>
+          <hr />
           <Collapse isOpen={collapseControl[1]} className="w-75 mr-auto ml-auto">
             <p>
               O dentista ou ortodontista designado a você determinará o melhor plano para suas necessidades, mas
               corrigimos a maioria dos sorrisos em uma média de 6 meses ou menos!
             </p>
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(2)} className="togglerDuvida pb-3">
+          <h4 onClick={() => this.toggleDuvida(2)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[2] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Como eu sei qual o melhor tratamento ortodôntico para mim?
           </h4>
+          <hr />
           <Collapse isOpen={collapseControl[2]} className="w-75 mr-auto ml-auto">
             <p>
               O dentista ou ortodontista designado determinará qual plano de tratamento é o melhor pra você. Nossos
@@ -69,20 +71,22 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               especial - como fotos de formatura, casamento ou eventos de trabalho.
             </p>
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(3)} className="togglerDuvida pb-3">
+          <h4 onClick={() => this.toggleDuvida(3)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[3] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Eu consigo ver como o meu sorriso ficará após o tratamento antes de tomar uma decisão?
           </h4>
+          <hr />
           <Collapse isOpen={collapseControl[3]} className="w-75 mr-auto ml-auto">
             <p>
               Sim, depois de recebermos sua imagem 3D, criamos um plano de tratamento personalizado que mostra uma
               visualização 3D de antes e depois de como seus dentes se moverão com o tratamento.
             </p>
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(4)} className="togglerDuvida pb-3">
+          <h4 onClick={() => this.toggleDuvida(4)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[4] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Como funciona o tratamento com os alinhadores alignerZ?
           </h4>
+          <hr />
           <Collapse isOpen={collapseControl[4]} className="w-75 mr-auto ml-auto">
             <p>
               Cada alinhador faz pequenos ajustes na posição do dente, e esse processo é mapeado com antecedência por um
@@ -90,10 +94,11 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               alinhadores conforme prescrito, avançando para o próximo estágio do seu novo sorriso.
             </p>
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(5)} className="togglerDuvida pb-3">
+          <h4 onClick={() => this.toggleDuvida(5)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[5] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Meus dentes vão doer enquanto eu estiver fazendo o uso dos alinhadores alignerZ?
           </h4>
+          <hr />
           <Collapse isOpen={collapseControl[5]} className="w-75 mr-auto ml-auto">
             <p>
               A maioria das pessoas sente alguma dor nos dentes por alguns dias depois de usar os alinhadores. E isso é
@@ -102,10 +107,11 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               parecido com um bom treino na academia, dói um pouco alguns dias depois.
             </p>
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(6)} className="togglerDuvida pb-3">
+          <h4 onClick={() => this.toggleDuvida(6)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[6] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;O que faço se os meus dentes não estão alinhando como o esperado?
           </h4>
+          <hr />
           <Collapse isOpen={collapseControl[6]} className="w-75 mr-auto ml-auto">
             <p>
               Às vezes, podem ser necessárias atualizações em seu plano. Você pode precisar de um ajuste no final do
