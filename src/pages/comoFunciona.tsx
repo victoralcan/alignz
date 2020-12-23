@@ -1,5 +1,5 @@
 import React from 'react';
-import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.png';
+import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.jpg';
 import { Col, Row } from 'reactstrap';
 import Passo1 from '../content/images/pages/como-funciona/passo1.jpg';
 import Passo2 from '../content/images/pages/como-funciona/passo2.jpg';
@@ -15,8 +15,8 @@ function ComoFunciona() {
   return (
     <>
       {/*Escolha Sorrir*/}
-      <section className="infoContainer80 mb-0">
-        <div className="position-absolute">
+      <section className="infoContainer80">
+        <div className="position-absolute" style={{ height: '80vh' }}>
           <FittedImage src={ChooseSmile} fit="cover" />
         </div>
         <div className="z-index-2 h-100">
