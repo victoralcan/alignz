@@ -6,9 +6,9 @@ import Motivo2 from 'content/images/pages/home/motivo2.jpg';
 import Motivo3 from 'content/images/pages/home/motivo3.jpg';
 import Comparando from 'content/images/pages/home/imagemcomparando.png';
 import Home1 from 'content/images/pages/home/home1.png';
-import Slide1 from '../content/images/pages/home/slide1.svg';
-import Slide2 from '../content/images/pages/home/slide2.svg';
-import Slide3 from '../content/images/pages/home/slide3.svg';
+import Slide1 from '../content/images/pages/home/slide1.jpg';
+import Slide2 from '../content/images/pages/home/slide2.jpg';
+import Slide3 from '../content/images/pages/home/slide3.jpg';
 import Comparacao from '../content/images/pages/home/comparacao.jpg';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 
@@ -24,22 +24,22 @@ class Home extends React.Component {
         photo: Slide1,
         description: 'Conveniência',
         description2: 'Tratamento quase todo feito no conforto da sua casa.',
-        photoHeight: '200px',
-        photoWidth: '200px',
+        photoHeight: '300px',
+        photoWidth: '300px',
       },
       {
         photo: Slide2,
         description: 'Acessibilidade',
         description2: 'Muito mais acessível do que os aparelhos convencionais ou os alinhadores do mercado atual.',
-        photoHeight: '200px',
-        photoWidth: '200px',
+        photoHeight: '300px',
+        photoWidth: '300px',
       },
       {
         photo: Slide3,
         description: 'Confiança',
         description2: 'Casos feitos e planejados por dentistas reais, personalizados pra você.',
-        photoHeight: '200px',
-        photoWidth: '200px',
+        photoHeight: '300px',
+        photoWidth: '300px',
       },
     ];
     return (

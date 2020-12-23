@@ -33,15 +33,16 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
                   <SwiperSlide key={i}>
                     <div className="tratamento-card">
                       <FittedImage
-                        fit="contain"
+                        fit="cover"
                         src={slide.photo}
                         style={
                           slide.photoHeight
                             ? {
                                 height: slide.photoHeight,
                                 width: slide.photoWidth,
+                                borderRadius: '20px',
                               }
-                            : {}
+                            : { borderRadius: '20px' }
                         }
                       />
                       <h4>{slide.description}</h4>
