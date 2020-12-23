@@ -10,7 +10,6 @@ function Header() {
       <Brand />
       <Link className="header-option" to="/como-funciona" style={{ textDecoration: 'none' }}>
         <p>COMO FUNCIONA</p>
-        <div className="clear" />
       </Link>
       <Link className="header-option" to="/valores" style={{ textDecoration: 'none' }}>
         <p>VALORES</p>

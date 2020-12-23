@@ -33,7 +33,10 @@
   }
 }
 
+a p {
+  color: var(--gray);
+}
+
 p, h5 {
   margin: 0 !important;
-  color: var(--gray) !important;
 }
