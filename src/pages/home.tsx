@@ -4,7 +4,7 @@ import FittedImage from 'react-fitted-image';
 import Motivo1 from 'content/images/pages/home/motivo1.png';
 import Motivo2 from 'content/images/pages/home/motivo2.jpg';
 import Motivo3 from 'content/images/pages/home/motivo3.jpg';
-import Home1 from 'content/images/pages/home/home1.jpg';
+import Home1 from 'content/images/pages/home/home1.png';
 import Slide1 from '../content/images/pages/home/slide1.svg';
 import Slide2 from '../content/images/pages/home/slide2.svg';
 import Slide3 from '../content/images/pages/home/slide3.svg';
@@ -53,8 +53,8 @@ class Home extends React.Component {
             <FittedImage src={Home1} style={{ height: '85vh' }} fit="cover" />
           </div>
           <div className="z-index-2 h-100">
-            <div className="h-100 col-6 center-elements">
-              <div className="m-auto w-50">
+            <div className="h-100 col-5 d-flex">
+              <div className="mt-auto mb-auto w-75 pl-5">
                 <h1 className="font-weight-bolder">Conheça o futuro do alinhamento dental</h1>
                 <ul>
                   <li>
@@ -149,7 +149,7 @@ class Home extends React.Component {
             <Col md={6} className="h-100 border-image">
               <FittedImage fit="cover" src={Motivo1} />
             </Col>
-            <div className="col-6 center-elements">
+            <div className="col-6 d-flex">
               <div className="m-auto w-75">
                 <h1 className="font-weight-bold">Fácil de Limpar</h1>
                 <ul>
@@ -165,7 +165,7 @@ class Home extends React.Component {
             </div>
           </Row>
           <Row>
-            <div className="col-6 center-elements">
+            <div className="col-6 d-flex">
               <div className="m-auto w-75">
                 <h1 className="font-weight-bold">Removível, fácil de colocar e tirar</h1>
                 <ul>
@@ -184,7 +184,7 @@ class Home extends React.Component {
             <Col md={6} className="h-100 border-image">
               <FittedImage fit="cover" src={Motivo3} />
             </Col>
-            <div className="col-6 center-elements">
+            <div className="col-6 d-flex">
               <div className="m-auto w-75">
                 <h1 className="font-weight-bold">Coma o que quiser</h1>
                 <ul>
@@ -210,7 +210,7 @@ class Home extends React.Component {
         {/*    <Col md={6} className="h-100 border-image">*/}
         {/*      <FittedImage fit="cover" src={Preco4} />*/}
         {/*    </Col>*/}
-        {/*    <div className="col-6 center-elements">*/}
+        {/*    <div className="col-6 d-flex">*/}
         {/*      <div className="m-auto w-75">*/}
         {/*        <h1 className="font-weight-bold">Nosso Produto</h1>*/}
         {/*        <ul>*/}
