@@ -1,22 +1,21 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
 import Motivo1 from 'content/images/pages/home/motivo1.png';
 import Motivo2 from 'content/images/pages/home/motivo2.jpg';
 import Motivo3 from 'content/images/pages/home/motivo3.jpg';
+import Comparando from 'content/images/pages/home/imagemcomparando.png';
 import Home1 from 'content/images/pages/home/home1.png';
 import Slide1 from '../content/images/pages/home/slide1.svg';
 import Slide2 from '../content/images/pages/home/slide2.svg';
 import Slide3 from '../content/images/pages/home/slide3.svg';
 import Comparacao from '../content/images/pages/home/comparacao.jpg';
-import AparelhoXalinhador from '../content/images/pages/home/aparelhoXalinhador.png';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 
 import '../styles/pages/home.css';
 import { Link } from 'react-router-dom';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
-import { ColorPallet } from '../shared/model/enum/colors';
 
 class Home extends React.Component {
   render() {
@@ -43,8 +42,6 @@ class Home extends React.Component {
         photoWidth: '200px',
       },
     ];
-    const cardHeaderColor = ColorPallet.orangeOpac;
-    const cardBodyColor = ColorPallet.orangeOpac2;
     return (
       <>
         {/*Conheça o Futuro*/}
@@ -77,59 +74,27 @@ class Home extends React.Component {
         {/*Comparação alinhador aparelho*/}
         <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
           <div className="m-auto">
-            <h1 className="font-weight-bold text-center">Qual alinhador é o certo para você?</h1>
+            <h1 className="font-weight-bold text-center">Comparativo</h1>
           </div>
           <br />
           <h6>
-            Maybe you want your new smile in time for a special event 4-6 months from now. Or maybe timing isn’t as
-            important as wearing your aligners only at night. Either way, we’ve got you covered.
+            Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
+            melhor se encaixa pra você.
           </h6>
           <br />
           <Row className="m-auto justify-content-center">
-            <Col sm={6} md={6} lg={6} className="d-flex flex-column pr-1">
-              <div className="mr-auto ml-auto">
-                <FittedImage src={AparelhoXalinhador} style={{ width: '350px', height: '136px' }} className="pr-3" />
-              </div>
-              <Row>
-                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
-                  <Card>
-                    <CardHeader style={{ backgroundColor: cardHeaderColor }}>
-                      <span className="font-weight-bold">Aparelhos convencionais</span>
-                    </CardHeader>
-                    <CardBody style={{ backgroundColor: cardBodyColor }}>
-                      <ul style={{ listStyle: 'inherit' }} className="pl-2">
-                        <li>
-                          24/7 dias
-                          <br /> 365 dias/ano
-                        </li>
-                        <li>Perceptível até mesmo distante</li>
-                        <li>Bráquetes incômodos, podem machucar</li>
-                        <li>Leva um tempo para conclusão...</li>
-                      </ul>
-                    </CardBody>
-                  </Card>
-                </Col>
-                <Col sm={6} md={6} lg={6} className="d-flex justify-content-center align-items-center">
-                  <Card>
-                    <CardHeader style={{ backgroundColor: cardHeaderColor }}>
-                      <span className="font-weight-bold">Alinhadores transparentes</span>
-                    </CardHeader>
-                    <CardBody style={{ backgroundColor: cardBodyColor }}>
-                      <ul style={{ listStyle: 'inherit' }} className="pl-2">
-                        <li>22h por dia</li>
-                        <li>Transparente, quase imperceptível</li>
-                        <li>Confortável, não machuca</li>
-                        <li>3x mais rápido</li>
-                        <br />
-                        <br />
-                      </ul>
-                    </CardBody>
-                  </Card>
-                </Col>
-              </Row>
+            <Col sm={6} md={6} lg={6} className="d-flex flex-column">
+              <FittedImage src={Comparando} fit="cover" />
             </Col>
             <Col sm={6} md={6} lg={6}>
-              <FittedImage src={Comparacao} fit="cover" />
+              <div className="h-75 pt-5 mt-5">
+                <FittedImage src={Comparacao} fit="cover" />
+              </div>
+              <div className="d-flex pt-5">
+                <Button tag={Link} to="/chatbot" className="general-button m-auto">
+                  Sou um candidato?
+                </Button>
+              </div>
             </Col>
           </Row>
         </section>
