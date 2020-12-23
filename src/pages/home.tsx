@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
-import Motivo1 from 'content/images/pages/home/motivo1.png';
+import Motivo1 from 'content/images/pages/home/motivo1.jpg';
 import Motivo2 from 'content/images/pages/home/motivo2.jpg';
 import Motivo3 from 'content/images/pages/home/motivo3.jpg';
 import Comparando from 'content/images/pages/home/imagemcomparando.png';
@@ -116,7 +116,7 @@ class Home extends React.Component {
             </Col>
             <div className="col-6 d-flex">
               <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Fácil de Limpar</h1>
+                <h2 className="font-weight-bold">Fácil de Limpar</h2>
                 <ul>
                   <li>
                     <span>
@@ -132,7 +132,7 @@ class Home extends React.Component {
           <Row>
             <div className="col-6 d-flex">
               <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Removível, fácil de colocar e tirar</h1>
+                <h2 className="font-weight-bold">Removível, fácil de colocar e tirar</h2>
                 <ul>
                   <li>
                     <span>Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal</span>
@@ -151,7 +151,7 @@ class Home extends React.Component {
             </Col>
             <div className="col-6 d-flex">
               <div className="m-auto w-75">
-                <h1 className="font-weight-bold">Coma o que quiser</h1>
+                <h2 className="font-weight-bold">Coma o que quiser</h2>
                 <ul>
                   <li>
                     <span>
