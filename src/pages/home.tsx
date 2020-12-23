@@ -77,10 +77,10 @@ class Home extends React.Component {
             <h1 className="font-weight-bold text-center">Comparativo</h1>
           </div>
           <br />
-          <h6>
+          <h5>
             Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
             melhor se encaixa pra você.
-          </h6>
+          </h5>
           <br />
           <Row className="m-auto justify-content-center">
             <Col sm={6} md={6} lg={6} className="d-flex flex-column">
