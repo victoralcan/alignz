@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import ReadySetSmileImg from '../../content/images/readySetSmile.jpg';
+import ReadySetSmileImg from '../../content/images/readySetSmile.png';
 import FittedImage from 'react-fitted-image';
 import { Link } from 'react-router-dom';
 
