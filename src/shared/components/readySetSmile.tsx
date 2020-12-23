@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import ReadySetSmileImg from '../../content/images/readySetSmile.png';
+import ReadySetSmileImg from '../../content/images/readySetSmile.jpg';
 import FittedImage from 'react-fitted-image';
 import { Link } from 'react-router-dom';
 
 function ReadySetSmile() {
   return (
     <section className="infoContainer">
-      <div className="position-absolute">
+      <div className="position-absolute" style={{ height: '85vh' }}>
         <FittedImage src={ReadySetSmileImg} fit="cover" />
       </div>
       <div className="z-index-2 h-100">
