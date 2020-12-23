@@ -1,31 +1,36 @@
 .header-container {
   background-color: var(--white);
+  padding: 30px !important;
 }
 
 .header-option {
-  padding-left: 16px;
-  width: 100%;
+  padding: 20px;
   color: var(--black);
   font-size: large;
   font-weight: bold;
-
   &:hover {
     color: var(--pastel);
   }
 }
 
 .brand-logo {
+  padding: 40px 20px 40px 40px;
   &:hover {
     text-decoration: none;
   }
 
   .brand-icon {
-    height: 35px;
+    height: 44px;
     width: auto;
     display: inline-block;
 
     img {
-      height: 45px;
+      height: 55px;
     }
   }
+}
+
+p, h5 {
+  margin: 0 !important;
+  color: var(--gray) !important;
 }

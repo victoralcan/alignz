@@ -120,11 +120,11 @@ h1 {
     font-size: 24px;
     line-height: 26px;
 
-    padding: 8px 18px;
+    padding: 18px 28px;
 
     background-color: var(--orange);
     border-color: var(--orange);
-    border-radius: 25px;
+    border-radius: 10px;
     border-width: 2px;
 
     transition: background-color 0.2s ease-in-out;
@@ -177,8 +177,8 @@ h1 {
     --orange: #e76034;
     --orange-opac: rgba(231, 96, 52, 0.6);
     --orange-opac2: rgba(231, 96, 52, 0.2);
-    --gray: #424242;
-    --gray-opac: rgba(66, 66, 66, 0.6);
+    --gray: #737373;
+    --gray-opac: rgba(155, 155, 155, 0.6);
     --pink: #c85c74;
     --black: #000;
     --pink-light: #F9DAD0;

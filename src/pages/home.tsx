@@ -55,7 +55,7 @@ class Home extends React.Component {
           <div className="z-index-2 h-100">
             <div className="h-100 col-6 center-elements">
               <div className="m-auto w-50">
-                <h1 className="font-weight-bold">Conheça o futuro do alinhamento dental</h1>
+                <h1 className="font-weight-bolder">Conheça o futuro do alinhamento dental</h1>
                 <ul>
                   <li>
                     <span>
@@ -98,8 +98,10 @@ class Home extends React.Component {
                     </CardHeader>
                     <CardBody style={{ backgroundColor: cardBodyColor }}>
                       <ul style={{ listStyle: 'inherit' }} className="pl-2">
-                        <li>24/7 dias</li>
-                        <li>365 dias/ano</li>
+                        <li>
+                          24/7 dias
+                          <br /> 365 dias/ano
+                        </li>
                         <li>Perceptível até mesmo distante</li>
                         <li>Bráquetes incômodos, podem machucar</li>
                         <li>Leva um tempo para conclusão...</li>
