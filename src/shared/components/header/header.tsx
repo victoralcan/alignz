@@ -6,7 +6,7 @@ import { Button, Col, Navbar } from 'reactstrap';
 
 function Header() {
   return (
-    <Navbar expand="lg" className="header-container">
+    <Navbar expand="lg" className="header-container fixed-top shadow">
       <Brand />
       <Link className="header-option" to="/como-funciona" style={{ textDecoration: 'none' }}>
         <p>COMO FUNCIONA</p>
