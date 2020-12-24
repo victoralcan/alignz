@@ -4,7 +4,11 @@ import ReadySetSmileImg from '../../content/images/readySetSmile.png';
 import FittedImage from 'react-fitted-image';
 import { Link } from 'react-router-dom';
 
-function ReadySetSmile() {
+interface IReadySetSmileProps {
+  right?: boolean;
+}
+
+function ReadySetSmile(props: IReadySetSmileProps) {
   return (
     <section className="infoContainer">
       <div className="position-absolute" style={{ height: '85vh' }}>
