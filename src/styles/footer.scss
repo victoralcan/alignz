@@ -1,15 +1,10 @@
-.card-body a {
-  color: #21192f;
+li a {
+  color: var(--black);
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.card-body {
-  background-color: var(--pastel2-opac);
-}
-
-.card-deck {
-  background-color: var(--pastel2-opac);
-}
-
-.card-text {
-  margin-bottom: 8px;
+div[class*='col-'] {
+  margin: 30px;
 }
