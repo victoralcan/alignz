@@ -12,9 +12,9 @@ import { Brand } from './header/header-components';
 
 function Footer() {
   return (
-    <Row style={{ backgroundColor: ColorPallet.pinkLight }}>
-      <Col lg={4} md={4} sm={4}>
-        <ul>
+    <Row style={{ backgroundColor: ColorPallet.pinkLight }} className="p-5">
+      <Col lg={5} md={5} sm={5} className="d-flex align-items-center justify-content-center">
+        <ul className="d-flex flex-column">
           <li>
             <Brand />
           </li>
@@ -27,7 +27,7 @@ function Footer() {
           <li>
             <h6>Fique ligado nas nossas mídias</h6>
           </li>
-          <li>
+          <li className="m-auto">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
             &nbsp;&nbsp;
             <FontAwesomeIcon icon={faFacebook} size="2x" />
@@ -38,11 +38,12 @@ function Footer() {
           </li>
         </ul>
       </Col>
-      <Col lg={3} md={3} sm={3}>
+      <Col lg={3} md={3} sm={3} className="d-flex align-items-center justify-content-center">
         <ul>
           <li>
             <h2>
               SOBRE
+              <br />
               <br />
             </h2>
           </li>
@@ -63,10 +64,11 @@ function Footer() {
           </li>
         </ul>
       </Col>
-      <Col lg={3} md={3} sm={3}>
+      <Col lg={3} md={3} sm={3} className="d-flex align-items-center justify-content-center">
         <ul>
           <li>
             <h2>ATENDIMENTO</h2>
+            <br />
             <br />
           </li>
           <li>+55 (61) 98443-6135</li>
