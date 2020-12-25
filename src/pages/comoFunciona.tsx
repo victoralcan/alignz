@@ -47,6 +47,10 @@ function ComoFunciona() {
             <div className="m-auto w-75">
               <ul>
                 <li>
+                  <h2>Hormônios da felicidade</h2>
+                  <br />
+                </li>
+                <li>
                   <span>
                     Sorrir libera dopamina, endorfinas e serotonina em seu cérebro. Essas substâncias atuam como um
                     analgésico natural e elevam o humor, que, consequentemente, melhora seu bem-estar de forma geral.
@@ -61,6 +65,10 @@ function ComoFunciona() {
           <div className="col-6 center-elements">
             <div className="m-auto w-75">
               <ul>
+                <li>
+                  <h2>Ecercício do bom humor</h2>
+                  <br />
+                </li>
                 <li>
                   <span>
                     O seu humor está diretamente relacionado às suas ações. Quanto mais você flexiona os músculos do
@@ -83,6 +91,10 @@ function ComoFunciona() {
             <div className="m-auto w-75">
               <ul>
                 <li>
+                  <h2>Otimismo nas alturas</h2>
+                  <br />
+                </li>
+                <li>
                   <span>
                     Sorrir por 30 segundos algumas vezes ao dia mantém você animado e com energia, ajuda a evitar o
                     esgotamento psicológico e garante que sua perspectiva permaneça positiva. O sorriso realmente é uma
@@ -101,7 +113,7 @@ function ComoFunciona() {
           <h1>3 SIMPLES PASSOS PARA A MUDANÇA</h1>
         </div>
         <br />
-        <Row>
+        <Row className="pb-5 mb-5">
           <div className="col-7 border-image">
             <FittedImage fit="cover" src={Passo1} />
           </div>
@@ -120,7 +132,7 @@ function ComoFunciona() {
             </div>
           </div>
         </Row>
-        <Row>
+        <Row className="pb-5 mb-5">
           <div className="col-5 center-elements">
             <div className="m-auto w-75">
               <h1 className="font-weight-bold">Daí, vem o seu planejamento</h1>
@@ -139,7 +151,7 @@ function ComoFunciona() {
             <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
           </div>
         </Row>
-        <Row>
+        <Row className="pb-5 mb-5">
           <div className="col-7 border-image">
             <FittedImage fit="cover" src={Passo3} />
           </div>
