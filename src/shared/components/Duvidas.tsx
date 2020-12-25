@@ -46,6 +46,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               plástico transparente sem BPA ajustadas, personalizadas, que mudam gradualmente os dentes para a posição
               que eles deveriam estar.
             </p>
+            <br />
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(1)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[1] ? 'minus' : 'plus'} />
@@ -57,6 +58,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               O dentista ou ortodontista designado a você determinará o melhor plano para suas necessidades, mas
               corrigimos a maioria dos sorrisos em uma média de 6 meses ou menos!
             </p>
+            <br />
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(2)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[2] ? 'minus' : 'plus'} />
@@ -70,6 +72,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               rápidos e convenientes para os clientes que desejam completar seu novo sorriso a tempo para um evento
               especial - como fotos de formatura, casamento ou eventos de trabalho.
             </p>
+            <br />
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(3)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[3] ? 'minus' : 'plus'} />
@@ -81,6 +84,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               Sim, depois de recebermos sua imagem 3D, criamos um plano de tratamento personalizado que mostra uma
               visualização 3D de antes e depois de como seus dentes se moverão com o tratamento.
             </p>
+            <br />
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(4)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[4] ? 'minus' : 'plus'} />
@@ -93,6 +97,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               dentista ou ortodontista Aligner Z, que analisa o seu caso. Você começará a usar um novo conjunto de
               alinhadores conforme prescrito, avançando para o próximo estágio do seu novo sorriso.
             </p>
+            <br />
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(5)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[5] ? 'minus' : 'plus'} />
@@ -106,6 +111,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
               até o destino final. Esta dor deve desaparecer gradualmente após os primeiros dias de uso. É muito
               parecido com um bom treino na academia, dói um pouco alguns dias depois.
             </p>
+            <br />
           </Collapse>
           <h4 onClick={() => this.toggleDuvida(6)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[6] ? 'minus' : 'plus'} />
