@@ -121,7 +121,7 @@ function ComoFunciona() {
           </div>
           <div className="col-5 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Primeiro, as imagens</h1>
+              <h1 className="font-weight-bold text-black">Primeiro, as imagens</h1>
               <ul>
                 <li>
                   <span>
@@ -137,7 +137,7 @@ function ComoFunciona() {
         <Row className="pb-5 mb-5">
           <div className="col-5 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">Daí, vem o seu planejamento</h1>
+              <h1 className="font-weight-bold text-black">Daí, vem o seu planejamento</h1>
               <ul>
                 <li>
                   <span>
@@ -159,7 +159,7 @@ function ComoFunciona() {
           </div>
           <div className="col-5 center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold">E então, você pode começar sua jornada!</h1>
+              <h1 className="font-weight-bold text-black">E então, você pode começar sua jornada!</h1>
               <ul>
                 <li>
                   <span>
