@@ -11,5 +11,5 @@ export enum ColorPallet {
   grayOpac = 'rgba(155, 155, 155, 0.6)',
   pink = '#c85c74',
   black = '#000',
-  pinkLight = '#F9DAD0',
+  pinkLight = '#fff5f1',
 }

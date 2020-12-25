@@ -1,105 +1,79 @@
 import React from 'react';
 import '../../styles/footer.scss';
-import { Card, CardBody, CardDeck, CardHeader, CardText, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { Col, Row } from 'reactstrap';
 import { ColorPallet } from '../model/enum/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
-import Logo from '../../content/images/logo-alignz-removebg.png';
+import { Brand } from './header/header-components';
 
 function Footer() {
-  const cardClassName = 'mb-3 mt-3 ml-1 mr-1';
-  const cardHeaderClassName = 'border-0 font-weight-bold';
-  const textDecoration = 'none';
-  const backgroundColor = ColorPallet.pastel2;
   return (
-    <Row>
-      <Col lg={12} md={12} sm={12}>
-        <CardDeck className="m-1">
-          <Card className={cardClassName}>
-            <CardHeader className="border-0 font-weight-bold d-flex flex-column" style={{ backgroundColor }}>
-              <div className="m-auto" style={{ width: 'auto', display: 'inline-block' }}>
-                <img src={Logo} alt="AlignerZ" />
-              </div>
-              <h4 className="text-center">Alguma frase impacto</h4>
-            </CardHeader>
-          </Card>
-          <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              Informações
-            </CardHeader>
-            <CardBody>
-              <CardText>
-                <Link to="/como-funciona" style={{ textDecoration }}>
-                  Como funciona
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/valores" style={{ textDecoration }}>
-                  Valores
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/agenda" style={{ textDecoration }}>
-                  Agendar pré avaliação
-                </Link>
-              </CardText>
-              <div className="clear" />
-              <CardText>
-                <Link to="/duvidas" style={{ textDecoration }}>
-                  Dúvidas?
-                </Link>
-              </CardText>
-            </CardBody>
-          </Card>
-          <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              Contatos
-            </CardHeader>
-            <CardBody>
-              <span>
-                <FontAwesomeIcon icon="phone" />
-                &nbsp;&nbsp;Telefone
-              </span>
-              <div className="clear" />
-              <small>horarios</small>
-              <div className="clear" />
-              <span>
-                <FontAwesomeIcon icon={faWhatsapp} />
-                &nbsp;&nbsp;Whatsapp
-              </span>
-              <div className="clear" />
-              <small>horarios</small>
-              <div className="clear" />
-            </CardBody>
-          </Card>
-          <Card className={cardClassName}>
-            <CardHeader className={cardHeaderClassName} style={{ backgroundColor }}>
-              Social
-            </CardHeader>
-            <CardBody>
-              <span>
-                <FontAwesomeIcon icon={faFacebook} />
-                &nbsp;&nbsp;Facebook
-              </span>
-              <div className="clear" />
-              <span>
-                <FontAwesomeIcon icon={faInstagram} />
-                &nbsp;&nbsp;Instagram
-              </span>
-              <div className="clear" />
-              <span>
-                <FontAwesomeIcon icon={faYoutube} />
-                &nbsp;&nbsp;Youtube
-              </span>
-            </CardBody>
-          </Card>
-        </CardDeck>
+    <Row style={{ backgroundColor: ColorPallet.pinkLight }}>
+      <Col lg={4} md={4} sm={4}>
+        <ul>
+          <li>
+            <Brand />
+          </li>
+          <li>
+            <br />
+            <br />
+            <br />
+            <br />
+          </li>
+          <li>
+            <h6>Fique ligado nas nossas mídias</h6>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+            &nbsp;&nbsp;
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
+            &nbsp;&nbsp;
+            <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+            &nbsp;&nbsp;
+            <FontAwesomeIcon icon={faYoutube} size="2x" />
+          </li>
+        </ul>
+      </Col>
+      <Col lg={3} md={3} sm={3}>
+        <ul>
+          <li>
+            <h2>
+              SOBRE
+              <br />
+            </h2>
+          </li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/como-funciona">Como funciona</Link>
+          </li>
+          <li>
+            <Link to="/valores">Valores</Link>
+          </li>
+          <li>
+            <Link to="/chatbot">Pré-avaliação</Link>
+          </li>
+          <li>
+            <Link to="/duvidas">Dúvidas</Link>
+          </li>
+        </ul>
+      </Col>
+      <Col lg={3} md={3} sm={3}>
+        <ul>
+          <li>
+            <h2>ATENDIMENTO</h2>
+            <br />
+          </li>
+          <li>+55 (61) 98443-6135</li>
+          <li>@alignerz</li>
+          <li>Segunda a sexta</li>
+          <li>8h30 às 18h</li>
+        </ul>
       </Col>
     </Row>
   );
