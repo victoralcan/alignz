@@ -1,9 +1,6 @@
 .header-container {
   background-color: var(--white);
-  padding: 25px !important;
   position: fixed;
-  top: -2% !important;
-  left: -2% !important;
 }
 
 .header-option {
@@ -17,7 +14,7 @@
 }
 
 .brand-logo {
-  padding: 40px 20px 40px 40px;
+  padding: 40px 20px 40px 0px;
   &:hover {
     text-decoration: none;
   }

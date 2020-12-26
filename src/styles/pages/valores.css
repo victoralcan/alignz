@@ -6,10 +6,6 @@ input {
     margin: auto !important;
 }
 
-button {
-    border-radius: 20px !important;
-}
-
 #left-side-box {
     display: flex;
     flex-direction: column;
