@@ -10,7 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'styles/global.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import 'react-modal-video/scss/modal-video.scss';
 import 'swiper/swiper.scss';
 
 loadIcons();
