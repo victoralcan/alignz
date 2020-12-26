@@ -1,6 +1,6 @@
 import React from 'react';
 import FittedImage from 'react-fitted-image';
-import Preco1 from 'content/images/pages/valores/valores1.jpg';
+import Preco1 from 'content/images/pages/valores/valores1.png';
 import '../styles/pages/valores.css';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
