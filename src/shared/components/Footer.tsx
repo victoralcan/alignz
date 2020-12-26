@@ -67,9 +67,11 @@ function Footer() {
       <Col lg={3} md={3} sm={3} className="d-flex align-items-center justify-content-center">
         <ul>
           <li>
-            <h2>ATENDIMENTO</h2>
-            <br />
-            <br />
+            <h2>
+              ATENDIMENTO
+              <br />
+              <br />
+            </h2>
           </li>
           <li>+55 (61) 98443-6135</li>
           <li>@alignerz</li>

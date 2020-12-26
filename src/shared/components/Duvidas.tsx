@@ -34,11 +34,11 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
     return (
       <section className="infoContainerFlex d-flex flex-column p-4">
         <h1 className="pb-5 mr-auto ml-auto">{title ? title : 'Dúvidas Frequentes'}</h1>
-        <div className="mr-auto ml-auto w-50">
-          <h4 onClick={() => this.toggleDuvida(0)} className="pb-3">
+        <div className="mr-auto ml-auto w-65">
+          <h5 onClick={() => this.toggleDuvida(0)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[0] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;O que são os alinhadores alignerZ?
-          </h4>
+          </h5>
           <hr />
           <Collapse isOpen={collapseControl[0]} className="w-75 mr-auto ml-auto">
             <p>
@@ -48,10 +48,10 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
             </p>
             <br />
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(1)} className="pb-3">
+          <h5 onClick={() => this.toggleDuvida(1)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[1] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Quanto tempo os alinhadores alignerZ levam para endireitar o meu sorriso?
-          </h4>
+          </h5>
           <hr />
           <Collapse isOpen={collapseControl[1]} className="w-75 mr-auto ml-auto">
             <p>
@@ -60,10 +60,10 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
             </p>
             <br />
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(2)} className="pb-3">
+          <h5 onClick={() => this.toggleDuvida(2)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[2] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Como eu sei qual o melhor tratamento ortodôntico para mim?
-          </h4>
+          </h5>
           <hr />
           <Collapse isOpen={collapseControl[2]} className="w-75 mr-auto ml-auto">
             <p>
@@ -74,10 +74,10 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
             </p>
             <br />
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(3)} className="pb-3">
+          <h5 onClick={() => this.toggleDuvida(3)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[3] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Eu consigo ver como o meu sorriso ficará após o tratamento antes de tomar uma decisão?
-          </h4>
+          </h5>
           <hr />
           <Collapse isOpen={collapseControl[3]} className="w-75 mr-auto ml-auto">
             <p>
@@ -86,10 +86,10 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
             </p>
             <br />
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(4)} className="pb-3">
+          <h5 onClick={() => this.toggleDuvida(4)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[4] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Como funciona o tratamento com os alinhadores alignerZ?
-          </h4>
+          </h5>
           <hr />
           <Collapse isOpen={collapseControl[4]} className="w-75 mr-auto ml-auto">
             <p>
@@ -99,10 +99,10 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
             </p>
             <br />
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(5)} className="pb-3">
+          <h5 onClick={() => this.toggleDuvida(5)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[5] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;Meus dentes vão doer enquanto eu estiver fazendo o uso dos alinhadores alignerZ?
-          </h4>
+          </h5>
           <hr />
           <Collapse isOpen={collapseControl[5]} className="w-75 mr-auto ml-auto">
             <p>
@@ -113,10 +113,10 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
             </p>
             <br />
           </Collapse>
-          <h4 onClick={() => this.toggleDuvida(6)} className="pb-3">
+          <h5 onClick={() => this.toggleDuvida(6)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[6] ? 'minus' : 'plus'} />
             &nbsp;&nbsp;O que faço se os meus dentes não estão alinhando como o esperado?
-          </h4>
+          </h5>
           <hr />
           <Collapse isOpen={collapseControl[6]} className="w-75 mr-auto ml-auto">
             <p>

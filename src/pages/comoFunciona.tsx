@@ -198,7 +198,7 @@ function ComoFunciona() {
       {/*Duvidas*/}
       <Duvidas title="Ainda tem dúvidas?" />
       {/*Ready Set Smile*/}
-      <ReadySetSmile />
+      <ReadySetSmile right={false} />
     </>
   );
 }
