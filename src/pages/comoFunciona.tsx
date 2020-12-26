@@ -7,11 +7,10 @@ import Passo3 from '../content/images/pages/como-funciona/passo3.jpg';
 import Beneficio1 from '../content/images/pages/como-funciona/beneficio1.png';
 import Beneficio2 from '../content/images/pages/como-funciona/beneficio2.png';
 import Beneficio3 from '../content/images/pages/como-funciona/beneficio3.png';
-import Mao from '../content/images/pages/como-funciona/mao.png';
+import SorrisoGarantido from '../content/images/pages/como-funciona/sorrisoGarantido.png';
 import Duvidas from '../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
 import ReadySetSmile from '../shared/components/readySetSmile';
-import { ColorPallet } from '../shared/model/enum/colors';
 
 function ComoFunciona() {
   return (
@@ -174,26 +173,8 @@ function ComoFunciona() {
         </Row>
       </section>
       {/*Sorriso Garantido*/}
-      <section
-        className="infoContainerSmall d-flex align-items-center justify-content-center"
-        style={{ backgroundColor: ColorPallet.orange }}
-      >
-        <ul className="d-flex flex-column w-75">
-          <li className="m-auto">
-            <FittedImage src={Mao} style={{ height: '100px', width: '100px' }} />
-          </li>
-          <li>
-            <br />
-            <h1 className="text-white text-center">SEU SORRISO GARANTIDO COM alignerZ</h1>
-            <br />
-          </li>
-          <li>
-            <h4 className="text-white text-center">
-              Desde a criação do seu planejamento 3D até sua contenção final, nossos dentistas acompanham você todo o
-              tempo, garantindo um tratamento eficiente.
-            </h4>
-          </li>
-        </ul>
+      <section className="infoContainerFlex">
+        <FittedImage src={SorrisoGarantido} fit="cover" />
       </section>
       {/*Duvidas*/}
       <Duvidas title="Ainda tem dúvidas?" />
