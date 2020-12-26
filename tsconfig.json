@@ -19,7 +19,8 @@
     "noEmit": true,
     "noImplicitAny": false,
     "jsx": "react",
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "strictNullChecks": false
   },
   "include": [
     "src"
