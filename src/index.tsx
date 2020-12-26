@@ -5,7 +5,6 @@ import App from './App';
 import initStore from './config/store';
 import ErrorBoundary from './shared/error/error-boundary';
 import { loadIcons } from './config/icon-loader';
-import 'fonts/LeagueSpartan.otf';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'styles/global.css';
 import 'slick-carousel/slick/slick.css';
