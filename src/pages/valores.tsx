@@ -103,7 +103,7 @@ class Valores extends React.Component {
             <h3>Contenções finais</h3>
           </div>
         </section>
-        <ReadySetSmile />
+        <ReadySetSmile right={true} />
         <Duvidas title="Ainda tem dúvidas?" />
       </>
     );

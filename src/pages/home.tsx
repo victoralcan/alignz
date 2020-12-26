@@ -142,7 +142,8 @@ class Home extends React.Component {
               </div>
             </div>
             <Col md={6} className="h-100 border-image">
-              <FittedImage fit="cover" src={Motivo2} />
+              {/*// 714 x 771 */}
+              <FittedImage fit="cover" src={Motivo2} style={{ height: '713px' }} />
             </Col>
           </Row>
           <Row>
@@ -168,7 +169,7 @@ class Home extends React.Component {
         {/*Duvidas*/}
         <Duvidas />
         {/*Ready Set Smile*/}
-        <ReadySetSmile />
+        <ReadySetSmile right={true} />
         {/*Produto*/}
         {/*<section className="infoContainerFlex">*/}
         {/*  <Row>*/}
