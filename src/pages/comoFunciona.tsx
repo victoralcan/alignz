@@ -1,12 +1,12 @@
 import React from 'react';
-import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.jpg';
+import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.png';
 import { Col, Row } from 'reactstrap';
 import Passo1 from '../content/images/pages/como-funciona/passo1.jpg';
 import Passo2 from '../content/images/pages/como-funciona/passo2.jpg';
 import Passo3 from '../content/images/pages/como-funciona/passo3.jpg';
-import Beneficio1 from '../content/images/pages/como-funciona/beneficio1.jpg';
-import Beneficio2 from '../content/images/pages/como-funciona/beneficio2.jpg';
-import Beneficio3 from '../content/images/pages/como-funciona/beneficio3.jpg';
+import Beneficio1 from '../content/images/pages/como-funciona/beneficio1.png';
+import Beneficio2 from '../content/images/pages/como-funciona/beneficio2.png';
+import Beneficio3 from '../content/images/pages/como-funciona/beneficio3.png';
 import Mao from '../content/images/pages/como-funciona/mao.png';
 import Duvidas from '../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
