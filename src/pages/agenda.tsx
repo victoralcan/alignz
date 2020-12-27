@@ -1,10 +1,11 @@
 import React from 'react';
+import Wizard from '../shared/components/Wizard/Wizard';
 
 function Agenda() {
   return (
-    <div>
-      <div>Agenda</div>
-    </div>
+    <section className="infoContainer">
+      <Wizard />
+    </section>
   );
 }
 
