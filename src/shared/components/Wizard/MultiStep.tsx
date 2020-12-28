@@ -106,12 +106,12 @@ class MultiStep extends React.Component<IMultiStepProps> {
         <div className="divider" />
         <div className="clearfix">
           <div>
-            <Button className="float-left" onClick={this.previous}>
+            <Button className="general-button p-3 float-left" onClick={this.previous}>
               <FontAwesomeIcon icon="arrow-left" />
-              &nbsp;&nbsp;Voltar
+              Voltar
             </Button>
-            <Button className="float-right" onClick={this.next}>
-              Proximo&nbsp;&nbsp;
+            <Button className="general-button p-3 float-right" onClick={this.next}>
+              Proximo
               <FontAwesomeIcon icon="arrow-right" />
             </Button>
           </div>

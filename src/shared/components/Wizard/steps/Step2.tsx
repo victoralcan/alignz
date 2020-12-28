@@ -1,6 +1,6 @@
 import React from 'react';
-import { Col, Label, Row, FormGroup } from 'reactstrap';
-import { AvField, AvForm } from 'availity-reactstrap-validation';
+import { Col, FormGroup, Label, Row } from 'reactstrap';
+import { AvForm } from 'availity-reactstrap-validation';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
 import Select from 'react-select';
