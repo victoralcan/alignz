@@ -33,4 +33,15 @@
     margin: auto;
     width: 50%;
   }
+  .m-auto-w-75 {
+    margin: auto;
+    width: 75%;
+  }
+  .w-60-flex {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
