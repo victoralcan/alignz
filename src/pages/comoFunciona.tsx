@@ -11,18 +11,19 @@ import SorrisoGarantido from '../content/images/pages/como-funciona/sorrisoGaran
 import Duvidas from '../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
 import ReadySetSmile from '../shared/components/readySetSmile';
+import '../styles/pages/comoFunciona.scss';
 
 function ComoFunciona() {
   return (
     <>
       {/*Escolha Sorrir*/}
       <section className="infoContainer80">
-        <div className="position-absolute" style={{ height: '80vh' }}>
+        <div id="chooseSmileImg">
           <FittedImage src={ChooseSmile} fit="cover" />
         </div>
-        <div className="z-index-2 h-100">
-          <div className="h-100 col-6 center-elements">
-            <div className="m-auto w-50">
+        <div id="chooseSmileText">
+          <Col xs={12} md={6} className="centerTextImg">
+            <div className="m-auto-w-50">
               <h1 className="display-4 font-weight-bold">Escolha sorrir.</h1>
               <ul>
                 <li>
@@ -35,7 +36,7 @@ function ComoFunciona() {
                 </li>
               </ul>
             </div>
-          </div>
+          </Col>
         </div>
       </section>
       {/*Beneficios*/}
@@ -115,10 +116,10 @@ function ComoFunciona() {
         </div>
         <br />
         <Row className="pb-5 mb-5">
-          <div className="col-7 border-image">
+          <Col md={7} className="border-image">
             <FittedImage fit="cover" src={Passo1} />
-          </div>
-          <div className="col-5 center-elements">
+          </Col>
+          <Col md={5} className="center-elements">
             <div className="m-auto w-75">
               <h1 className="font-weight-bold text-black">Primeiro, as imagens</h1>
               <ul>
@@ -131,10 +132,10 @@ function ComoFunciona() {
                 </li>
               </ul>
             </div>
-          </div>
+          </Col>
         </Row>
         <Row className="pb-5 mb-5">
-          <div className="col-5 center-elements">
+          <Col md={5} className="center-elements">
             <div className="m-auto w-75">
               <h1 className="font-weight-bold text-black">Daí, vem o seu planejamento</h1>
               <ul>
@@ -147,16 +148,16 @@ function ComoFunciona() {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="col-7 border-image">
+          </Col>
+          <Col md={7} className="border-image">
             <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
-          </div>
+          </Col>
         </Row>
         <Row className="pb-5 mb-5">
-          <div className="col-7 border-image">
+          <Col md={7} className="border-image">
             <FittedImage fit="cover" src={Passo3} />
-          </div>
-          <div className="col-5 center-elements">
+          </Col>
+          <Col md={5} className="center-elements">
             <div className="m-auto w-75">
               <h1 className="font-weight-bold text-black">E então, você pode começar sua jornada!</h1>
               <ul>
@@ -169,7 +170,7 @@ function ComoFunciona() {
                 </li>
               </ul>
             </div>
-          </div>
+          </Col>
         </Row>
       </section>
       {/*Sorriso Garantido*/}
