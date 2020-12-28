@@ -91,10 +91,7 @@ class MultiStep extends React.Component<IMultiStepProps> {
 
   renderSteps = () => {
     return this.props.steps.map((s, i) => (
-      <li className={this.getClassName('form-wizard-step', i)} onClick={this.handleOnClick} key={i} value={i}>
-        <em>{i + 1}</em>
-        <span>{this.props.steps[i].name}</span>
-      </li>
+      <li className={this.getClassName('form-wizard-step', i)} onClick={this.handleOnClick} key={i} value={i} />
     ));
   };
 
@@ -108,10 +105,10 @@ class MultiStep extends React.Component<IMultiStepProps> {
           <div>
             <Button className="general-button p-3 float-left" onClick={this.previous}>
               <FontAwesomeIcon icon="arrow-left" />
-              Voltar
+              <h5 className="text-white">Voltar</h5>
             </Button>
             <Button className="general-button p-3 float-right" onClick={this.next}>
-              Proximo
+              <h5 className="text-white">Próximo</h5>
               <FontAwesomeIcon icon="arrow-right" />
             </Button>
           </div>

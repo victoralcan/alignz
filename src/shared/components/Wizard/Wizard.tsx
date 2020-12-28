@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import Step1 from './steps/Step1';
 import Step2 from './steps/Step2';
 import Step3 from './steps/Step3';
+import { ColorPallet } from '../../model/enum/colors';
 
 export interface IWizardProps extends StateProps, DispatchProps {}
 
@@ -74,17 +75,17 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
       { name: 'Passo 3', component: <Step3 /> },
     ];
     return (
-      <Row>
+      <Row className="h-100">
         <Col md="12">
-          <Card className="main-card mb-3">
-            <CardBody>
+          <Card className="main-card mb-3 h-100" style={{ backgroundColor: ColorPallet.pastelOpac }}>
+            <CardBody className="center-elements">
               <br />
               <br />
               <br />
               <br />
               <br />
               <br />
-              <div className="forms-wizard-alt">
+              <div className="forms-wizard-alt p-5" style={{ backgroundColor: ColorPallet.white }}>
                 <MultiStep steps={steps} />
               </div>
             </CardBody>

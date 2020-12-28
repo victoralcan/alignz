@@ -249,3 +249,20 @@ $layout-spacer-x: 1.5rem;
     }
   }
 }
+
+@media screen and (max-width: 575px) {
+  .forms-wizard-alt {
+
+  }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 992px) {
+  .forms-wizard-alt {
+    width: 50% !important;
+    padding: 6em !important;
+  }
+}
