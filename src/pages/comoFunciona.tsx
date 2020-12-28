@@ -140,7 +140,7 @@ function ComoFunciona() {
         </Row>
       </section>
       {/*Sorria em 3 passos*/}
-      <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
+      <section className="infoContainerFlex w-75-flex">
         <div>
           <h1 className="display-4 font-weight-bold">3 SIMPLES PASSOS PARA A MUDANÇA</h1>
         </div>
@@ -165,23 +165,47 @@ function ComoFunciona() {
           </Col>
         </Row>
         <Row className="pb-5 mb-5">
-          <Col md={5} className="center-elements">
-            <div className="m-auto w-75">
-              <h1 className="font-weight-bold text-black">Daí, vem o seu planejamento</h1>
-              <ul>
-                <li>
-                  <p>
-                    Fazemos uma imagem 3D do seu sorriso, que nos mostrará o que está acontecendo. Então, um de nossos
-                    dentistas monta, analisa e aprova seu plano de tratamento totalmente personalizado.
-                  </p>
-                  <div className="clear" />
-                </li>
-              </ul>
-            </div>
-          </Col>
-          <Col md={7} className="border-image">
-            <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
-          </Col>
+          {mobile ? (
+            <>
+              <Col md={7} className="border-image">
+                <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
+              </Col>
+              <Col md={5} className="center-elements">
+                <div className="m-auto w-75">
+                  <h1 className="font-weight-bold text-black">Daí, vem o seu planejamento</h1>
+                  <ul>
+                    <li>
+                      <p>
+                        Fazemos uma imagem 3D do seu sorriso, que nos mostrará o que está acontecendo. Então, um de
+                        nossos dentistas monta, analisa e aprova seu plano de tratamento totalmente personalizado.
+                      </p>
+                      <div className="clear" />
+                    </li>
+                  </ul>
+                </div>
+              </Col>
+            </>
+          ) : (
+            <>
+              <Col md={5} className="center-elements">
+                <div className="m-auto w-75">
+                  <h1 className="font-weight-bold text-black">Daí, vem o seu planejamento</h1>
+                  <ul>
+                    <li>
+                      <p>
+                        Fazemos uma imagem 3D do seu sorriso, que nos mostrará o que está acontecendo. Então, um de
+                        nossos dentistas monta, analisa e aprova seu plano de tratamento totalmente personalizado.
+                      </p>
+                      <div className="clear" />
+                    </li>
+                  </ul>
+                </div>
+              </Col>
+              <Col md={7} className="border-image">
+                <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
+              </Col>
+            </>
+          )}
         </Row>
         <Row className="pb-5 mb-5">
           <Col md={7} className="border-image">
@@ -204,9 +228,15 @@ function ComoFunciona() {
         </Row>
       </section>
       {/*Sorriso Garantido*/}
-      <section className="infoContainerFlex">
-        <FittedImage src={SorrisoGarantido} fit="cover" />
-      </section>
+      {mobile ? (
+        <section style={{ height: '22vh', marginBottom: '10vh' }}>
+          <FittedImage src={SorrisoGarantido} fit="cover" />
+        </section>
+      ) : (
+        <section className="infoContainerFlex">
+          <FittedImage src={SorrisoGarantido} fit="cover" />
+        </section>
+      )}
       {/*Duvidas*/}
       <Duvidas title="Ainda tem dúvidas?" />
       {/*Ready Set Smile*/}
