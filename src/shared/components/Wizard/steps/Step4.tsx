@@ -20,7 +20,7 @@ class Step4 extends React.Component<IStep4Props, IStep4State> {
               <FittedImage src={Boca} fit="contain" />
             </div>
           </div>
-          <Label for="espacamento">Qual o nível de desalinhamento dos seus dentes?</Label>
+          <Label for="espacamento">Como é o espaçamento dos seus dentes?</Label>
           <Row>
             <Col xs={4} className="center-elements">
               <div className="optionImage">

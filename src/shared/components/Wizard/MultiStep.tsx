@@ -98,7 +98,6 @@ class MultiStep extends React.Component<IMultiStepProps> {
   render() {
     return (
       <div onKeyDown={this.handleKeyDown}>
-        <ol className="forms-wizard">{this.renderSteps()}</ol>
         {this.props.steps[this.state.compState].component}
         <div className="divider" />
         <div className="clearfix">

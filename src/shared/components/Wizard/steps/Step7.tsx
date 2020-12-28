@@ -13,14 +13,14 @@ interface ISelectOption {
 interface IStep7Props extends StateProps, DispatchProps {}
 
 interface IStep7State {
-  frase: ISelectOption;
+  tempo: ISelectOption;
 }
 
 class Step7 extends React.Component<IStep7Props, IStep7State> {
   constructor(props) {
     super(props);
     this.state = {
-      frase: { label: '', value: '' },
+      tempo: { label: '', value: '' },
     };
   }
 
@@ -28,20 +28,20 @@ class Step7 extends React.Component<IStep7Props, IStep7State> {
     event.preventDefault();
   };
 
-  setFrase = (frase) => {
-    if (frase) {
+  setTempo = (tempo) => {
+    if (tempo) {
       this.setState({
-        frase,
+        tempo,
       });
     }
   };
 
   render() {
-    const frases = [
-      { value: '0', label: 'Tenho implante' },
-      { value: '1', label: 'Perdi um dente' },
-      { value: '2', label: 'Uso prótese' },
-      { value: '3', label: 'Nenhuma das anteriores' },
+    const tempos = [
+      { value: '0', label: 'Imediatamente' },
+      { value: '1', label: 'Em semanas' },
+      { value: '2', label: 'Em alguns meses' },
+      { value: '3', label: 'Sem pressa' },
     ];
     return (
       <>
@@ -50,18 +50,19 @@ class Step7 extends React.Component<IStep7Props, IStep7State> {
             <Row form>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="frases">Alguma dessas frases se aplica a você?</Label>
+                  <Label for="tempos">Em quanto tempo você deseja começar?</Label>
                   <Select
                     className="basic-single"
                     classNamePrefix="select"
-                    id="frases"
-                    name="frases"
-                    options={frases.map((motivacao, i) => ({
+                    id="tempos"
+                    name="tempos"
+                    options={tempos.map((motivacao, i) => ({
                       ...motivacao,
                       key: i,
                     }))}
-                    onChange={this.setFrase}
-                    value={this.state.frase}
+                    placeholder="Escolha uma opção"
+                    onChange={this.setTempo}
+                    value={this.state.tempo}
                   />
                 </FormGroup>
               </Col>

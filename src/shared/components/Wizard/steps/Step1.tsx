@@ -1,109 +1,70 @@
 import React from 'react';
-import { Col, Row } from 'reactstrap';
-import { AvField, AvForm } from 'availity-reactstrap-validation';
+import { Col, FormGroup, Label, Row } from 'reactstrap';
+import { AvForm } from 'availity-reactstrap-validation';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
+import Select from 'react-select';
 
-export interface IStep1Props extends StateProps, DispatchProps {}
+interface ISelectOption {
+  label: string;
+  value: string;
+}
 
-export interface IStep1State {}
+interface IStep1Props extends StateProps, DispatchProps {}
+
+interface IStep1State {
+  motivacao: ISelectOption;
+}
 
 class Step1 extends React.Component<IStep1Props, IStep1State> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      motivacao: { label: '', value: '' },
+    };
+  }
+
   handleSubmit = (event, errors, values) => {
     event.preventDefault();
   };
 
+  setMotivacao = (motivacao) => {
+    if (motivacao) {
+      this.setState({
+        motivacao,
+      });
+    }
+  };
+
   render() {
+    const motivacoes = [
+      { value: '0', label: 'Melhorar a apresentação pessoal' },
+      { value: '1', label: 'Tenho um evento importante (casamento, formatura, etc)' },
+      { value: '2', label: 'Quero melhorar minha auto-estima' },
+      { value: '3', label: 'Outro' },
+    ];
     return (
       <>
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <Row form>
-              <Col xs={12}>
-                <AvField
-                  className="w-50"
-                  label="Nome"
-                  name="name"
-                  id="name"
-                  placeholder="Seu Nome"
-                  validate={{
-                    required: {
-                      value: true,
-                      errorMessage: 'O nome é obrigatório!',
-                    },
-                    pattern: {
-                      value: /^[\w À-ÖØ-öø-ÿ]{2,250}$/,
-                      errorMessage: 'Você utilizou caractéres inválidos!',
-                    },
-                    maxLength: {
-                      value: 44,
-                    },
-                  }}
-                />
-              </Col>
-              <Col xs={12}>
-                <AvField
-                  className="w-50"
-                  label="E-mail"
-                  name="email"
-                  id="email"
-                  placeholder="Seu E-mail"
-                  type="email"
-                  errorMessage="Email incorreto!"
-                  validate={{
-                    required: {
-                      value: true,
-                      errorMessage: 'O email é obrigatório!',
-                    },
-                  }}
-                />
-              </Col>
-              <Col xs={4}>
-                <AvField
-                  label="Telefone"
-                  name="telefone"
-                  id="telefone"
-                  placeholder="Seu Telefone"
-                  validate={{
-                    required: {
-                      value: true,
-                      errorMessage: 'O telefone é obrigatório!',
-                    },
-                    pattern: {
-                      value: /^\d+$/,
-                      errorMessage: 'Você utilizou caractéres inválidos!',
-                    },
-                  }}
-                />
-              </Col>
-              <Col xs={4}>
-                <AvField
-                  label="CEP"
-                  name="cep"
-                  id="cep"
-                  placeholder="Seu CEP"
-                  validate={{
-                    required: {
-                      value: true,
-                      errorMessage: 'O CEP é obrigatório!',
-                    },
-                  }}
-                />
-              </Col>
-              <Col xs={4}>
-                <AvField
-                  label="Idade"
-                  name="idade"
-                  id="idade"
-                  placeholder="Sua Idade"
-                  errorMessage="Idade incorreta!"
-                  validate={{
-                    required: {
-                      value: true,
-                      errorMessage: 'A idade é obrigatória!',
-                    },
-                  }}
-                />
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="motivacao">Qual sua principal motivação para melhorar seu sorriso?</Label>
+                  <Select
+                    className="basic-single"
+                    classNamePrefix="select"
+                    id="motivacao"
+                    name="motivacao"
+                    options={motivacoes.map((motivacao, i) => ({
+                      ...motivacao,
+                      key: i,
+                    }))}
+                    placeholder="Escolha uma opção"
+                    onChange={this.setMotivacao}
+                    value={this.state.motivacao}
+                  />
+                </FormGroup>
               </Col>
             </Row>
           </AvForm>

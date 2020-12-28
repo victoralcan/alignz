@@ -1,67 +1,46 @@
 import React from 'react';
-import { Col, FormGroup, Label, Row } from 'reactstrap';
-import { AvForm } from 'availity-reactstrap-validation';
+import { Col, Label, Row } from 'reactstrap';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Select from 'react-select';
-
-interface ISelectOption {
-  label: string;
-  value: string;
-}
+import FittedImage from 'react-fitted-image';
+import Boca from 'content/images/pages/agenda/boca.png';
+import ImgTemp from 'content/images/pages/agenda/imgTemporaria.png';
 
 interface IStep3Props extends StateProps, DispatchProps {}
 
-interface IStep3State {
-  usouAparelho: ISelectOption;
-}
+interface IStep3State {}
 
 class Step3 extends React.Component<IStep3Props, IStep3State> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      usouAparelho: { label: '', value: '' },
-    };
-  }
-
-  handleSubmit = (event, errors, values) => {
-    event.preventDefault();
-  };
-
-  setUsouAparelho = (usouAparelho) => {
-    if (usouAparelho) {
-      this.setState({
-        usouAparelho,
-      });
-    }
-  };
-
   render() {
     return (
       <>
         <div className="form-wizard-content">
-          <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="usouAparelho">Você já usou aparelho?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="usouAparelho"
-                    name="usouAparelho"
-                    options={[
-                      { value: true, label: 'Sim' },
-                      { value: false, label: 'Não' },
-                    ]}
-                    placeholder="Escolha uma opção"
-                    onChange={this.setUsouAparelho}
-                    value={this.state.usouAparelho}
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
-          </AvForm>
+          <div className="center-elements">
+            <div className="formImage">
+              <FittedImage src={Boca} fit="contain" />
+            </div>
+          </div>
+          <Label for="espacamento">Qual o nível de desalinhamento dos seus dentes?</Label>
+          <Row>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={12} className="d-flex">
+              <p className="m-auto">Nenhuma</p>
+            </Col>
+          </Row>
         </div>
       </>
     );
