@@ -19,8 +19,9 @@ class Step1 extends React.Component<IStep1Props, IStep1State> {
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <Row form>
-              <Col md={6}>
+              <Col xs={12}>
                 <AvField
+                  className="w-50"
                   label="Nome"
                   name="name"
                   id="name"
@@ -40,7 +41,24 @@ class Step1 extends React.Component<IStep1Props, IStep1State> {
                   }}
                 />
               </Col>
-              <Col md={6}>
+              <Col xs={12}>
+                <AvField
+                  className="w-50"
+                  label="E-mail"
+                  name="email"
+                  id="email"
+                  placeholder="Seu E-mail"
+                  type="email"
+                  errorMessage="Email incorreto!"
+                  validate={{
+                    required: {
+                      value: true,
+                      errorMessage: 'O email é obrigatório!',
+                    },
+                  }}
+                />
+              </Col>
+              <Col xs={4}>
                 <AvField
                   label="Telefone"
                   name="telefone"
@@ -58,25 +76,7 @@ class Step1 extends React.Component<IStep1Props, IStep1State> {
                   }}
                 />
               </Col>
-            </Row>
-            <Row form>
-              <Col md={6}>
-                <AvField
-                  label="E-mail"
-                  name="email"
-                  id="email"
-                  placeholder="Seu E-mail"
-                  type="email"
-                  errorMessage="Email incorreto!"
-                  validate={{
-                    required: {
-                      value: true,
-                      errorMessage: 'O email é obrigatório!',
-                    },
-                  }}
-                />
-              </Col>
-              <Col md={6}>
+              <Col xs={4}>
                 <AvField
                   label="CEP"
                   name="cep"
@@ -90,9 +90,7 @@ class Step1 extends React.Component<IStep1Props, IStep1State> {
                   }}
                 />
               </Col>
-            </Row>
-            <Row form>
-              <Col md={6}>
+              <Col xs={4}>
                 <AvField
                   label="Idade"
                   name="idade"

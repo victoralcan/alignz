@@ -52,7 +52,7 @@ class Home extends React.Component {
           <div className="z-index-2 h-100">
             <div className="h-100 col-5 d-flex">
               <div className="mt-auto mb-auto w-75 pl-5">
-                <h1 className="font-weight-bolder">Conheça o futuro do alinhamento dental</h1>
+                <h1 className="display-4 font-weight-bolder">Conheça o futuro do alinhamento dental</h1>
                 <ul>
                   <li>
                     <span>
@@ -74,13 +74,13 @@ class Home extends React.Component {
         {/*Comparação alinhador aparelho*/}
         <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
           <div className="m-auto">
-            <h1 className="font-weight-bold text-center">Comparativo</h1>
+            <h1 className="display-4 font-weight-bold text-center">Comparativo</h1>
           </div>
           <br />
-          <h5>
+          <h4 className="text-center">
             Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
             melhor se encaixa pra você.
-          </h5>
+          </h4>
           <br />
           <Row className="m-auto justify-content-center">
             <Col sm={6} md={6} lg={6} className="d-flex flex-column">
@@ -107,7 +107,9 @@ class Home extends React.Component {
         {/*Mais motivos para usar AlignerZ*/}
         <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
           <div className="m-auto w-75">
-            <h1 className="text-center big">Mais razões para usar alignerZ ao invés de bráquetes</h1>
+            <h1 className="text-center display-4 font-weight-bold">
+              Mais razões para usar alignerZ ao invés de bráquetes
+            </h1>
           </div>
           <br />
           <Row>

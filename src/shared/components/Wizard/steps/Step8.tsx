@@ -10,17 +10,17 @@ interface ISelectOption {
   value: string;
 }
 
-interface IStep3Props extends StateProps, DispatchProps {}
+interface IStep8Props extends StateProps, DispatchProps {}
 
-interface IStep3State {
-  usouAparelho: ISelectOption;
+interface IStep8State {
+  tempo: ISelectOption;
 }
 
-class Step3 extends React.Component<IStep3Props, IStep3State> {
+class Step8 extends React.Component<IStep8Props, IStep8State> {
   constructor(props) {
     super(props);
     this.state = {
-      usouAparelho: { label: '', value: '' },
+      tempo: { label: '', value: '' },
     };
   }
 
@@ -28,15 +28,21 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
     event.preventDefault();
   };
 
-  setUsouAparelho = (usouAparelho) => {
-    if (usouAparelho) {
+  setTempo = (tempo) => {
+    if (tempo) {
       this.setState({
-        usouAparelho,
+        tempo,
       });
     }
   };
 
   render() {
+    const tempos = [
+      { value: '0', label: 'Imediatamente' },
+      { value: '1', label: 'Em semanas' },
+      { value: '2', label: 'Em alguns meses' },
+      { value: '3', label: 'Sem pressa' },
+    ];
     return (
       <>
         <div className="form-wizard-content">
@@ -44,19 +50,19 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
             <Row form>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="usouAparelho">Você já usou aparelho?</Label>
+                  <Label for="tempos">Em quanto tempo você deseja começar?</Label>
                   <Select
                     className="basic-single"
                     classNamePrefix="select"
-                    id="usouAparelho"
-                    name="usouAparelho"
-                    options={[
-                      { value: true, label: 'Sim' },
-                      { value: false, label: 'Não' },
-                    ]}
+                    id="tempos"
+                    name="tempos"
+                    options={tempos.map((motivacao, i) => ({
+                      ...motivacao,
+                      key: i,
+                    }))}
                     placeholder="Escolha uma opção"
-                    onChange={this.setUsouAparelho}
-                    value={this.state.usouAparelho}
+                    onChange={this.setTempo}
+                    value={this.state.tempo}
                   />
                 </FormGroup>
               </Col>
@@ -74,4 +80,4 @@ const mapDispatchToProps = {};
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Step3);
+export default connect(mapStateToProps, mapDispatchToProps)(Step8);

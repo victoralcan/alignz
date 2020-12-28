@@ -14,9 +14,6 @@ interface IStep2Props extends StateProps, DispatchProps {}
 
 interface IStep2State {
   motivacao: ISelectOption;
-  usouAparelho: ISelectOption;
-  desalinhamento: ISelectOption;
-  espacamento: ISelectOption;
 }
 
 class Step2 extends React.Component<IStep2Props, IStep2State> {
@@ -24,9 +21,6 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
     super(props);
     this.state = {
       motivacao: { label: '', value: '' },
-      usouAparelho: { label: '', value: '' },
-      desalinhamento: { label: '', value: '' },
-      espacamento: { label: '', value: '' },
     };
   }
 
@@ -42,42 +36,12 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
     }
   };
 
-  setUsouAparelho = (usouAparelho) => {
-    if (usouAparelho) {
-      this.setState({
-        usouAparelho,
-      });
-    }
-  };
-
-  setDesalinhamento = (desalinhamento) => {
-    if (desalinhamento) {
-      this.setState({
-        desalinhamento,
-      });
-    }
-  };
-
-  setEspacamento = (espacamento) => {
-    if (espacamento) {
-      this.setState({
-        espacamento,
-      });
-    }
-  };
-
   render() {
     const motivacoes = [
       { value: '0', label: 'Melhorar a apresentação pessoal' },
       { value: '1', label: 'Tenho um evento importante (casamento, formatura, etc)' },
       { value: '2', label: 'Quero melhorar minha auto-estima' },
       { value: '3', label: 'Outro' },
-    ];
-    const niveis = [
-      { value: '0', label: 'Leve' },
-      { value: '1', label: 'Moderado' },
-      { value: '2', label: 'Extremo' },
-      { value: '3', label: 'Nenhum' },
     ];
     return (
       <>
@@ -99,60 +63,6 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
                     placeholder="Escolha uma opção"
                     onChange={this.setMotivacao}
                     value={this.state.motivacao}
-                  />
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="usouAparelho">Você já usou aparelho?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="usouAparelho"
-                    name="usouAparelho"
-                    options={[
-                      { value: true, label: 'Sim' },
-                      { value: false, label: 'Não' },
-                    ]}
-                    placeholder="Escolha uma opção"
-                    onChange={this.setUsouAparelho}
-                    value={this.state.usouAparelho}
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
-            <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="desalinhamento">Qual o nível de desalinhamento dos seus dentes?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="desalinhamento"
-                    name="desalinhamento"
-                    options={niveis.map((nivel, i) => ({
-                      ...nivel,
-                      key: i,
-                    }))}
-                    onChange={this.setDesalinhamento}
-                    value={this.state.desalinhamento}
-                  />
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="espacamento">Como é o espaçamento dos seus dentes?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="espacamento"
-                    name="espacamento"
-                    options={niveis.map((nivel, i) => ({
-                      ...nivel,
-                      key: i,
-                    }))}
-                    onChange={this.setEspacamento}
-                    value={this.state.espacamento}
                   />
                 </FormGroup>
               </Col>
