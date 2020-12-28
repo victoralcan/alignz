@@ -7,6 +7,11 @@ import { connect } from 'react-redux';
 import Step1 from './steps/Step1';
 import Step2 from './steps/Step2';
 import Step3 from './steps/Step3';
+import Step4 from './steps/Step4';
+import Step5 from './steps/Step5';
+import Step6 from './steps/Step6';
+import Step7 from './steps/Step7';
+import Step8 from './steps/Step8';
 import { ColorPallet } from '../../model/enum/colors';
 import Logo from '../../../content/images/logo-alignerz-removebg.png';
 import FittedImage from 'react-fitted-image';
@@ -75,6 +80,11 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
       { name: 'Passo 1', component: <Step1 /> },
       { name: 'Passo 2', component: <Step2 /> },
       { name: 'Passo 3', component: <Step3 /> },
+      { name: 'Passo 4', component: <Step4 /> },
+      { name: 'Passo 5', component: <Step5 /> },
+      { name: 'Passo 6', component: <Step6 /> },
+      { name: 'Passo 7', component: <Step7 /> },
+      { name: 'Passo 8', component: <Step8 /> },
     ];
     return (
       <Row className="h-100">

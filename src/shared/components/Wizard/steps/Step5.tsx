@@ -10,17 +10,17 @@ interface ISelectOption {
   value: string;
 }
 
-interface IStep3Props extends StateProps, DispatchProps {}
+interface IStep5Props extends StateProps, DispatchProps {}
 
-interface IStep3State {
-  usouAparelho: ISelectOption;
+interface IStep5State {
+  espacamento: ISelectOption;
 }
 
-class Step3 extends React.Component<IStep3Props, IStep3State> {
+class Step5 extends React.Component<IStep5Props, IStep5State> {
   constructor(props) {
     super(props);
     this.state = {
-      usouAparelho: { label: '', value: '' },
+      espacamento: { label: '', value: '' },
     };
   }
 
@@ -28,15 +28,21 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
     event.preventDefault();
   };
 
-  setUsouAparelho = (usouAparelho) => {
-    if (usouAparelho) {
+  setEspacamento = (espacamento) => {
+    if (espacamento) {
       this.setState({
-        usouAparelho,
+        espacamento,
       });
     }
   };
 
   render() {
+    const niveis = [
+      { value: '0', label: 'Leve' },
+      { value: '1', label: 'Moderado' },
+      { value: '2', label: 'Extremo' },
+      { value: '3', label: 'Nenhum' },
+    ];
     return (
       <>
         <div className="form-wizard-content">
@@ -44,19 +50,18 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
             <Row form>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="usouAparelho">Você já usou aparelho?</Label>
+                  <Label for="espacamento">Como é o espaçamento dos seus dentes?</Label>
                   <Select
                     className="basic-single"
                     classNamePrefix="select"
-                    id="usouAparelho"
-                    name="usouAparelho"
-                    options={[
-                      { value: true, label: 'Sim' },
-                      { value: false, label: 'Não' },
-                    ]}
-                    placeholder="Escolha uma opção"
-                    onChange={this.setUsouAparelho}
-                    value={this.state.usouAparelho}
+                    id="espacamento"
+                    name="espacamento"
+                    options={niveis.map((nivel, i) => ({
+                      ...nivel,
+                      key: i,
+                    }))}
+                    onChange={this.setEspacamento}
+                    value={this.state.espacamento}
                   />
                 </FormGroup>
               </Col>
@@ -74,4 +79,4 @@ const mapDispatchToProps = {};
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Step3);
+export default connect(mapStateToProps, mapDispatchToProps)(Step5);

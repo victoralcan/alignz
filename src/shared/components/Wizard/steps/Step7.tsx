@@ -10,17 +10,17 @@ interface ISelectOption {
   value: string;
 }
 
-interface IStep3Props extends StateProps, DispatchProps {}
+interface IStep7Props extends StateProps, DispatchProps {}
 
-interface IStep3State {
-  usouAparelho: ISelectOption;
+interface IStep7State {
+  frase: ISelectOption;
 }
 
-class Step3 extends React.Component<IStep3Props, IStep3State> {
+class Step7 extends React.Component<IStep7Props, IStep7State> {
   constructor(props) {
     super(props);
     this.state = {
-      usouAparelho: { label: '', value: '' },
+      frase: { label: '', value: '' },
     };
   }
 
@@ -28,15 +28,21 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
     event.preventDefault();
   };
 
-  setUsouAparelho = (usouAparelho) => {
-    if (usouAparelho) {
+  setFrase = (frase) => {
+    if (frase) {
       this.setState({
-        usouAparelho,
+        frase,
       });
     }
   };
 
   render() {
+    const frases = [
+      { value: '0', label: 'Tenho implante' },
+      { value: '1', label: 'Perdi um dente' },
+      { value: '2', label: 'Uso prótese' },
+      { value: '3', label: 'Nenhuma das anteriores' },
+    ];
     return (
       <>
         <div className="form-wizard-content">
@@ -44,19 +50,18 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
             <Row form>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="usouAparelho">Você já usou aparelho?</Label>
+                  <Label for="frases">Alguma dessas frases se aplica a você?</Label>
                   <Select
                     className="basic-single"
                     classNamePrefix="select"
-                    id="usouAparelho"
-                    name="usouAparelho"
-                    options={[
-                      { value: true, label: 'Sim' },
-                      { value: false, label: 'Não' },
-                    ]}
-                    placeholder="Escolha uma opção"
-                    onChange={this.setUsouAparelho}
-                    value={this.state.usouAparelho}
+                    id="frases"
+                    name="frases"
+                    options={frases.map((motivacao, i) => ({
+                      ...motivacao,
+                      key: i,
+                    }))}
+                    onChange={this.setFrase}
+                    value={this.state.frase}
                   />
                 </FormGroup>
               </Col>
@@ -74,4 +79,4 @@ const mapDispatchToProps = {};
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Step3);
+export default connect(mapStateToProps, mapDispatchToProps)(Step7);
