@@ -42,7 +42,7 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <Row form>
-              <Col md={6}>
+              <Col xs={12}>
                 <FormGroup>
                   <Label for="usouAparelho">Você já usou aparelho?</Label>
                   <Select
