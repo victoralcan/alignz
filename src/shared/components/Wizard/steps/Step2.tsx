@@ -13,14 +13,14 @@ interface ISelectOption {
 interface IStep2Props extends StateProps, DispatchProps {}
 
 interface IStep2State {
-  motivacao: ISelectOption;
+  usouAparelho: ISelectOption;
 }
 
 class Step2 extends React.Component<IStep2Props, IStep2State> {
   constructor(props) {
     super(props);
     this.state = {
-      motivacao: { label: '', value: '' },
+      usouAparelho: { label: '', value: '' },
     };
   }
 
@@ -28,21 +28,15 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
     event.preventDefault();
   };
 
-  setMotivacao = (motivacao) => {
-    if (motivacao) {
+  setUsouAparelho = (usouAparelho) => {
+    if (usouAparelho) {
       this.setState({
-        motivacao,
+        usouAparelho,
       });
     }
   };
 
   render() {
-    const motivacoes = [
-      { value: '0', label: 'Melhorar a apresentação pessoal' },
-      { value: '1', label: 'Tenho um evento importante (casamento, formatura, etc)' },
-      { value: '2', label: 'Quero melhorar minha auto-estima' },
-      { value: '3', label: 'Outro' },
-    ];
     return (
       <>
         <div className="form-wizard-content">
@@ -50,19 +44,19 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
             <Row form>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="motivacao">Qual sua principal motivação para melhorar seu sorriso?</Label>
+                  <Label for="usouAparelho">Você já usou aparelho?</Label>
                   <Select
                     className="basic-single"
                     classNamePrefix="select"
-                    id="motivacao"
-                    name="motivacao"
-                    options={motivacoes.map((motivacao, i) => ({
-                      ...motivacao,
-                      key: i,
-                    }))}
+                    id="usouAparelho"
+                    name="usouAparelho"
+                    options={[
+                      { value: true, label: 'Sim' },
+                      { value: false, label: 'Não' },
+                    ]}
                     placeholder="Escolha uma opção"
-                    onChange={this.setMotivacao}
-                    value={this.state.motivacao}
+                    onChange={this.setUsouAparelho}
+                    value={this.state.usouAparelho}
                   />
                 </FormGroup>
               </Col>

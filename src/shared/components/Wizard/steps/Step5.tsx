@@ -2,9 +2,9 @@ import React from 'react';
 import { Col, Label, Row } from 'reactstrap';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
+import Boca from '../../../../content/images/pages/agenda/boca.png';
+import ImgTemp from '../../../../content/images/pages/agenda/imgTemporaria.png';
 import FittedImage from 'react-fitted-image';
-import Boca from 'content/images/pages/agenda/boca.png';
-import ImgTemp from 'content/images/pages/agenda/imgTemporaria.png';
 
 interface IStep5Props extends StateProps, DispatchProps {}
 
@@ -20,25 +20,27 @@ class Step5 extends React.Component<IStep5Props, IStep5State> {
               <FittedImage src={Boca} fit="contain" />
             </div>
           </div>
-          <Label for="espacamento">Como é o espaçamento dos seus dentes?</Label>
+          <Label for="espacamento">Como é sua mordida?</Label>
           <Row>
-            <Col xs={4} className="center-elements">
+            <Col xs={3} className="center-elements">
               <div className="optionImage">
                 <FittedImage src={ImgTemp} fit="contain" />
               </div>
             </Col>
-            <Col xs={4} className="center-elements">
+            <Col xs={3} className="center-elements">
               <div className="optionImage">
                 <FittedImage src={ImgTemp} fit="contain" />
               </div>
             </Col>
-            <Col xs={4} className="center-elements">
+            <Col xs={3} className="center-elements">
               <div className="optionImage">
                 <FittedImage src={ImgTemp} fit="contain" />
               </div>
             </Col>
-            <Col xs={12} className="d-flex">
-              <p className="m-auto">Nenhuma</p>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
             </Col>
           </Row>
         </div>
