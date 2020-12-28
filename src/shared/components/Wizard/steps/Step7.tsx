@@ -48,7 +48,7 @@ class Step7 extends React.Component<IStep7Props, IStep7State> {
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <Row form>
-              <Col md={6}>
+              <Col xs={12}>
                 <FormGroup>
                   <Label for="tempos">Em quanto tempo você deseja começar?</Label>
                   <Select

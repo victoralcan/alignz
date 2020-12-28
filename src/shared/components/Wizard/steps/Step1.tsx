@@ -48,7 +48,7 @@ class Step1 extends React.Component<IStep1Props, IStep1State> {
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <Row form>
-              <Col md={6}>
+              <Col xs={12}>
                 <FormGroup>
                   <Label for="motivacao">Qual sua principal motivação para melhorar seu sorriso?</Label>
                   <Select
