@@ -129,16 +129,10 @@ h1 {
     border-color: var(--orange-opac);
 }
 
-.general-button:active {
-    color: var(--orange-opac) !important;
-    background-color: var(--orange-opac) !important;
-    border-color: var(--orange-opac) !important;
-}
-
 .general-button:focus {
-    color: var(--orange-opac);
-    background-color: var(--orange-opac);
-    border-color: var(--orange-opac);
+    color: var(--white);
+    background-color: var(--orange);
+    border-color: var(--orange);
 }
 
 .font-size-big {
