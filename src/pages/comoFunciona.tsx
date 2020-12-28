@@ -23,7 +23,7 @@ function ComoFunciona() {
         <div className="z-index-2 h-100">
           <div className="h-100 col-6 center-elements">
             <div className="m-auto w-50">
-              <h1 className="font-weight-bold">Escolha sorrir.</h1>
+              <h1 className="display-4 font-weight-bold">Escolha sorrir.</h1>
               <ul>
                 <li>
                   <span>
@@ -111,7 +111,7 @@ function ComoFunciona() {
       {/*Sorria em 3 passos*/}
       <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
         <div>
-          <h1>3 SIMPLES PASSOS PARA A MUDANÇA</h1>
+          <h1 className="display-4 font-weight-bold">3 SIMPLES PASSOS PARA A MUDANÇA</h1>
         </div>
         <br />
         <Row className="pb-5 mb-5">

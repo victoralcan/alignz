@@ -19,7 +19,7 @@ class Valores extends React.Component {
           <div className="z-index-2 h-100">
             <div className="h-100 col-6 center-elements pt-5">
               <div className="m-auto w-50 pt-5">
-                <h1 className="font-weight-bold">Acessível para todos</h1>
+                <h1 className="display-4 font-weight-bold">Acessível para todos</h1>
                 <ul>
                   <li>
                     <span>Acreditamos que você não precisa pagar uma fortuna pelo seu sorriso dos sonhos ;)</span>
@@ -32,7 +32,7 @@ class Valores extends React.Component {
         </section>
         <section className="infoContainerFlex d-flex flex-column">
           <div className="m-auto">
-            <h1 className="font-weight-bold text-center">Quer saber se você é um candidato?</h1>
+            <h1 className="display-4 font-weight-bold text-center">Quer saber se você é um candidato?</h1>
           </div>
           <Row>
             <Col md={5}>
@@ -46,7 +46,7 @@ class Valores extends React.Component {
                   <Input
                     placeholder="Insira seu email"
                     style={{ backgroundColor: ColorPallet.pastel }}
-                    className="mb-3"
+                    className="mb-3 w-50 mr-auto ml-auto"
                   />
                 </li>
                 <li>
@@ -85,7 +85,7 @@ class Valores extends React.Component {
         </section>
         <section className="infoContainerFlex d-flex flex-column" style={{ backgroundColor: ColorPallet.pastelOpac }}>
           <div className="d-flex flex-column w-75 mr-auto ml-auto align-items-center pt-3 pb-2">
-            <h1 className="text-center">
+            <h1 className="text-center display-4 font-weight-bold">
               Trabalhamos da fábrica diretamente com os pacientes, evitando custos desnecessários :)
             </h1>
             <br />

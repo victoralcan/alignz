@@ -33,7 +33,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
     const { title } = this.props;
     return (
       <section className="infoContainerFlex d-flex flex-column p-4">
-        <h1 className="pb-5 mr-auto ml-auto">{title ? title : 'Dúvidas Frequentes'}</h1>
+        <h1 className="pb-5 mr-auto ml-auto display-4 font-weight-bold">{title ? title : 'Dúvidas Frequentes'}</h1>
         <div className="mr-auto ml-auto w-65">
           <h5 onClick={() => this.toggleDuvida(0)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[0] ? 'minus' : 'plus'} />

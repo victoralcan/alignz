@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Row } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import ReadySetSmileImgRight from '../../content/images/readySetSmileRight.png';
 import ReadySetSmileImgLeft from '../../content/images/readySetSmileLeft.png';
 import FittedImage from 'react-fitted-image';
 import { Link } from 'react-router-dom';
+import '../../styles/components/readySetSmile.scss';
 
 interface IReadySetSmileProps {
   right: boolean;
@@ -11,11 +12,11 @@ interface IReadySetSmileProps {
 
 function Content() {
   return (
-    <div className="w-50">
-      <h1 className="font-weight-bold">Preparar. Apontar. Sorria!</h1>
+    <div id="contentDiv">
+      <h1 className="display-4 font-weight-bold">Preparar. Apontar. Sorria!</h1>
       <ul>
         <li>
-          <span>Faça nosso teste online e veja se você é um candidato(a) a utilizar os alinhadores transparentes</span>
+          <h3>Faça nosso teste online e veja se você é um candidato(a) a utilizar os alinhadores transparentes</h3>
           <div className="clear" />
         </li>
       </ul>
@@ -31,13 +32,17 @@ function Content() {
 function ReadySetSmile(props: IReadySetSmileProps) {
   return (
     <section className="infoContainer">
-      <div className="position-absolute" style={{ height: '85vh' }}>
+      <div id="readySetSmileImg" style={{}}>
         <FittedImage src={props.right ? ReadySetSmileImgRight : ReadySetSmileImgLeft} fit="cover" />
       </div>
-      <div className="z-index-2 h-100">
+      <div id="readySetSmileText">
         <Row className="h-100">
-          <div className="col-6 center-elements">{!props.right && Content()}</div>
-          <div className="col-6 center-elements">{props.right && Content()}</div>
+          <Col md={6} lg={6} sm={4} xs={4} className="center-elements">
+            {!props.right && Content()}
+          </Col>
+          <Col md={6} lg={6} sm={4} xs={4} className="center-elements">
+            {props.right && Content()}
+          </Col>
         </Row>
       </div>
     </section>
