@@ -254,15 +254,26 @@ $layout-spacer-x: 1.5rem;
   .forms-wizard-alt {
 
   }
+  #alignerzLogo {
+    height: 55px;
+    width: 80px;
+  }
 }
 
 @media (min-width: 576px) {
-
+  #alignerzLogo {
+    height: 55px;
+    width: 80px;
+  }
 }
 
 @media (min-width: 992px) {
   .forms-wizard-alt {
     width: 50% !important;
     padding: 6em !important;
+  }
+  #alignerzLogo {
+    height: 165px;
+    width: 200px;
   }
 }

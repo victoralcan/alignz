@@ -8,6 +8,8 @@ import Step1 from './steps/Step1';
 import Step2 from './steps/Step2';
 import Step3 from './steps/Step3';
 import { ColorPallet } from '../../model/enum/colors';
+import Logo from '../../../content/images/logo-alignerz-removebg.png';
+import FittedImage from 'react-fitted-image';
 
 export interface IWizardProps extends StateProps, DispatchProps {}
 
@@ -79,13 +81,10 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
         <Col md="12">
           <Card className="main-card mb-3 h-100" style={{ backgroundColor: ColorPallet.pastelOpac }}>
             <CardBody className="center-elements">
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <div className="forms-wizard-alt p-5" style={{ backgroundColor: ColorPallet.white }}>
+              <div id="alignerzLogo">
+                <FittedImage src={Logo} alt="AlignerZ" fit="contain" />
+              </div>
+              <div className="forms-wizard-alt p-5 border border-light" style={{ backgroundColor: ColorPallet.white }}>
                 <MultiStep steps={steps} />
               </div>
             </CardBody>
