@@ -8,6 +8,7 @@ import { loadIcons } from './config/icon-loader';
 import 'styles/global.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'styles/pages/clareamento.scss';
 
 loadIcons();
 

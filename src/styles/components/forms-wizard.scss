@@ -258,6 +258,14 @@ $layout-spacer-x: 1.5rem;
     height: 55px;
     width: 80px;
   }
+  .optionImage {
+    width: 80px;
+    height: 80px
+  }
+  .formImage {
+    width: 130px;
+    height: 92px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -275,5 +283,13 @@ $layout-spacer-x: 1.5rem;
   #alignerzLogo {
     height: 165px;
     width: 200px;
+  }
+  .optionImage {
+    width: 120px;
+    height: 120px
+  }
+  .formImage {
+    width: 187px;
+    height: 132px;
   }
 }

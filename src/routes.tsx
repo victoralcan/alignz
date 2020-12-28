@@ -4,7 +4,6 @@ import ErrorBoundaryRoute from './shared/error/error-boundary-route';
 import PageNotFound from './shared/error/page-not-found';
 import Home from './pages/home';
 import ComoFunciona from './pages/comoFunciona';
-import Clareamento from './pages/clareamento';
 import Preco from './pages/valores';
 import Agenda from './pages/agenda';
 import Depoimentos from './pages/depoimentos';
@@ -16,7 +15,6 @@ function Routes() {
     <Switch>
       <ErrorBoundaryRoute exact path="/" component={Home} />
       <ErrorBoundaryRoute path="/como-funciona" component={ComoFunciona} />
-      <ErrorBoundaryRoute path="/clareamento" component={Clareamento} />
       <ErrorBoundaryRoute path="/valores" component={Preco} />
       <ErrorBoundaryRoute path="/agenda" component={Agenda} />
       <ErrorBoundaryRoute path="/depoimentos" component={Depoimentos} />

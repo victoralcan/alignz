@@ -1,72 +1,46 @@
 import React from 'react';
-import { Col, FormGroup, Label, Row } from 'reactstrap';
-import { AvForm } from 'availity-reactstrap-validation';
+import { Col, Label, Row } from 'reactstrap';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Select from 'react-select';
-
-interface ISelectOption {
-  label: string;
-  value: string;
-}
+import FittedImage from 'react-fitted-image';
+import Boca from 'content/images/pages/agenda/boca.png';
+import ImgTemp from 'content/images/pages/agenda/imgTemporaria.png';
 
 interface IStep4Props extends StateProps, DispatchProps {}
 
-interface IStep4State {
-  desalinhamento: ISelectOption;
-}
+interface IStep4State {}
 
 class Step4 extends React.Component<IStep4Props, IStep4State> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      desalinhamento: { label: '', value: '' },
-    };
-  }
-
-  handleSubmit = (event, errors, values) => {
-    event.preventDefault();
-  };
-
-  setDesalinhamento = (desalinhamento) => {
-    if (desalinhamento) {
-      this.setState({
-        desalinhamento,
-      });
-    }
-  };
-
   render() {
-    const niveis = [
-      { value: '0', label: 'Leve' },
-      { value: '1', label: 'Moderado' },
-      { value: '2', label: 'Extremo' },
-      { value: '3', label: 'Nenhum' },
-    ];
     return (
       <>
         <div className="form-wizard-content">
-          <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="desalinhamento">Qual o nível de desalinhamento dos seus dentes?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="desalinhamento"
-                    name="desalinhamento"
-                    options={niveis.map((nivel, i) => ({
-                      ...nivel,
-                      key: i,
-                    }))}
-                    onChange={this.setDesalinhamento}
-                    value={this.state.desalinhamento}
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
-          </AvForm>
+          <div className="center-elements">
+            <div className="formImage">
+              <FittedImage src={Boca} fit="contain" />
+            </div>
+          </div>
+          <Label for="espacamento">Qual o nível de desalinhamento dos seus dentes?</Label>
+          <Row>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={12} className="d-flex">
+              <p className="m-auto">Nenhuma</p>
+            </Col>
+          </Row>
         </div>
       </>
     );

@@ -1,72 +1,46 @@
 import React from 'react';
-import { Col, FormGroup, Label, Row } from 'reactstrap';
-import { AvForm } from 'availity-reactstrap-validation';
+import { Col, Label, Row } from 'reactstrap';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Select from 'react-select';
-
-interface ISelectOption {
-  label: string;
-  value: string;
-}
+import FittedImage from 'react-fitted-image';
+import Boca from 'content/images/pages/agenda/boca.png';
+import ImgTemp from 'content/images/pages/agenda/imgTemporaria.png';
 
 interface IStep5Props extends StateProps, DispatchProps {}
 
-interface IStep5State {
-  espacamento: ISelectOption;
-}
+interface IStep5State {}
 
 class Step5 extends React.Component<IStep5Props, IStep5State> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      espacamento: { label: '', value: '' },
-    };
-  }
-
-  handleSubmit = (event, errors, values) => {
-    event.preventDefault();
-  };
-
-  setEspacamento = (espacamento) => {
-    if (espacamento) {
-      this.setState({
-        espacamento,
-      });
-    }
-  };
-
   render() {
-    const niveis = [
-      { value: '0', label: 'Leve' },
-      { value: '1', label: 'Moderado' },
-      { value: '2', label: 'Extremo' },
-      { value: '3', label: 'Nenhum' },
-    ];
     return (
       <>
         <div className="form-wizard-content">
-          <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="espacamento">Como é o espaçamento dos seus dentes?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="espacamento"
-                    name="espacamento"
-                    options={niveis.map((nivel, i) => ({
-                      ...nivel,
-                      key: i,
-                    }))}
-                    onChange={this.setEspacamento}
-                    value={this.state.espacamento}
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
-          </AvForm>
+          <div className="center-elements">
+            <div className="formImage">
+              <FittedImage src={Boca} fit="contain" />
+            </div>
+          </div>
+          <Label for="espacamento">Como é o espaçamento dos seus dentes?</Label>
+          <Row>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={4} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={12} className="d-flex">
+              <p className="m-auto">Nenhuma</p>
+            </Col>
+          </Row>
         </div>
       </>
     );

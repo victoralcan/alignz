@@ -1,51 +1,48 @@
 import React from 'react';
-import { Col, FormGroup, Input, Label, Row } from 'reactstrap';
-import { AvForm } from 'availity-reactstrap-validation';
+import { Col, Label, Row } from 'reactstrap';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
+import Boca from '../../../../content/images/pages/agenda/boca.png';
+import ImgTemp from '../../../../content/images/pages/agenda/imgTemporaria.png';
+import FittedImage from 'react-fitted-image';
 
 interface IStep6Props extends StateProps, DispatchProps {}
 
 interface IStep6State {}
 
 class Step6 extends React.Component<IStep6Props, IStep6State> {
-  handleSubmit = (event, errors, values) => {
-    event.preventDefault();
-  };
-
   render() {
     return (
       <>
         <div className="form-wizard-content">
-          <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <Row form>
-              <Col md={6}>
-                <FormGroup tag="fieldset">
-                  <Label>Como é sua mordida?</Label>
-                  <FormGroup check>
-                    <Label check>
-                      <Input type="radio" name="radio1" /> Cruzada (dentes inferiores em cima dos superiores)
-                    </Label>
-                  </FormGroup>
-                  <FormGroup check>
-                    <Label check>
-                      <Input type="radio" name="radio1" /> Profunda (dentes superiores cobrem quase todos os inferiores)
-                    </Label>
-                  </FormGroup>
-                  <FormGroup check>
-                    <Label check>
-                      <Input type="radio" name="radio1" /> Aberta (dentes superiores e inferiores não se tocam)
-                    </Label>
-                  </FormGroup>
-                  <FormGroup check>
-                    <Label check>
-                      <Input type="radio" name="radio1" /> Nenhuma
-                    </Label>
-                  </FormGroup>
-                </FormGroup>
-              </Col>
-            </Row>
-          </AvForm>
+          <div className="center-elements">
+            <div className="formImage">
+              <FittedImage src={Boca} fit="contain" />
+            </div>
+          </div>
+          <Label for="espacamento">Como é sua mordida?</Label>
+          <Row>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+          </Row>
         </div>
       </>
     );
