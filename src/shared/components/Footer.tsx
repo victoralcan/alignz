@@ -52,10 +52,7 @@ function Footer() {
             <Link to="/valores">Valores</Link>
           </li>
           <li>
-            <Link to="/chatbot">Pré-avaliação</Link>
-          </li>
-          <li>
-            <Link to="/duvidas">Dúvidas</Link>
+            <Link to="/agenda">Pré-avaliação</Link>
           </li>
         </ul>
       </Col>
@@ -69,9 +66,6 @@ function Footer() {
           <li>@alignerz</li>
           <li>Segunda a sexta</li>
           <li>8h30 às 18h</li>
-          <li>
-            <br />
-          </li>
         </ul>
       </Col>
     </Row>

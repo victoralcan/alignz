@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.png';
 import { Col, Row } from 'reactstrap';
 import Passo1 from '../content/images/pages/como-funciona/passo1.png';
@@ -18,12 +18,19 @@ function ComoFunciona() {
   const content = document.getElementById('root');
   const contentWidth = content ? content.clientWidth : 1024;
   const mobile = contentWidth <= 992;
+  let beginView: HTMLElement;
+  useEffect(() => {
+    beginView.scrollIntoView({ behavior: 'smooth' });
+  }, []);
   return (
     <>
+      <div id="beginView" ref={(el) => {
+        beginView = el;
+      }}/>
       {/*Escolha Sorrir*/}
       <section className="infoContainer80">
         <div id="chooseSmileImg">
-          <FittedImage src={ChooseSmile} fit="cover" />
+          <FittedImage src={ChooseSmile} fit="cover"/>
         </div>
         <div id="chooseSmileText">
           <Col xs={12} md={6} className="centerTextImg">
@@ -143,33 +150,33 @@ function ComoFunciona() {
       {/*Sorria em 3 passos*/}
       <section className="infoContainerFlex w-75-flex">
         <div>
-          <h1 className="font-weight-bold">3 SIMPLES PASSOS PARA A MUDANÇA</h1>
+          <h1 className="font-weight-bold title pr-5 pl-5">3 SIMPLES PASSOS PARA A MUDANÇA</h1>
         </div>
-        <br />
-        <Row className="pb-5 mb-5">
+        <br/>
+        <Row className="pb-5 mb-5 pr-5 pl-5">
           <Col md={7} className="border-image">
-            <FittedImage fit="cover" src={Passo1} />
+            <FittedImage fit="cover" src={Passo1}/>
           </Col>
           <Col md={5} className="center-elements">
             <div className="m-auto w-75">
-              <h1 className="font-weight-bold text-black">Primeiro, as imagens</h1>
+              <h2 className="font-weight-bold text-black">Primeiro, as imagens</h2>
               <ul>
                 <li>
                   <p>
                     Para começar, você pode visitar nosso espaço AlignerZ físico para fazer o escaneamento dos seus
                     dentes e tirar algumas fotos para registro.
                   </p>
-                  <div className="clear" />
+                  <div className="clear"/>
                 </li>
               </ul>
             </div>
           </Col>
         </Row>
-        <Row className="pb-5 mb-5">
+        <Row className="pb-5 mb-5 pr-5 pl-5">
           {mobile ? (
             <>
               <Col md={7} className="border-image">
-                <FittedImage fit="cover" src={Passo2}  />
+                <FittedImage fit="cover" src={Passo2}/>
               </Col>
               <Col md={5} className="center-elements">
                 <div className="m-auto w-75">
@@ -203,12 +210,12 @@ function ComoFunciona() {
                 </div>
               </Col>
               <Col md={7} className="border-image">
-                <FittedImage fit="cover" src={Passo2} />
+                <FittedImage fit="cover" src={Passo2}/>
               </Col>
             </>
           )}
         </Row>
-        <Row className="pb-5 mb-5">
+        <Row className="pb-5 mb-5 pr-5 pl-5">
           <Col md={7} className="border-image">
             <FittedImage fit="cover" src={Passo3}/>
           </Col>
