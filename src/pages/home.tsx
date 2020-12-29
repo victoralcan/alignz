@@ -13,7 +13,7 @@ import Comparacao from '../content/images/pages/home/comparacao.jpg';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
 import ReadySetSmileImgRight from '../content/images/readySetSmileRight.png';
 
-import '../styles/pages/home.css';
+import '../styles/pages/home.scss';
 import { Link } from 'react-router-dom';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
