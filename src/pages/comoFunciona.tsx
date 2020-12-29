@@ -11,6 +11,7 @@ import SorrisoGarantido from '../content/images/pages/como-funciona/sorrisoGaran
 import Duvidas from '../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
 import ReadySetSmile from '../shared/components/readySetSmile';
+import ReadySetSmileImgLeft from '../content/images/readySetSmileLeft.png';
 import '../styles/pages/comoFunciona.scss';
 
 function ComoFunciona() {
@@ -240,7 +241,7 @@ function ComoFunciona() {
       {/*Duvidas*/}
       <Duvidas title="Ainda tem dúvidas?" />
       {/*Ready Set Smile*/}
-      <ReadySetSmile right={false} />
+      <ReadySetSmile src={ReadySetSmileImgLeft} right={false} />
     </>
   );
 }
