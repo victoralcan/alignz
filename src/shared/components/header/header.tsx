@@ -11,7 +11,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <Navbar expand="lg" className="header-container fixed-top shadow">
+    <Navbar expand="lg" className="header-container sticky-top shadow">
       <Brand />
       <NavbarToggler
         onClick={toggle}
