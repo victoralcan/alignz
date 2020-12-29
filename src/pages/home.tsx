@@ -47,29 +47,31 @@ class Home extends React.Component {
       <>
         {/*Conheça o Futuro*/}
         <section className="infoContainer">
-          <div className="position-absolute w-100">
-            <FittedImage src={Home1} style={{ height: '85vh' }} fit="cover" />
+          <div className="bgImg">
+            <FittedImage src={Home1} fit="cover" />
           </div>
-          <div className="z-index-2 h-100">
-            <div className="h-100 col-5 d-flex">
-              <div className="mt-auto mb-auto w-75 pl-5">
-                <h1 className="display-4 font-weight-bolder">Conheça o futuro do alinhamento dental</h1>
-                <ul>
-                  <li>
-                    <span>
-                      Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes e
-                      até 3x mais rápido que os tratamentos convencionais essas plaquinhas mágicas
-                    </span>
-                    <div className="clear" />
-                  </li>
-                </ul>
-                <div className="d-flex">
-                  <Button tag={Link} to="/chatbot" className="general-button m-auto">
-                    Sou um candidato?
-                  </Button>
+          <div className="bgText">
+            <Row className="h-100">
+              <Col md={5} className="h-100 d-flex">
+                <div className="m-auto contentDiv">
+                  <h1 className="display-4 font-weight-bolder">Conheça o futuro do alinhamento dental</h1>
+                  <ul>
+                    <li>
+                      <span>
+                        Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes
+                        e até 3x mais rápido que os tratamentos convencionais essas plaquinhas mágicas
+                      </span>
+                      <div className="clear" />
+                    </li>
+                  </ul>
+                  <div className="d-flex">
+                    <Button tag={Link} to="/chatbot" className="general-button m-auto">
+                      Sou um candidato?
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </Col>
+            </Row>
           </div>
         </section>
         {/*Comparação alinhador aparelho*/}

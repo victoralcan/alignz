@@ -93,7 +93,7 @@ class Valores extends React.Component {
           </div>
           <div className="bgText">
             <Col md={5} className="h-100 d-flex">
-              <div className="contentDiv">
+              <div className="contentDiv m-auto">
                 <ul>
                   <li>
                     <h1 className="text-black">
