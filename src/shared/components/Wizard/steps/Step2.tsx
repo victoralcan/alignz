@@ -1,26 +1,30 @@
 import React from 'react';
-import { Col, FormGroup, Label, Row } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import { AvForm } from 'availity-reactstrap-validation';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Select from 'react-select';
 
 interface ISelectOption {
   label: string;
-  value: string;
+  selected: boolean;
 }
 
 interface IStep2Props extends StateProps, DispatchProps {}
 
 interface IStep2State {
-  motivacao: ISelectOption;
+  motivacoes: Array<ISelectOption>;
 }
 
 class Step2 extends React.Component<IStep2Props, IStep2State> {
   constructor(props) {
     super(props);
     this.state = {
-      motivacao: { label: '', value: '' },
+      motivacoes: [
+        { label: 'Melhorar a apresentação pessoal', selected: false },
+        { label: 'Tenho um evento importante', selected: false },
+        { label: 'Quero melhorar minha auto-estima', selected: false },
+        { label: 'Outro', selected: false },
+      ],
     };
   }
 
@@ -28,45 +32,41 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
     event.preventDefault();
   };
 
-  setMotivacao = (motivacao) => {
-    if (motivacao) {
-      this.setState({
-        motivacao,
-      });
-    }
+  setMotivacao = (index) => {
+    const motivacoes = [...this.state.motivacoes];
+    motivacoes.forEach((motivacao) => (motivacao.selected = false));
+    motivacoes[index].selected = true;
+    this.setState({
+      motivacoes,
+    });
   };
 
   render() {
-    const motivacoes = [
-      { value: '0', label: 'Melhorar a apresentação pessoal' },
-      { value: '1', label: 'Tenho um evento importante (casamento, formatura, etc)' },
-      { value: '2', label: 'Quero melhorar minha auto-estima' },
-      { value: '3', label: 'Outro' },
-    ];
+    const { motivacoes } = this.state;
     return (
       <>
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <Row form>
-              <Col xs={12}>
-                <FormGroup>
-                  <Label for="motivacao">Qual sua principal motivação para melhorar seu sorriso?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="motivacao"
-                    name="motivacao"
-                    options={motivacoes.map((motivacao, i) => ({
-                      ...motivacao,
-                      key: i,
-                    }))}
-                    placeholder="Escolha uma opção"
-                    onChange={this.setMotivacao}
-                    value={this.state.motivacao}
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
+            <div className="d-flex">
+              <Row form className="text-center w-50 m-auto">
+                <Col xs={12}>
+                  <h3 className="mb-5">Qual sua principal motivação para melhorar seu sorriso?</h3>
+                </Col>
+                {motivacoes.map((motivacao, index) => {
+                  return (
+                    <Col key={index} xs={12}>
+                      <Button
+                        type="submit"
+                        className={`w-100 m-2 optionButton ${motivacao.selected && 'selected'}`}
+                        onClick={() => this.setMotivacao(index)}
+                      >
+                        <h5>{motivacao.label}</h5>
+                      </Button>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </div>
           </AvForm>
         </div>
       </>

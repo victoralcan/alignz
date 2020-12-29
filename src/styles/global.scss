@@ -106,6 +106,12 @@ h1 {
     border-color: var(--orange-opac);
 }
 
+.general-button:active {
+    color: var(--orange-opac) !important;
+    background-color: var(--orange-opac) !important;
+    border-color: var(--orange-opac) !important;
+}
+
 .general-button:focus {
     color: var(--white);
     background-color: var(--orange);
@@ -238,11 +244,11 @@ h1 {
     .bgText {
       padding: 20px;
       text-align: center;
-  
+
       h1 {
         font-size: 4em;
       }
-  
+
       p {
         font-size: 2.5em;
       }
@@ -257,7 +263,7 @@ h1 {
 }
 
 @media screen and (max-width: 599px) {
-  
+
 }
 
 @media screen and (min-width: 600px) {
@@ -304,11 +310,11 @@ h1 {
 }
 
 @media screen and (min-width: 1200px) {
-  
+
 }
 
 @media screen and (min-width: 1800px) {
-  
+
 }
 
 .swiper-container {

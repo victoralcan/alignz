@@ -1,46 +1,77 @@
 import React from 'react';
-import { Col, Label, Row } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
+import { AvForm } from 'availity-reactstrap-validation';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
+import Pouco from '../../../../content/images/pages/agenda/espacamentoPouco.png';
+import Moderado from '../../../../content/images/pages/agenda/espacamentoModerado.png';
+import Severo from '../../../../content/images/pages/agenda/espacamentoSevero.png';
 import FittedImage from 'react-fitted-image';
-import Boca from 'content/images/pages/agenda/boca.png';
-import ImgTemp from 'content/images/pages/agenda/imgTemporaria.png';
+
+interface ISelectOption {
+  label: string;
+  selected: boolean;
+  src: ImageData;
+}
 
 interface IStep4Props extends StateProps, DispatchProps {}
 
-interface IStep4State {}
+interface IStep4State {
+  respostas: Array<ISelectOption>;
+}
 
 class Step4 extends React.Component<IStep4Props, IStep4State> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      respostas: [
+        { label: 'Pouco ou nenhum', selected: false, src: Pouco },
+        { label: 'Moderado', selected: false, src: Moderado },
+        { label: 'Severo', selected: false, src: Severo },
+      ],
+    };
+  }
+
+  handleSubmit = (event, errors, values) => {
+    event.preventDefault();
+  };
+
+  setResposta = (index) => {
+    const respostas = [...this.state.respostas];
+    respostas.forEach((resposta) => (resposta.selected = false));
+    respostas[index].selected = true;
+    this.setState({
+      respostas,
+    });
+  };
+
   render() {
+    const { respostas } = this.state;
     return (
       <>
         <div className="form-wizard-content">
-          <div className="center-elements">
-            <div className="formImage">
-              <FittedImage src={Boca} fit="contain" />
+          <AvForm onSubmit={this.handleSubmit} model={{}}>
+            <div className="d-flex">
+              <Row className="text-center w-75 m-auto">
+                <Col xs={12}>
+                  <h3 className="mb-5">Como é o espaçamento dos seus dentes?</h3>
+                </Col>
+                {respostas.map((resposta, index) => {
+                  return (
+                    <Col key={index} xs={12} sm={6} md={4} className="center-elements mb-3">
+                      <Button type="submit" className="d-none"></Button>
+                      <div
+                        className={`optionImage wrapper ${resposta.selected && 'selectedImg'}`}
+                        onClick={() => this.setResposta(index)}
+                      >
+                        <FittedImage src={resposta.src} fit="contain" />
+                      </div>
+                    </Col>
+                  );
+                })}
+              </Row>
             </div>
-          </div>
-          <Label for="espacamento">Qual o nível de desalinhamento dos seus dentes?</Label>
-          <Row>
-            <Col xs={4} className="center-elements">
-              <div className="optionImage">
-                <FittedImage src={ImgTemp} fit="contain" />
-              </div>
-            </Col>
-            <Col xs={4} className="center-elements">
-              <div className="optionImage">
-                <FittedImage src={ImgTemp} fit="contain" />
-              </div>
-            </Col>
-            <Col xs={4} className="center-elements">
-              <div className="optionImage">
-                <FittedImage src={ImgTemp} fit="contain" />
-              </div>
-            </Col>
-            <Col xs={12} className="d-flex">
-              <p className="m-auto">Nenhuma</p>
-            </Col>
-          </Row>
+          </AvForm>
         </div>
       </>
     );

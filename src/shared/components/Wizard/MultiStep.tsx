@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
 
 const getNavStates = (indx, length) => {
@@ -99,7 +98,7 @@ class MultiStep extends React.Component<IMultiStepProps> {
     return (
       <div onKeyDown={this.handleKeyDown}>
         {this.props.steps[this.state.compState].component}
-        <div className="divider" />
+        <br />
         <div className="clearfix">
           <div>
             {this.state.compState === 0 ? (
@@ -119,7 +118,7 @@ class MultiStep extends React.Component<IMultiStepProps> {
                 <Button className="general-button p-3 float-left" onClick={this.previous}>
                   <h5 className="text-white">Voltar</h5>
                 </Button>
-                <Button className="general-button p-3 float-right" onClick={this.next}>
+                <Button className="general-button p-3 float-right" id="nextStepButton" onClick={this.next}>
                   <h5 className="text-white">Próximo</h5>
                 </Button>
               </>
