@@ -3,9 +3,9 @@ import { Button, Col, Row } from 'reactstrap';
 import { AvForm } from 'availity-reactstrap-validation';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Cruzada from '../../../../content/images/pages/agenda/mordidaCruzada.png';
-import Protuida from '../../../../content/images/pages/agenda/mordidaProtuida.png';
-import Retraida from '../../../../content/images/pages/agenda/mordidaRetraida.png';
+import Cruzada from '../../../../content/images/pages/preavaliacao/mordidaCruzada.png';
+import Protuida from '../../../../content/images/pages/preavaliacao/mordidaProtuida.png';
+import Retraida from '../../../../content/images/pages/preavaliacao/mordidaRetraida.png';
 import FittedImage from 'react-fitted-image';
 
 interface ISelectOption {

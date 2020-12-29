@@ -15,10 +15,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 class Valores extends React.Component {
-  private beginView: HTMLElement;
-
   componentDidMount() {
-    this.beginView.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   render() {
@@ -27,9 +25,6 @@ class Valores extends React.Component {
     const mobile = contentWidth <= 992;
     return (
       <>
-        <div id="beginView" ref={(el) => {
-          this.beginView = el;
-        }}/>
         {/*Acessível para todos*/}
         <section className="infoContainer">
           <div className="bgImg">
@@ -82,7 +77,7 @@ class Valores extends React.Component {
                       <ul>
                         <li>
                           <div className="d-flex">
-                            <Button tag={Link} to="/agenda" className="w-50 mr-auto ml-auto btn-light">
+                            <Button tag={Link} to="/preavaliacao" className="w-50 mr-auto ml-auto btn-light">
                               <h4>Faça nosso teste online</h4>
                             </Button>
                           </div>

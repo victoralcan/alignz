@@ -31,12 +31,12 @@ function Header() {
           <Link className="header-option" to="/valores" style={{ textDecoration: 'none' }}>
             <h6>VALORES</h6>
           </Link>
-          <Link className="header-option" to="/agenda" style={{ textDecoration: 'none' }}>
+          <Link className="header-option" to="/preavaliacao" style={{ textDecoration: 'none' }}>
             <h6>PRÉ-AVALIAÇÃO</h6>
           </Link>
         </Nav>
         <Col>
-          <Button tag={Link} to="/chatbot" className={`general-button ${mobile ? '' : 'float-right'}`}>
+          <Button tag={Link} to="/preavaliacao" className={`general-button ${mobile ? '' : 'float-right'}`}>
             <h6 className="text-white m-0">SOU UM CANDIDATO?</h6>
           </Button>
         </Col>

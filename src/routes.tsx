@@ -5,7 +5,7 @@ import PageNotFound from './shared/error/page-not-found';
 import Home from './pages/home';
 import ComoFunciona from './pages/comoFunciona';
 import Preco from './pages/valores';
-import Agenda from './pages/agenda';
+import Preavaliacao from './pages/preavaliacao';
 import Depoimentos from './pages/depoimentos';
 import Duvidas from './pages/duvidas';
 import OndeEstamos from './pages/ondeEstamos';
@@ -16,7 +16,7 @@ function Routes() {
       <ErrorBoundaryRoute exact path="/" component={Home} />
       <ErrorBoundaryRoute path="/como-funciona" component={ComoFunciona} />
       <ErrorBoundaryRoute path="/valores" component={Preco} />
-      <ErrorBoundaryRoute path="/agenda" component={Agenda} />
+      <ErrorBoundaryRoute path="/preavaliacao" component={Preavaliacao} />
       <ErrorBoundaryRoute path="/depoimentos" component={Depoimentos} />
       <ErrorBoundaryRoute path="/duvidas" component={Duvidas} />
       <ErrorBoundaryRoute path="/onde-estamos" component={OndeEstamos} />
