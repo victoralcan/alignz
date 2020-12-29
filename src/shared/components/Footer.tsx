@@ -39,7 +39,7 @@ function Footer() {
       <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0">
         <ul>
           <li>
-            <h3>SOBRE</h3>
+            <h3>SOBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
             <br />
           </li>
           <li>
