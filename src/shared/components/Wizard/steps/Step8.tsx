@@ -48,7 +48,7 @@ class Step8 extends React.Component<IStep8Props, IStep8State> {
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <div className="d-flex">
-              <Row form className="text-center w-50 m-auto">
+              <Row form className="text-center w-65 m-auto">
                 <Col xs={12}>
                   <h3 className="mb-5">Em quanto tempo você deseja começar sua jornada?</h3>
                 </Col>
