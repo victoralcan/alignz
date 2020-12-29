@@ -10,6 +10,9 @@ import { faGripLines } from '@fortawesome/free-solid-svg-icons';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const content = document.getElementById('root');
+  const contentWidth = content ? content.clientWidth : 1024;
+  const mobile = contentWidth <= 992;
   return (
     <Navbar expand="lg" className="header-container sticky-top shadow">
       <Brand />
@@ -33,7 +36,7 @@ function Header() {
           </Link>
         </Nav>
         <Col>
-          <Button tag={Link} to="/chatbot" className="general-button float-right">
+          <Button tag={Link} to="/chatbot" className={`general-button ${mobile ? '' : 'float-right'}`}>
             <h5 className="text-white">SOU UM CANDIDATO?</h5>
           </Button>
         </Col>
