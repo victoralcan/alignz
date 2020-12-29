@@ -12,23 +12,6 @@
   }
 }
 
-.brand-logo {
-  padding: 40px 20px 40px 0px;
-  &:hover {
-    text-decoration: none;
-  }
-
-  .brand-icon {
-    height: 44px;
-    width: auto;
-    display: inline-block;
-
-    img {
-      height: 55px;
-    }
-  }
-}
-
 @media screen and (max-width: 575px) {
   .brand-logo {
     padding: 40px 20px 40px 0px;
@@ -56,12 +39,12 @@
     }
 
     .brand-icon {
-      height: 44px;
+      height: 35px;
       width: auto;
       display: inline-block;
 
       img {
-        height: 55px;
+        height: 44px;
       }
     }
   }
