@@ -195,6 +195,23 @@ h1 {
         font-weight: 300;
         line-height: 1.2;
     }
+    .bgImg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .bgImg {
+        position: static;
+        height: 85vh;
+    }
+    .bgText {
+        position: static;
+    }
+    .contentDiv {
+        width: 100% !important;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -217,6 +234,18 @@ h1 {
     .infoContainerBig {
         min-height: 100vh;
         margin-bottom: $margin-bottom;
+    }
+    .bgImg {
+        position: absolute;
+        height: 85vh;
+    }
+    .bgText {
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+    .contentDiv {
+        width: 70% !important;
     }
 }
 
