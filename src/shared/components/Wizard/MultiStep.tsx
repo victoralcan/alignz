@@ -102,14 +102,28 @@ class MultiStep extends React.Component<IMultiStepProps> {
         <div className="divider" />
         <div className="clearfix">
           <div>
-            <Button className="general-button p-3 float-left" onClick={this.previous}>
-              <FontAwesomeIcon icon="arrow-left" />
-              <h5 className="text-white">Voltar</h5>
-            </Button>
-            <Button className="general-button p-3 float-right" onClick={this.next}>
-              <h5 className="text-white">Próximo</h5>
-              <FontAwesomeIcon icon="arrow-right" />
-            </Button>
+            {this.state.compState === 0 ? (
+              <div className="d-flex">
+                <Button className="general-button p-3 m-auto" onClick={this.next}>
+                  <h5 className="text-white">Iniciar</h5>
+                </Button>
+              </div>
+            ) : this.state.compState === this.props.steps.length - 1 ? (
+              <div className="d-flex">
+                <Button className="general-button p-3 m-auto" onClick={this.next}>
+                  <h5 className="text-white">Ver meu resultado</h5>
+                </Button>
+              </div>
+            ) : (
+              <>
+                <Button className="general-button p-3 float-left" onClick={this.previous}>
+                  <h5 className="text-white">Voltar</h5>
+                </Button>
+                <Button className="general-button p-3 float-right" onClick={this.next}>
+                  <h5 className="text-white">Próximo</h5>
+                </Button>
+              </>
+            )}
           </div>
         </div>
       </div>

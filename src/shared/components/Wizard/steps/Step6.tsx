@@ -1,72 +1,48 @@
 import React from 'react';
-import { Col, FormGroup, Label, Row } from 'reactstrap';
-import { AvForm } from 'availity-reactstrap-validation';
+import { Col, Label, Row } from 'reactstrap';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Select from 'react-select';
-
-interface ISelectOption {
-  label: string;
-  value: string;
-}
+import Boca from '../../../../content/images/pages/agenda/boca.png';
+import ImgTemp from '../../../../content/images/pages/agenda/imgTemporaria.png';
+import FittedImage from 'react-fitted-image';
 
 interface IStep6Props extends StateProps, DispatchProps {}
 
-interface IStep6State {
-  frase: ISelectOption;
-}
+interface IStep6State {}
 
 class Step6 extends React.Component<IStep6Props, IStep6State> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      frase: { label: '', value: '' },
-    };
-  }
-
-  handleSubmit = (event, errors, values) => {
-    event.preventDefault();
-  };
-
-  setFrase = (frase) => {
-    if (frase) {
-      this.setState({
-        frase,
-      });
-    }
-  };
-
   render() {
-    const frases = [
-      { value: '0', label: 'Tenho implante' },
-      { value: '1', label: 'Perdi um dente' },
-      { value: '2', label: 'Uso prótese' },
-      { value: '3', label: 'Nenhuma das anteriores' },
-    ];
     return (
       <>
         <div className="form-wizard-content">
-          <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="frases">Alguma dessas frases se aplica a você?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="frases"
-                    name="frases"
-                    options={frases.map((motivacao, i) => ({
-                      ...motivacao,
-                      key: i,
-                    }))}
-                    onChange={this.setFrase}
-                    value={this.state.frase}
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
-          </AvForm>
+          <div className="center-elements">
+            <div className="formImage">
+              <FittedImage src={Boca} fit="contain" />
+            </div>
+          </div>
+          <Label for="espacamento">Como é sua mordida?</Label>
+          <Row>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+            <Col xs={3} className="center-elements">
+              <div className="optionImage">
+                <FittedImage src={ImgTemp} fit="contain" />
+              </div>
+            </Col>
+          </Row>
         </div>
       </>
     );
