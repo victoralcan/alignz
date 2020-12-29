@@ -48,9 +48,9 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <div className="d-flex">
-              <Row form className="text-center w-50 m-auto">
+              <Row form className="text-center w-65 m-auto">
                 <Col xs={12}>
-                  <h3 className="mb-5">Qual sua principal motivação para melhorar seu sorriso?</h3>
+                  <h2 className="mb-5">Qual sua principal motivação para melhorar seu sorriso?</h2>
                 </Col>
                 {motivacoes.map((motivacao, index) => {
                   return (
