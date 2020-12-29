@@ -93,12 +93,10 @@ class Valores extends React.Component {
           </div>
           <div className="bgText">
             <Col md={5} className="h-100 d-flex">
-              <div className="m-auto">
+              <div className="contentDiv m-auto">
                 <ul>
                   <li>
-                    <h1 className="text-black">
-                      Trabalhamos direto da fábrica com os pacientes, evitando custos desnecessários.
-                    </h1>
+                    <h2>Trabalhamos direto da fábrica com os pacientes, evitando custos desnecessários.</h2>
                     <div className="clear" />
                   </li>
                 </ul>
