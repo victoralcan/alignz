@@ -155,7 +155,7 @@ function ComoFunciona() {
           </Col>
           <Col md={5} className="center-elements">
             <div className="m-auto w-75">
-              <h2 className="font-weight-bold text-black">Primeiro, as imagens</h2>
+              <h1 className="font-weight-bold text-black">Primeiro, as imagens</h1>
               <ul>
                 <li>
                   <p>
