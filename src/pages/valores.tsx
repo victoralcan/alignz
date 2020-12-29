@@ -1,20 +1,23 @@
 import React from 'react';
 import FittedImage from 'react-fitted-image';
-import Preco1 from 'content/images/pages/valores/valores1.png';
+import Valores1 from 'content/images/pages/valores/valores1.png';
+import Valores2 from 'content/images/pages/valores/valores2.png';
 import '../styles/pages/valores.css';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
 import { Button, Col, Input, Row } from 'reactstrap';
 import { ColorPallet } from '../shared/model/enum/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 class Valores extends React.Component {
   render() {
     return (
       <>
+        {/*Acessível para todos*/}
         <section className="infoContainer">
           <div className="position-absolute w-100">
-            <FittedImage src={Preco1} style={{ height: '85vh' }} fit="cover" />
+            <FittedImage src={Valores1} style={{ height: '85vh' }} fit="cover" />
           </div>
           <div className="z-index-2 h-100">
             <div className="h-100 col-6 center-elements pt-5">
@@ -30,59 +33,59 @@ class Valores extends React.Component {
             </div>
           </div>
         </section>
-        <section className="infoContainerFlex d-flex flex-column">
-          <div className="m-auto">
-            <h1 className="display-4 font-weight-bold text-center">Quer saber se você é um candidato?</h1>
+        {/*Quer saber se você é um candidato*/}
+        <section className="infoContainer">
+          <div className="position-absolute w-100">
+            <FittedImage src={Valores2} style={{ height: '85vh' }} fit="cover" />
           </div>
-          <Row>
-            <Col md={5}>
-              <ul>
-                <li>
-                  <div className="d-flex">
-                    <h2 className="mr-auto ml-auto pb-4">Preencha seu e-mail</h2>
-                  </div>
-                </li>
-                <li>
-                  <Input
-                    placeholder="Insira seu email"
-                    style={{ backgroundColor: ColorPallet.pastel }}
-                    className="mb-3 w-50 mr-auto ml-auto"
-                  />
-                </li>
-                <li>
-                  <div className="d-flex">
-                    <Button className="general-button w-50 mr-auto ml-auto">Solicitar o Preço</Button>
-                  </div>
-                </li>
-              </ul>
-            </Col>
-            <Col md={2} className="d-flex align-items-center">
-              <div className="m-auto">
-                <h2>OU</h2>
-              </div>
-            </Col>
-            <Col md={5}>
-              <ul>
-                <li>
-                  <div className="d-flex">
-                    <h2 className="mr-auto ml-auto pb-4">faça nosso teste online</h2>
-                  </div>
-                </li>
-                <li>
-                  <br />
-                </li>
-                <li>
-                  <br />
-                </li>
-                <li>
-                  <div className="d-flex">
-                    <Button className="general-button w-50 mr-auto ml-auto">Sou um candidato?</Button>
-                  </div>
-                </li>
-              </ul>
-            </Col>
-          </Row>
+          <div className="z-index-2 h-100">
+            <Row className="h-100">
+              <Col md={6} className="h-100"></Col>
+              <Col md={6} className="h-100 center-elements">
+                <div className="m-auto w-75">
+                  <h1 className="display-4 font-weight-bold text-black">Quer saber se você é um candidato?</h1>
+                  <Row>
+                    <Col md={12}>
+                      <ul>
+                        <li>
+                          <Row>
+                            <Col md={6}>
+                              <Input
+                                placeholder="Preencha seu email"
+                                style={{ backgroundColor: ColorPallet.pastel }}
+                                className="mb-3"
+                              />
+                            </Col>
+                            <Col>
+                              <Button className="general-button"></Button>
+                            </Col>
+                          </Row>
+                        </li>
+                      </ul>
+                    </Col>
+                    <Col md={12} className="d-flex align-items-center">
+                      <div className="m-auto">
+                        <h2>OU</h2>
+                      </div>
+                    </Col>
+                    <Col md={12}>
+                      <ul>
+                        <li>
+                          <div className="d-flex">
+                            <Button tag={Link} to="/agenda" className="w-50 mr-auto ml-auto btn-light">
+                              <h4>Faça nosso teste online</h4>
+                            </Button>
+                          </div>
+                        </li>
+                      </ul>
+                    </Col>
+                  </Row>
+                </div>
+              </Col>
+            </Row>
+          </div>
         </section>
+        {/*Trabalhamos direto da fábrica*/}
         <section className="infoContainerFlex d-flex flex-column" style={{ backgroundColor: ColorPallet.pastelOpac }}>
           <div className="d-flex flex-column w-75 mr-auto ml-auto align-items-center pt-3 pb-2">
             <h1 className="text-center display-4 font-weight-bold">
@@ -103,7 +106,10 @@ class Valores extends React.Component {
             <h3>Contenções finais</h3>
           </div>
         </section>
+        {/*Como isso funciona*/}
+        {/*Ready Set Smile*/}
         <ReadySetSmile right={true} />
+        {/*Dúvidas*/}
         <Duvidas title="Ainda tem dúvidas?" />
       </>
     );
