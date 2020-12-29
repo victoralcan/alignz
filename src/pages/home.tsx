@@ -19,10 +19,8 @@ import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
 
 class Home extends React.Component {
-  private beginView: HTMLElement;
-
   componentDidMount() {
-    this.beginView.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   render() {
@@ -51,9 +49,6 @@ class Home extends React.Component {
     ];
     return (
       <>
-        <div id="beginView" ref={(el) => {
-          this.beginView = el;
-        }}/>
         {/*Conheça o Futuro*/}
         <section className="infoContainer">
           <div className="bgImg">
@@ -70,7 +65,7 @@ class Home extends React.Component {
                   </h4>
                   <div className="clear"/>
                   <div>
-                    <Button tag={Link} to="/chatbot" className="general-button">
+                    <Button tag={Link} to="/preavaliacao" className="general-button">
                       Sou um candidato?
                     </Button>
                   </div>
@@ -99,7 +94,7 @@ class Home extends React.Component {
                 <FittedImage src={Comparacao} fit="cover" />
               </div>
               <div className="d-flex pt-5">
-                <Button tag={Link} to="/chatbot" className="general-button m-auto">
+                <Button tag={Link} to="/preavaliacao" className="general-button m-auto">
                   Sou um candidato?
                 </Button>
               </div>

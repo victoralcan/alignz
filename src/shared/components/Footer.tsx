@@ -52,7 +52,7 @@ function Footer() {
             <Link to="/valores">Valores</Link>
           </li>
           <li>
-            <Link to="/agenda">Pré-avaliação</Link>
+            <Link to="/preavaliacao">Pré-avaliação</Link>
           </li>
         </ul>
       </Col>

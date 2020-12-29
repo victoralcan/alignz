@@ -18,15 +18,11 @@ function ComoFunciona() {
   const content = document.getElementById('root');
   const contentWidth = content ? content.clientWidth : 1024;
   const mobile = contentWidth <= 992;
-  let beginView: HTMLElement;
   useEffect(() => {
-    beginView.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
   return (
     <>
-      <div id="beginView" ref={(el) => {
-        beginView = el;
-      }}/>
       {/*Escolha Sorrir*/}
       <section className="infoContainer80">
         <div id="chooseSmileImg">

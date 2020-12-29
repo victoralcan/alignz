@@ -3,9 +3,9 @@ import { Button, Col, Row } from 'reactstrap';
 import { AvForm } from 'availity-reactstrap-validation';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Leve from '../../../../content/images/pages/agenda/desalinhamentoLeve.png';
-import Moderado from '../../../../content/images/pages/agenda/desalinhamentoModerado.png';
-import Severo from '../../../../content/images/pages/agenda/desalinhamentoSevero.png';
+import Leve from '../../../../content/images/pages/preavaliacao/desalinhamentoLeve.png';
+import Moderado from '../../../../content/images/pages/preavaliacao/desalinhamentoModerado.png';
+import Severo from '../../../../content/images/pages/preavaliacao/desalinhamentoSevero.png';
 import FittedImage from 'react-fitted-image';
 
 interface ISelectOption {

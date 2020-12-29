@@ -19,7 +19,7 @@ function Content() {
           <div className="clear" />
         </li>
       </ul>
-      <Button tag={Link} to="/chatbot" className="general-button">
+      <Button tag={Link} to="/preavaliacao" className="general-button">
         Sou um candidato?
       </Button>
     </div>

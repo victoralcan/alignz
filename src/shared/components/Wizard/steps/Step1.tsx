@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
 import FittedImage from 'react-fitted-image';
-import Boca from '../../../../content/images/pages/agenda/boca.png';
+import Boca from '../../../../content/images/pages/preavaliacao/boca.png';
 
 interface IStep1Props extends StateProps, DispatchProps {}
 
