@@ -56,9 +56,8 @@ class Home extends React.Component {
                 <div>
                   <h1>Conheça o futuro do alinhamento dental</h1>
                   <p>
-                  Apresento-lhes os alinhadores transparentes!
-                  Alinhe os seus dentes com segurança, sem bráquetes e
-                  até 3x mais rápido que os tratamentos convencionais com essas plaquinhas mágicas
+                    Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes e
+                    até 3x mais rápido que os tratamentos convencionais com essas plaquinhas mágicas
                   </p>
                   <div className="clear" />
                   <div>
@@ -72,10 +71,10 @@ class Home extends React.Component {
           </div>
         </section>
         {/*Comparação alinhador aparelho*/}
-        <section className="infoContainerFlex">
+        <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
           <div className="info-container-header">
             <h1>Comparativo</h1>
-            <br/>
+            <br />
             <h4>
               Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
               melhor se encaixa pra você.
