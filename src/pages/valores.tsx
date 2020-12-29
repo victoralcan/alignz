@@ -2,12 +2,13 @@ import React from 'react';
 import FittedImage from 'react-fitted-image';
 import Valores1 from 'content/images/pages/valores/valores1.png';
 import Valores2 from 'content/images/pages/valores/valores2.png';
+import Valores3 from '../content/images/pages/valores/valores3.png';
+import ReadySetSmileRight2 from '../content/images/readySetSmileRight2.png';
 import '../styles/pages/valores.css';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
 import { Button, Col, Input, Row } from 'reactstrap';
 import { ColorPallet } from '../shared/model/enum/colors';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 class Valores extends React.Component {
@@ -86,29 +87,26 @@ class Valores extends React.Component {
           </div>
         </section>
         {/*Trabalhamos direto da fábrica*/}
-        <section className="infoContainerFlex d-flex flex-column" style={{ backgroundColor: ColorPallet.pastelOpac }}>
-          <div className="d-flex flex-column w-75 mr-auto ml-auto align-items-center pt-3 pb-2">
-            <h1 className="text-center display-4 font-weight-bold">
-              Trabalhamos da fábrica diretamente com os pacientes, evitando custos desnecessários :)
-            </h1>
-            <br />
-            <h2 className="font-weight-light">Como funciona?</h2>
-            <br />
-            <br />
-            <h3>Nos mostre seu sorriso</h3>
-            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
-            <h3>Fazemos o seu planejamento 3D</h3>
-            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
-            <h3>Fabricamos seus alinhadores personalizados</h3>
-            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
-            <h3>Acompanhamos o seu passo a passo</h3>
-            <FontAwesomeIcon icon="long-arrow-alt-down" size="5x" />
-            <h3>Contenções finais</h3>
+        <section className="infoContainer">
+          <div className="position-absolute w-100">
+            <FittedImage src={Valores3} style={{ height: '85vh' }} fit="cover" />
+          </div>
+          <div className="z-index-2 h-100">
+            <div className="h-100 col-5 d-flex">
+              <div className="m-auto w-100 pl-5">
+                <ul>
+                  <li>
+                    <h2>Trabalhamos direto da fábrica com os pacientes, evitando custos desnecessários.</h2>
+                    <div className="clear" />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
         {/*Como isso funciona*/}
         {/*Ready Set Smile*/}
-        <ReadySetSmile right={true} />
+        <ReadySetSmile src={ReadySetSmileRight2} right={false} />
         {/*Dúvidas*/}
         <Duvidas title="Ainda tem dúvidas?" />
       </>

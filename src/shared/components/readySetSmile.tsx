@@ -1,13 +1,12 @@
 import React from 'react';
 import { Button, Col, Row } from 'reactstrap';
-import ReadySetSmileImgRight from '../../content/images/readySetSmileRight.png';
-import ReadySetSmileImgLeft from '../../content/images/readySetSmileLeft.png';
 import FittedImage from 'react-fitted-image';
 import { Link } from 'react-router-dom';
 import '../../styles/components/readySetSmile.scss';
 
 interface IReadySetSmileProps {
   right: boolean;
+  src: ImageData;
 }
 
 function Content() {
@@ -31,7 +30,7 @@ function ReadySetSmile(props: IReadySetSmileProps) {
   return (
     <section className="infoContainer">
       <div id="readySetSmileImg">
-        <FittedImage src={props.right ? ReadySetSmileImgRight : ReadySetSmileImgLeft} fit="cover" />
+        <FittedImage src={props.src} fit="cover" />
       </div>
       <div id="readySetSmileText">
         <Row className="h-100">

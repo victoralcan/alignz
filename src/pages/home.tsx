@@ -11,6 +11,7 @@ import Slide2 from '../content/images/pages/home/slide2.jpg';
 import Slide3 from '../content/images/pages/home/slide3.jpg';
 import Comparacao from '../content/images/pages/home/comparacao.jpg';
 import SwiperPhoto, { ISlide } from '../shared/components/SwiperPhoto';
+import ReadySetSmileImgRight from '../content/images/readySetSmileRight.png';
 
 import '../styles/pages/home.css';
 import { Link } from 'react-router-dom';
@@ -170,7 +171,7 @@ class Home extends React.Component {
         {/*Duvidas*/}
         <Duvidas />
         {/*Ready Set Smile*/}
-        <ReadySetSmile right={true} />
+        <ReadySetSmile src={ReadySetSmileImgRight} right={true} />
         {/*Produto*/}
         {/*<section className="infoContainerFlex">*/}
         {/*  <Row>*/}
