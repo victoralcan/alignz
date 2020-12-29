@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Col, Row } from 'reactstrap';
 import FittedImage from 'react-fitted-image';
-import Motivo1 from 'content/images/pages/home/motivo1.jpg';
-import Motivo2 from 'content/images/pages/home/motivo2.jpg';
-import Motivo3 from 'content/images/pages/home/motivo3.jpg';
+import Motivo1 from 'content/images/pages/home/motivo1.png';
+import Motivo2 from 'content/images/pages/home/motivo2.png';
+import Motivo3 from 'content/images/pages/home/motivo3.png';
 import Comparando from 'content/images/pages/home/imagemcomparando.png';
 import Home1 from 'content/images/pages/home/home1.png';
 import Slide1 from '../content/images/pages/home/slide1.jpg';
@@ -105,7 +105,7 @@ class Home extends React.Component {
           subtitle="Aqui temos 3 boas razões. Mas a real pergunta é: porque não?"
         />
         {/*Mais motivos para usar AlignerZ*/}
-        <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
+        <section className="infoContainerFlex d-flex flex-column w-65 mr-auto ml-auto">
           <div className="m-auto w-75">
             <h1 className="text-center display-4 font-weight-bold">
               Mais razões para usar alignerZ ao invés de bráquetes
@@ -113,7 +113,7 @@ class Home extends React.Component {
           </div>
           <br />
           <Row>
-            <Col md={6} className="h-100 border-image">
+            <Col md={6} className="border-image">
               <FittedImage fit="cover" src={Motivo1} />
             </Col>
             <div className="col-6 d-flex">
@@ -143,13 +143,12 @@ class Home extends React.Component {
                 </ul>
               </div>
             </div>
-            <Col md={6} className="h-100 border-image">
-              {/*// 714 x 771 */}
-              <FittedImage fit="cover" src={Motivo2} style={{ height: '713px' }} />
+            <Col md={6} className="border-image">
+              <FittedImage fit="cover" src={Motivo2} />
             </Col>
           </Row>
           <Row>
-            <Col md={6} className="h-100 border-image">
+            <Col md={6} className="border-image">
               <FittedImage fit="cover" src={Motivo3} />
             </Col>
             <div className="col-6 d-flex">

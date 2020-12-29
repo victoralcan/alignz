@@ -3,6 +3,8 @@
 @import 'node_modules/swiper/swiper.scss';
 @import './components/forms-wizard';
 
+$margin-bottom: 20vh;
+
 * {
     margin: 0;
     padding: 0;
@@ -170,23 +172,23 @@ h1 {
 @media screen and (max-width: 575px) {
     .infoContainer {
         min-height: 30vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainer80 {
         min-height: 30vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainerSmall {
         min-height: 30vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainerFlex {
         min-height: 30vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainerBig {
         min-height: 30vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .titleMobile {
         font-size: 3.5rem;
@@ -198,23 +200,23 @@ h1 {
 @media screen and (min-width: 992px) {
     .infoContainer {
         height: 85vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainer80 {
         height: 80vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainerSmall {
         height: 50vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainerFlex {
         min-height: 30vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
     .infoContainerBig {
         min-height: 100vh;
-        margin-bottom: 10vh;
+        margin-bottom: $margin-bottom;
     }
 }
 
