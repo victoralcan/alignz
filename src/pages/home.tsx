@@ -48,18 +48,18 @@ class Home extends React.Component {
         {/*Conheça o Futuro*/}
         <section className="infoContainer">
           <div className="bgImg">
-            <FittedImage src={Home1} fit="cover" />
+            <FittedImage src={Home1} fit="cover"/>
           </div>
           <div className="bgText">
             <Row>
-              <Col sm={12} md={5}>
+              <Col xs={12} md={5} className="contentDiv pt-5">
                 <div>
                   <h1>Conheça o futuro do alinhamento dental</h1>
-                  <p>
+                  <h4>
                     Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes e
                     até 3x mais rápido que os tratamentos convencionais com essas plaquinhas mágicas
-                  </p>
-                  <div className="clear" />
+                  </h4>
+                  <div className="clear"/>
                   <div>
                     <Button tag={Link} to="/chatbot" className="general-button">
                       Sou um candidato?
@@ -112,7 +112,7 @@ class Home extends React.Component {
           </div>
           <br />
           <Row>
-            <Col md={6} className="border-image">
+            <Col md={6}>
               <FittedImage fit="cover" src={Motivo1} />
             </Col>
             <div className="col-6 d-flex">
@@ -142,12 +142,12 @@ class Home extends React.Component {
                 </ul>
               </div>
             </div>
-            <Col md={6} className="border-image">
+            <Col md={6}>
               <FittedImage fit="cover" src={Motivo2} />
             </Col>
           </Row>
           <Row>
-            <Col md={6} className="border-image">
+            <Col md={6}>
               <FittedImage fit="cover" src={Motivo3} />
             </Col>
             <div className="col-6 d-flex">

@@ -1,9 +1,9 @@
 import React from 'react';
 import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.png';
 import { Col, Row } from 'reactstrap';
-import Passo1 from '../content/images/pages/como-funciona/passo1.jpg';
-import Passo2 from '../content/images/pages/como-funciona/passo2.jpg';
-import Passo3 from '../content/images/pages/como-funciona/passo3.jpg';
+import Passo1 from '../content/images/pages/como-funciona/passo1.png';
+import Passo2 from '../content/images/pages/como-funciona/passo2.png';
+import Passo3 from '../content/images/pages/como-funciona/passo3.png';
 import Beneficio1 from '../content/images/pages/como-funciona/beneficio1.png';
 import Beneficio2 from '../content/images/pages/como-funciona/beneficio2.png';
 import Beneficio3 from '../content/images/pages/como-funciona/beneficio3.png';
@@ -169,7 +169,7 @@ function ComoFunciona() {
           {mobile ? (
             <>
               <Col md={7} className="border-image">
-                <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
+                <FittedImage fit="cover" src={Passo2}  />
               </Col>
               <Col md={5} className="center-elements">
                 <div className="m-auto w-75">
@@ -203,14 +203,14 @@ function ComoFunciona() {
                 </div>
               </Col>
               <Col md={7} className="border-image">
-                <FittedImage fit="cover" src={Passo2} style={{ maxHeight: '555px' }} />
+                <FittedImage fit="cover" src={Passo2} />
               </Col>
             </>
           )}
         </Row>
         <Row className="pb-5 mb-5">
           <Col md={7} className="border-image">
-            <FittedImage fit="cover" src={Passo3} />
+            <FittedImage fit="cover" src={Passo3}/>
           </Col>
           <Col md={5} className="center-elements">
             <div className="m-auto w-75">
