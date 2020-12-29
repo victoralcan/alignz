@@ -1,0 +1,14 @@
+.content-col {
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  h1 {
+    font-size: 80px;
+  }
+}

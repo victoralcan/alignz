@@ -47,42 +47,41 @@ class Home extends React.Component {
       <>
         {/*Conheça o Futuro*/}
         <section className="infoContainer">
-          <div className="position-absolute w-100">
-            <FittedImage src={Home1} style={{ height: '85vh' }} fit="cover" />
+          <div className="bgImg">
+            <FittedImage src={Home1} fit="cover" />
           </div>
-          <div className="z-index-2 h-100">
-            <div className="h-100 col-5 d-flex">
-              <div className="mt-auto mb-auto w-75 pl-5">
-                <h1 className="display-4 font-weight-bolder">Conheça o futuro do alinhamento dental</h1>
-                <ul>
-                  <li>
-                    <span>
-                      Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes e
-                      até 3x mais rápido que os tratamentos convencionais essas plaquinhas mágicas
-                    </span>
-                    <div className="clear" />
-                  </li>
-                </ul>
-                <div className="d-flex">
-                  <Button tag={Link} to="/chatbot" className="general-button m-auto">
-                    Sou um candidato?
-                  </Button>
+          <div className="bgText">
+            <Row>
+              <Col sm={12} md={5}>
+                <div>
+                  <h1>Conheça o futuro do alinhamento dental</h1>
+                  <p>
+                  Apresento-lhes os alinhadores transparentes!
+                  Alinhe os seus dentes com segurança, sem bráquetes e
+                  até 3x mais rápido que os tratamentos convencionais com essas plaquinhas mágicas
+                  </p>
+                  <div className="clear" />
+                  <div>
+                    <Button tag={Link} to="/chatbot" className="general-button">
+                      Sou um candidato?
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </Col>
+            </Row>
           </div>
         </section>
         {/*Comparação alinhador aparelho*/}
-        <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
-          <div className="m-auto">
-            <h1 className="display-4 font-weight-bold text-center">Comparativo</h1>
+        <section className="infoContainerFlex">
+          <div className="info-container-header">
+            <h1>Comparativo</h1>
+            <br/>
+            <h4>
+              Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
+              melhor se encaixa pra você.
+            </h4>
           </div>
-          <br />
-          <h4 className="text-center">
-            Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
-            melhor se encaixa pra você.
-          </h4>
-          <br />
+
           <Row className="m-auto justify-content-center">
             <Col sm={6} md={6} lg={6} className="d-flex flex-column">
               <FittedImage src={Comparando} fit="cover" />
