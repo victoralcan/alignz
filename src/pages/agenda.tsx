@@ -3,7 +3,7 @@ import Wizard from '../shared/components/Wizard/Wizard';
 
 function Agenda() {
   return (
-    <section className="infoContainer">
+    <section className="infoContainerFlex">
       <Wizard />
     </section>
   );

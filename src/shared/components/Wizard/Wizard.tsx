@@ -91,7 +91,7 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
     return (
       <Row className="h-100">
         <Col md="12">
-          <Card className="main-card mb-3 h-100" style={{ backgroundColor: ColorPallet.pastelOpac }}>
+          <Card className="main-card h-100" style={{ backgroundColor: ColorPallet.pastelOpac }}>
             <CardBody className="center-elements">
               <div id="alignerzLogo">
                 <FittedImage src={Logo} alt="AlignerZ" fit="contain" />
