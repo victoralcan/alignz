@@ -13,7 +13,7 @@ import { Brand } from './header/header-components';
 function Footer() {
   return (
     <Row style={{ backgroundColor: ColorPallet.pinkLight }} className="p-5">
-      <Col lg={5} md={5} sm={5} className="d-flex align-items-center justify-content-center">
+      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center">
         <ul className="d-flex flex-column">
           <li>
             <Brand />
@@ -38,14 +38,12 @@ function Footer() {
           </li>
         </ul>
       </Col>
-      <Col lg={3} md={3} sm={3} className="d-flex align-items-center justify-content-center">
+      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center">
         <ul>
           <li>
-            <h2>
-              SOBRE
-              <br />
-              <br />
-            </h2>
+            <h2>SOBRE</h2>
+            <br />
+            <br />
           </li>
           <li>
             <Link to="/">Home</Link>
@@ -64,19 +62,20 @@ function Footer() {
           </li>
         </ul>
       </Col>
-      <Col lg={3} md={3} sm={3} className="d-flex align-items-center justify-content-center">
+      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center">
         <ul>
           <li>
-            <h2>
-              ATENDIMENTO
-              <br />
-              <br />
-            </h2>
+            <h2>ATENDIMENTO</h2>
+            <br />
+            <br />
           </li>
           <li>+55 (61) 98443-6135</li>
           <li>@alignerz</li>
           <li>Segunda a sexta</li>
           <li>8h30 às 18h</li>
+          <li>
+            <br />
+          </li>
         </ul>
       </Col>
     </Row>
