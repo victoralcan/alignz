@@ -250,6 +250,45 @@ $layout-spacer-x: 1.5rem;
   }
 }
 
+.optionButton {
+  background-color: var(--white);
+  border-width: 5px;
+  border-color: var(--pink-light);
+  padding: 10px;
+
+  &:hover {
+    background-color: var(--pink-light);
+    border-color: var(--pink-light);
+  }
+
+  &:focus {
+    background-color: var(--pink-light);
+    border-color: var(--pink-light);
+  }
+
+  &:active {
+    background-color: var(--pink-light) !important;
+    border-color: var(--pink-light) !important;
+  }
+}
+
+.selected {
+  background-color: var(--pink-light) !important;
+  border-color: var(--pink-light) !important;
+}
+
+.wrapper {
+  outline: 3px solid var(--pink-light);
+}
+
+.selectedImg {
+  outline: 3px solid var(--orange);
+}
+
+.inputForm {
+  border: 3px solid var(--pink-light);
+}
+
 @media screen and (max-width: 575px) {
   .forms-wizard-alt {
     width: 100%;
@@ -285,8 +324,8 @@ $layout-spacer-x: 1.5rem;
     width: 200px;
   }
   .optionImage {
-    width: 120px;
-    height: 120px
+    width: 100px;
+    height: 100px
   }
   .formImage {
     width: 187px;

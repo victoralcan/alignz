@@ -20,7 +20,7 @@ interface ISwiperPhotoProps {
   subtitle: string;
 }
 
-SwiperCore.use([Navigation, Pagination])
+SwiperCore.use([Navigation, Pagination]);
 
 class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
   render() {
@@ -30,7 +30,7 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
         <div className="tratamento-content">
           <div className="tratamento-title info-container-header">
             <h1 className="display-4 font-weight-bold">{title}</h1>
-            <br/>
+            <br />
             <h3>{subtitle}</h3>
           </div>
           <div className="cards-container">
@@ -41,22 +41,22 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
                 600: {
                   width: 600,
                   slidesPerView: 3,
-                  spaceBetween: 120
+                  spaceBetween: 120,
                 },
                 900: {
                   width: 900,
                   slidesPerView: 3,
-                  spaceBetween: 120
+                  spaceBetween: 120,
                 },
                 1200: {
                   width: 1200,
                   slidesPerView: 3,
-                  spaceBetween: 120
+                  spaceBetween: 120,
                 },
                 1800: {
                   width: 1500,
                   slidesPerView: 3,
-                  spaceBetween: 120
+                  spaceBetween: 120,
                 },
               }}
             >

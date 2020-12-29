@@ -1,26 +1,30 @@
 import React from 'react';
-import { Col, FormGroup, Label, Row } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import { AvForm } from 'availity-reactstrap-validation';
 import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
-import Select from 'react-select';
 
 interface ISelectOption {
   label: string;
-  value: string;
+  selected: boolean;
 }
 
 interface IStep7Props extends StateProps, DispatchProps {}
 
 interface IStep7State {
-  frase: ISelectOption;
+  respostas: Array<ISelectOption>;
 }
 
 class Step7 extends React.Component<IStep7Props, IStep7State> {
   constructor(props) {
     super(props);
     this.state = {
-      frase: { label: '', value: '' },
+      respostas: [
+        { label: 'Tenho implante', selected: false },
+        { label: 'Perdi um dente', selected: false },
+        { label: 'Uso prótese', selected: false },
+        { label: 'Nenhum', selected: false },
+      ],
     };
   }
 
@@ -28,44 +32,41 @@ class Step7 extends React.Component<IStep7Props, IStep7State> {
     event.preventDefault();
   };
 
-  setFrase = (frase) => {
-    if (frase) {
-      this.setState({
-        frase,
-      });
-    }
+  setResposta = (index) => {
+    const respostas = [...this.state.respostas];
+    respostas.forEach((resposta) => (resposta.selected = false));
+    respostas[index].selected = true;
+    this.setState({
+      respostas,
+    });
   };
 
   render() {
-    const frases = [
-      { value: '0', label: 'Tenho implante' },
-      { value: '1', label: 'Perdi um dente' },
-      { value: '2', label: 'Uso prótese' },
-      { value: '3', label: 'Nenhuma das anteriores' },
-    ];
+    const { respostas } = this.state;
     return (
       <>
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="frases">Alguma dessas frases se aplica a você?</Label>
-                  <Select
-                    className="basic-single"
-                    classNamePrefix="select"
-                    id="frases"
-                    name="frases"
-                    options={frases.map((motivacao, i) => ({
-                      ...motivacao,
-                      key: i,
-                    }))}
-                    onChange={this.setFrase}
-                    value={this.state.frase}
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
+            <div className="d-flex">
+              <Row form className="text-center w-50 m-auto">
+                <Col xs={12}>
+                  <h3 className="mb-5">Alguma dessas frases se aplica a você?</h3>
+                </Col>
+                {respostas.map((resposta, index) => {
+                  return (
+                    <Col key={index} xs={12}>
+                      <Button
+                        type="submit"
+                        className={`w-100 m-2 optionButton ${resposta.selected && 'selected'}`}
+                        onClick={() => this.setResposta(index)}
+                      >
+                        <h5>{resposta.label}</h5>
+                      </Button>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </div>
           </AvForm>
         </div>
       </>

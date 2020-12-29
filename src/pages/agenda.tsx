@@ -3,7 +3,7 @@ import Wizard from '../shared/components/Wizard/Wizard';
 
 function Agenda() {
   return (
-    <section style={{ height: '100vh' }}>
+    <section className="infoContainer">
       <Wizard />
     </section>
   );
