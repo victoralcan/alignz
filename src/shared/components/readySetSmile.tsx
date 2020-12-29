@@ -16,7 +16,7 @@ function Content() {
       <h1 className="display-4 font-weight-bold">Preparar. Apontar. Sorria!</h1>
       <ul>
         <li>
-          <h3>Faça nosso teste online e veja se você é um candidato(a) a utilizar os alinhadores transparentes</h3>
+          <p>Faça nosso teste online e veja se você é um candidato(a) a utilizar os alinhadores transparentes</p>
           <div className="clear" />
         </li>
       </ul>
@@ -32,15 +32,15 @@ function Content() {
 function ReadySetSmile(props: IReadySetSmileProps) {
   return (
     <section className="infoContainer">
-      <div id="readySetSmileImg" style={{}}>
+      <div id="readySetSmileImg">
         <FittedImage src={props.right ? ReadySetSmileImgRight : ReadySetSmileImgLeft} fit="cover" />
       </div>
       <div id="readySetSmileText">
         <Row className="h-100">
-          <Col md={6} lg={6} sm={4} xs={4} className="center-elements">
+          <Col xs={12} md={6} className="center-elements">
             {!props.right && Content()}
           </Col>
-          <Col md={6} lg={6} sm={4} xs={4} className="center-elements">
+          <Col xs={12} md={6} className="center-elements">
             {props.right && Content()}
           </Col>
         </Row>
