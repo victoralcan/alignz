@@ -12,6 +12,7 @@ import Step5 from './steps/Step5';
 import Step6 from './steps/Step6';
 import Step7 from './steps/Step7';
 import Step8 from './steps/Step8';
+import Step9 from './steps/Step9';
 import { ColorPallet } from '../../model/enum/colors';
 import Logo from '../../../content/images/logo-alignerz-removebg.png';
 import FittedImage from 'react-fitted-image';
@@ -85,6 +86,7 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
       { name: 'Passo 6', component: <Step6 /> },
       { name: 'Passo 7', component: <Step7 /> },
       { name: 'Passo 8', component: <Step8 /> },
+      { name: 'Passo 9', component: <Step9 /> },
     ];
     return (
       <Row className="h-100">
