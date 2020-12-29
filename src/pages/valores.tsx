@@ -15,16 +15,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 class Valores extends React.Component {
+  private beginView: HTMLElement;
+
+  componentDidMount() {
+    this.beginView.scrollIntoView({ behavior: 'smooth' });
+  }
+
   render() {
     const content = document.getElementById('root');
     const contentWidth = content ? content.clientWidth : 1024;
     const mobile = contentWidth <= 992;
     return (
       <>
+        <div id="beginView" ref={(el) => {
+          this.beginView = el;
+        }}/>
         {/*Acessível para todos*/}
         <section className="infoContainer">
           <div className="bgImg">
-            <FittedImage src={Valores1} fit="cover" />
+            <FittedImage src={Valores1} fit="cover"/>
           </div>
           <div className="bgText">
             <Col md={6} className="h-100 center-elements pt-5">

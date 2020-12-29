@@ -19,6 +19,12 @@ import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
 
 class Home extends React.Component {
+  private beginView: HTMLElement;
+
+  componentDidMount() {
+    this.beginView.scrollIntoView({ behavior: 'smooth' });
+  }
+
   render() {
     const slidesVantagens: ISlide[] = [
       {
@@ -45,6 +51,9 @@ class Home extends React.Component {
     ];
     return (
       <>
+        <div id="beginView" ref={(el) => {
+          this.beginView = el;
+        }}/>
         {/*Conheça o Futuro*/}
         <section className="infoContainer">
           <div className="bgImg">

@@ -53,8 +53,11 @@ div[class*='col-'] {
 
 h1 {
     color: var(--orange);
-    font-size: 3.50em;
     font-weight: bolder;
+}
+
+.title {
+    font-size: 3.50em;
 }
 
 .vl {
