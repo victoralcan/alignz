@@ -12,7 +12,7 @@ export const BrandIcon = (props) => (
 );
 
 export const Brand = () => (
-  <NavbarBrand tag={Link} to="/" className="brand-logo">
+  <NavbarBrand tag={Link} to="/" className="brand-logo m-0">
     <BrandIcon />
   </NavbarBrand>
 );
