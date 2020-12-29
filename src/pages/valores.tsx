@@ -51,15 +51,15 @@ class Valores extends React.Component {
           </div>
           <div className="bgText">
             <Row className="h-100">
-              <Col md={6} className="h-100"></Col>
-              <Col md={6} className="h-100 center-elements">
+              <Col md={4} className="h-100"></Col>
+              <Col md={8} className="h-100 center-elements">
+                <h1 className="titleMobile title font-weight-bold text-black w-75">Quer saber se você é um candidato?</h1>
                 <div className="contentDiv">
-                  <h1 className="titleMobile font-weight-bold text-black">Quer saber se você é um candidato?</h1>
                   <Row>
                     <Col md={12}>
                       <ul>
                         <li className="d-flex">
-                          <div className="d-flex w-75 m-auto">
+                          <div className="d-flex w-100 m-auto">
                             <Input placeholder="Preencha seu email" style={{ backgroundColor: ColorPallet.pastel }} />
                             <Button className="btn-dark">
                               <FontAwesomeIcon icon={faChevronRight} color="white" />
@@ -68,7 +68,7 @@ class Valores extends React.Component {
                         </li>
                       </ul>
                     </Col>
-                    <Col md={12} className="d-flex align-items-center">
+                    <Col md={12} className="d-flex align-items-center p-3">
                       <div className="m-auto">
                         <h2>OU</h2>
                       </div>
@@ -77,8 +77,8 @@ class Valores extends React.Component {
                       <ul>
                         <li>
                           <div className="d-flex">
-                            <Button tag={Link} to="/preavaliacao" className="w-50 mr-auto ml-auto btn-light">
-                              <h4>Faça nosso teste online</h4>
+                            <Button tag={Link} to="/preavaliacao" className="mr-auto ml-auto btn-light w-100">
+                              <h5>Faça nosso teste online</h5>
                             </Button>
                           </div>
                         </li>
