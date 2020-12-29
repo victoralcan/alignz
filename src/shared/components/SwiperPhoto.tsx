@@ -1,6 +1,10 @@
 import React from 'react';
+import SwiperCore, { Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import FittedImage from 'react-fitted-image';
+
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
 
 export interface ISlide {
   photo: TexImageSource | string;
@@ -16,18 +20,46 @@ interface ISwiperPhotoProps {
   subtitle: string;
 }
 
+SwiperCore.use([Navigation, Pagination])
+
 class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
   render() {
     const { slides, title, subtitle } = this.props;
     return (
       <section id="tratamento-section" className="infoContainerFlex">
         <div className="tratamento-content">
-          <div className="tratamento-title">
+          <div className="tratamento-title info-container-header">
             <h1 className="display-4 font-weight-bold">{title}</h1>
+            <br/>
             <h3>{subtitle}</h3>
           </div>
           <div className="cards-container">
-            <Swiper spaceBetween={120} slidesPerView={3}>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1}
+              breakpoints={{
+                600: {
+                  width: 600,
+                  slidesPerView: 3,
+                  spaceBetween: 120
+                },
+                900: {
+                  width: 900,
+                  slidesPerView: 3,
+                  spaceBetween: 120
+                },
+                1200: {
+                  width: 1200,
+                  slidesPerView: 3,
+                  spaceBetween: 120
+                },
+                1800: {
+                  width: 1500,
+                  slidesPerView: 3,
+                  spaceBetween: 120
+                },
+              }}
+            >
               {slides.map((slide, i) => {
                 return (
                   <SwiperSlide key={i}>
@@ -46,7 +78,7 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
                         }
                       />
                       <h4>{slide.description}</h4>
-                      {slide.description2 ? <h6 className="font-weight-light">{slide.description2}</h6> : ''}
+                      {slide.description2 ? <p>{slide.description2}</p> : ''}
                     </div>
                   </SwiperSlide>
                 );

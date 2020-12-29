@@ -48,7 +48,8 @@ div[class*='col-'] {
 
 h1 {
     color: var(--orange);
-    font-weight: bold;
+    font-size: 4em;
+    font-weight: bolder;
 }
 
 .vl {
@@ -179,7 +180,36 @@ h1 {
     }
 }
 
-@media screen and (max-width: 575px) {
+.bgImg {
+  width: 100%;
+  height: auto;
+}
+
+.bgText {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 80px;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 1.8em;
+  }
+
+  .general-button {
+    margin-top: 30px;
+  }
+}
+
+.info-container-header {
+  text-align: center;
+}
+
+@media screen and (max-width: 599px) {
     .infoContainer {
         min-height: 30vh;
         margin-bottom: $margin-bottom;
@@ -205,26 +235,36 @@ h1 {
         font-weight: 300;
         line-height: 1.2;
     }
-    .bgImg {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    .bgImg {
-        position: static;
-        height: 85vh;
-    }
     .bgText {
-        position: static;
+      padding: 20px;
+      text-align: center;
+  
+      h1 {
+        font-size: 4em;
+      }
+  
+      p {
+        font-size: 2.5em;
+      }
     }
-    .contentDiv {
-        width: 100%;
+
+    .info-container-header {
+      h3, h4 {
+        padding: 10px 20px;
+        font-size: 2.5em;
+      }
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 599px) {
+  
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 900px) {
     .infoContainer {
         height: 85vh;
         margin-bottom: $margin-bottom;
@@ -253,11 +293,37 @@ h1 {
         height: 100%;
         position: relative;
         z-index: 2;
+
+        h1 {
+          font-weight: bolder;
+        }
     }
     .contentDiv {
         width: 70%;
     }
 }
+
+@media screen and (min-width: 1200px) {
+  
+}
+
+@media screen and (min-width: 1800px) {
+  
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  /*this gives the dimension of slider container*/
+  /*these values will make the container as big as the parent div*/
+  overflow: hidden;
+  /*important parameter to not disrupt the container when slides increases in coverflow and other effect*/
+  }
+  .swiper-slide {
+  // width:300px;
+  // height:300px;
+  /*this one holds the dimension of each slides and can be changed according to the user wish*/
+  }
 
 :root {
     --white: #fff;
