@@ -26,18 +26,18 @@ function Header() {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>
           <Link className="header-option" to="/como-funciona" style={{ textDecoration: 'none' }}>
-            <p>COMO FUNCIONA</p>
+            <h6>COMO FUNCIONA</h6>
           </Link>
           <Link className="header-option" to="/valores" style={{ textDecoration: 'none' }}>
-            <p>VALORES</p>
+            <h6>VALORES</h6>
           </Link>
           <Link className="header-option" to="/agenda" style={{ textDecoration: 'none' }}>
-            <p>AGENDAR PRÉ-AVALIAÇÃO</p>
+            <h6>PRÉ-AVALIAÇÃO</h6>
           </Link>
         </Nav>
         <Col>
           <Button tag={Link} to="/chatbot" className={`general-button ${mobile ? '' : 'float-right'}`}>
-            <h5 className="text-white">SOU UM CANDIDATO?</h5>
+            <h6 className="text-white m-0">SOU UM CANDIDATO?</h6>
           </Button>
         </Col>
       </Collapse>
