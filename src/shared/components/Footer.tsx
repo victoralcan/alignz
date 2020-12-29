@@ -15,7 +15,7 @@ function Footer() {
     <Row style={{ backgroundColor: ColorPallet.pinkLight }} className="p-5">
       <Col md={4} xs={12} className="d-flex align-items-center justify-content-center">
         <ul className="d-flex flex-column">
-          <li>
+          <li className="m-auto">
             <Brand />
           </li>
           <li>
@@ -41,7 +41,7 @@ function Footer() {
       <Col md={4} xs={12} className="d-flex align-items-center justify-content-center">
         <ul>
           <li>
-            <h2>SOBRE</h2>
+            <h3>SOBRE</h3>
             <br />
             <br />
           </li>
@@ -65,7 +65,7 @@ function Footer() {
       <Col md={4} xs={12} className="d-flex align-items-center justify-content-center">
         <ul>
           <li>
-            <h2>ATENDIMENTO</h2>
+            <h3>ATENDIMENTO</h3>
             <br />
             <br />
           </li>

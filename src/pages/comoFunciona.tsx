@@ -142,7 +142,7 @@ function ComoFunciona() {
       {/*Sorria em 3 passos*/}
       <section className="infoContainerFlex w-75-flex">
         <div>
-          <h1 className="display-4 font-weight-bold">3 SIMPLES PASSOS PARA A MUDANÇA</h1>
+          <h1 className="font-weight-bold">3 SIMPLES PASSOS PARA A MUDANÇA</h1>
         </div>
         <br />
         <Row className="pb-5 mb-5">

@@ -13,18 +13,16 @@ interface IReadySetSmileProps {
 function Content() {
   return (
     <div id="contentDiv">
-      <h1 className="display-4 font-weight-bold">Preparar. Apontar. Sorria!</h1>
+      <h1 className="font-weight-bold">Preparar. Apontar. Sorria!</h1>
       <ul>
         <li>
-          <p>Faça nosso teste online e veja se você é um candidato(a) a utilizar os alinhadores transparentes</p>
+          <h5>Faça nosso teste online e veja se você é um candidato(a) a utilizar os alinhadores transparentes</h5>
           <div className="clear" />
         </li>
       </ul>
-      <div className="d-flex">
-        <Button tag={Link} to="/chatbot" className="general-button m-auto">
-          Sou um candidato?
-        </Button>
-      </div>
+      <Button tag={Link} to="/chatbot" className="general-button">
+        Sou um candidato?
+      </Button>
     </div>
   );
 }
