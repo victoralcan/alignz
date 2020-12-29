@@ -1,13 +1,10 @@
 @media screen and (max-width: 575px) {
-  #readySetSmileImg {
-    position: static;
-    height: 85vh;
+  #chooseSmileImg {
+    width: 100%;
+    height: auto;
   }
-  #readySetSmileText {
-    position: static;
-  }
-  #contentDiv {
-    width: 100% !important;
+  #chooseSmileText {
+
   }
 }
 
@@ -30,9 +27,9 @@
     height: 85vh;
   }
   #readySetSmileText {
+    height: 100%;
     position: relative;
     z-index: 2;
-    height: 100% !important;
   }
   #contentDiv {
     width: 50% !important;
