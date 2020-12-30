@@ -25,10 +25,10 @@ function ComoFunciona() {
     <>
       {/*Escolha Sorrir*/}
       <section className="infoContainer80">
-        <div id="chooseSmileImg">
+        <div className="bgImg">
           <FittedImage src={ChooseSmile} fit="cover" />
         </div>
-        <div id="chooseSmileText">
+        <div className="bgText">
           <Col xs={12} md={6} className="centerTextImg">
             <div className="m-auto-w-50">
               <h1 className="display-4 font-weight-bold">Escolha sorrir.</h1>
@@ -49,11 +49,11 @@ function ComoFunciona() {
       {/*Beneficios*/}
       <section className="infoContainerFlex w-60-flex">
         <Row>
-          <Col md={6} className="h-100">
+          <Col xs={12} md={6} className="h-100">
             <FittedImage fit="cover" src={Beneficio1} />
           </Col>
-          <Col md={6} className="center-elements">
-            <div className="m-auto-w-75">
+          <Col xs={12} md={6}>
+            <div className="bgText m-auto-w-75">
               <ul>
                 <li>
                   <h2 className="titleMobile">Hormônios da felicidade</h2>
@@ -73,11 +73,11 @@ function ComoFunciona() {
         <Row>
           {mobile ? (
             <>
-              <Col md={6} className="h-100">
+              <Col xs={12} md={6} className="h-100">
                 <FittedImage fit="cover" src={Beneficio2} />
               </Col>
-              <Col md={6} className="center-elements">
-                <div className="m-auto-w-75">
+              <Col xs={12} md={6} className="center-elements">
+                <div className="bgText m-auto-w-75">
                   <ul>
                     <li>
                       <h2 className="titleMobile">Exercício do bom humor</h2>
@@ -96,11 +96,11 @@ function ComoFunciona() {
             </>
           ) : (
             <>
-              <Col md={6} className="center-elements">
+              <Col xs={12} md={6} className="center-elements">
                 <div className="m-auto-w-75">
                   <ul>
                     <li>
-                      <h2 className="titleMobile">Exercício do bom humor</h2>
+                      <h2>Exercício do bom humor</h2>
                       <br />
                     </li>
                     <li>
@@ -120,11 +120,11 @@ function ComoFunciona() {
           )}
         </Row>
         <Row>
-          <Col md={6} className="h-100">
+          <Col xs={12} md={6} className="h-100">
             <FittedImage fit="cover" src={Beneficio3} />
           </Col>
-          <Col md={6} className="center-elements">
-            <div className="m-auto-w-75">
+          <Col xs={12} md={6} className="center-elements">
+            <div className="bgText m-auto-w-75">
               <ul>
                 <li>
                   <h2 className="titleMobile">Otimismo nas alturas</h2>
@@ -150,11 +150,11 @@ function ComoFunciona() {
         </div>
         <br />
         <Row className="pb-5 mb-5 pr-5 pl-5">
-          <Col md={7} className="border-image">
+          <Col xs={12} md={7} className="border-image">
             <FittedImage fit="cover" src={Passo1} />
           </Col>
-          <Col md={5} className="center-elements">
-            <div className="m-auto w-75">
+          <Col xs={12} md={5} className="center-elements">
+            <div className="bgText m-auto-w-75">
               <h1 className="font-weight-bold text-black">Primeiro, as imagens</h1>
               <ul>
                 <li>
@@ -171,11 +171,11 @@ function ComoFunciona() {
         <Row className="pb-5 mb-5 pr-5 pl-5">
           {mobile ? (
             <>
-              <Col md={7} className="border-image">
+              <Col xs={12} md={7} className="border-image">
                 <FittedImage fit="cover" src={Passo2} />
               </Col>
-              <Col md={5} className="center-elements">
-                <div className="m-auto w-75">
+              <Col xs={12} md={5} className="center-elements">
+                <div className="bgText m-auto-w-75">
                   <h1 className="font-weight-bold text-black">Daí, vem o seu planejamento</h1>
                   <ul>
                     <li>
@@ -191,8 +191,8 @@ function ComoFunciona() {
             </>
           ) : (
             <>
-              <Col md={5} className="center-elements">
-                <div className="m-auto w-75">
+              <Col xs={12} md={5} className="center-elements">
+                <div className="bgText m-auto-w-75">
                   <h1 className="font-weight-bold text-black">Daí, vem o seu planejamento</h1>
                   <ul>
                     <li>
@@ -205,18 +205,18 @@ function ComoFunciona() {
                   </ul>
                 </div>
               </Col>
-              <Col md={7} className="border-image">
+              <Col xs={12} md={7} className="border-image">
                 <FittedImage fit="cover" src={Passo2} />
               </Col>
             </>
           )}
         </Row>
         <Row className="pb-5 mb-5 pr-5 pl-5">
-          <Col md={7} className="border-image">
+          <Col xs={12} md={7} className="border-image">
             <FittedImage fit="cover" src={Passo3} />
           </Col>
-          <Col md={5} className="center-elements">
-            <div className="m-auto w-75">
+          <Col xs={12} md={5} className="center-elements">
+            <div className="bgText m-auto-w-75">
               <h1 className="font-weight-bold text-black">E então, você pode começar sua jornada!</h1>
               <ul>
                 <li>

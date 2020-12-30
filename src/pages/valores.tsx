@@ -102,7 +102,7 @@ class Valores extends React.Component {
               <div className="contentDiv m-auto">
                 <ul>
                   <li>
-                    <h2>Trabalhamos direto da fábrica com os pacientes, evitando custos desnecessários.</h2>
+                    <h2 className="titleMobile">Trabalhamos direto da fábrica com os pacientes, evitando custos desnecessários.</h2>
                     <div className="clear" />
                   </li>
                 </ul>
@@ -113,7 +113,7 @@ class Valores extends React.Component {
         {/*Como isso funciona*/}
         <section className="infoContainerFlex">
           <div className="d-flex">
-            <h1 className="text-black mr-auto ml-auto mb-5">Como isso funciona?</h1>
+            <h1 className="title titleMobile text-black mr-auto ml-auto mb-5">Como isso funciona?</h1>
           </div>
           {mobile ? (
             <section className="infoContainerSmall">
