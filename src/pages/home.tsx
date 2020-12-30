@@ -24,6 +24,9 @@ class Home extends React.Component {
   }
 
   render() {
+    const content = document.getElementById('root');
+    const contentWidth = content ? content.clientWidth : 1024;
+    const mobile = contentWidth <= 992;
     const slidesVantagens: ISlide[] = [
       {
         photo: Slide1,
@@ -58,7 +61,7 @@ class Home extends React.Component {
             <Row>
               <Col xs={12} md={5} className="contentDiv pt-5">
                 <div>
-                  <h1>Conheça o futuro do alinhamento dental</h1>
+                  <h1 className="title titleMobile">Conheça o futuro do alinhamento dental</h1>
                   <h4>
                     Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes e
                     até 3x mais rápido que os tratamentos convencionais com essas plaquinhas mágicas
@@ -75,31 +78,33 @@ class Home extends React.Component {
           </div>
         </section>
         {/*Comparação alinhador aparelho*/}
-        <section className="infoContainerFlex d-flex flex-column w-75 mr-auto ml-auto">
-          <div className="info-container-header">
-            <h1>Comparativo</h1>
-            <br />
-            <h4>
-              Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
-              melhor se encaixa pra você.
-            </h4>
-          </div>
+        <section>
+          <div className="infoContainerFlex d-flex flex-column mr-auto ml-auto comparacao">
+            <div className="info-container-header">
+              <h1 className="title titleMobile" >Comparativo</h1>
+              <br />
+              <h4>
+                Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
+                melhor se encaixa pra você.
+              </h4>
+            </div>
 
-          <Row className="m-auto justify-content-center">
-            <Col sm={6} md={6} lg={6} className="d-flex flex-column">
-              <FittedImage src={Comparando} fit="cover" />
-            </Col>
-            <Col sm={6} md={6} lg={6}>
-              <div className="h-75 pt-5 mt-5">
-                <FittedImage src={Comparacao} fit="cover" />
-              </div>
-              <div className="d-flex pt-5">
-                <Button tag={Link} to="/preavaliacao" className="general-button m-auto">
-                  Sou um candidato?
-                </Button>
-              </div>
-            </Col>
-          </Row>
+            <Row className="m-auto justify-content-center">
+              <Col sm={6} md={6} lg={6} className="d-flex flex-column">
+                <FittedImage src={Comparando} fit="cover" />
+              </Col>
+              <Col sm={6} md={6} lg={6}>
+                <div className="h-75 pt-5 mt-5">
+                  <FittedImage src={Comparacao} fit="cover" />
+                </div>
+                <div className="d-flex pt-5">
+                  <Button tag={Link} to="/preavaliacao" className="general-button m-auto">
+                    Sou um candidato?
+                  </Button>
+                </div>
+              </Col>
+            </Row>
+          </div>
         </section>
         {/*Sorrir é facil como começar*/}
         <SwiperPhoto
@@ -108,67 +113,86 @@ class Home extends React.Component {
           subtitle="Aqui temos 3 boas razões. Mas a real pergunta é: porque não?"
         />
         {/*Mais motivos para usar AlignerZ*/}
-        <section className="infoContainerFlex d-flex flex-column w-65 mr-auto ml-auto">
-          <div className="m-auto w-75">
-            <h1 className="text-center display-4 font-weight-bold">
-              Mais razões para usar alignerZ ao invés de bráquetes
-            </h1>
-          </div>
-          <br />
-          <Row>
-            <Col md={6}>
-              <FittedImage fit="cover" src={Motivo1} />
-            </Col>
-            <div className="col-6 d-flex">
-              <div className="m-auto w-75">
-                <h2 className="font-weight-bold">Fácil de Limpar</h2>
-                <ul>
-                  <li>
-                    <span>
+        <section className="infoContainerFlex d-flex flex-column mr-auto ml-auto">
+          <div className="mais-razoes">
+            <div className="w-75 m-auto">
+              <h1 className="text-center display-4 title titleMobile">
+                Mais razões para usar alignerZ ao invés de bráquetes
+              </h1>
+            </div>
+            <br />
+            <Row>
+              <Col md={6}>
+                <FittedImage fit="cover" src={Motivo1} />
+              </Col>
+              <div className="col-md-6 col-sm-12 d-flex">
+                <div className="m-auto w-75 info-razao">
+                  <h2 className="font-weight-bold">Fácil de Limpar</h2>
+                  <div>
+                    <p>
                       É só colocar embaixo de água fria e higienizar com uma escova de dentes macia. Você nem precisa
-                      usar pasta de dentes pra isso
-                    </span>
+                      usar pasta de dentes pra isso.
+                    </p>
                     <div className="clear" />
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </Row>
-          <Row>
-            <div className="col-6 d-flex">
-              <div className="m-auto w-75">
-                <h2 className="font-weight-bold">Removível, fácil de colocar e tirar</h2>
-                <ul>
-                  <li>
-                    <span>Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal</span>
-                    <div className="clear" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <Col md={6}>
-              <FittedImage fit="cover" src={Motivo2} />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <FittedImage fit="cover" src={Motivo3} />
-            </Col>
-            <div className="col-6 d-flex">
-              <div className="m-auto w-75">
-                <h2 className="font-weight-bold">Coma o que quiser</h2>
-                <ul>
-                  <li>
-                    <span>
+            </Row>
+            <Row>
+              { mobile ? (
+                <>
+                  <Col md={6}>
+                    <FittedImage fit="cover" src={Motivo2} />
+                  </Col>
+                  <div className="col-md-6 col-sm-12 d-flex">
+                    <div className="m-auto w-75 info-razao">
+                      <h2 className="font-weight-bold">Removível, fácil de colocar e tirar</h2>
+                      <div>
+                        <p>
+                          Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal
+                        </p>
+                        <div className="clear" />
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="col-6 d-flex">
+                    <div className="m-auto w-75">
+                      <h2 className="font-weight-bold">Removível, fácil de colocar e tirar</h2>
+                      <ul>
+                        <li>
+                          <span>Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal</span>
+                          <div className="clear" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <Col md={6}>
+                    <FittedImage fit="cover" src={Motivo2} />
+                  </Col>
+                </>
+              )}
+            </Row>
+            <Row>
+              <Col md={6}>
+                <FittedImage fit="cover" src={Motivo3} />
+              </Col>
+              <div className="col-md-6 col-sm-12 d-flex">
+                <div className="m-auto w-75 info-razao">
+                  <h2 className="font-weight-bold">Coma o que quiser</h2>
+                  <div>
+                    <p>
                       Por serem removíveis, você não precisa se privar de comer suas comidas favoritas por ter medo de
-                      quebrar o seu aparelho
-                    </span>
+                      quebrar o seu aparelho.
+                    </p>
                     <div className="clear" />
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </Row>
+            </Row>
+          </div>
         </section>
         {/*Duvidas*/}
         <Duvidas />

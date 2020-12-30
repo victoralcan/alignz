@@ -266,6 +266,10 @@ h1 {
             font-size: 4em;
         }
 
+        h4 {
+          font-size: 2.3em;
+        }
+
         p {
             font-size: 2.5em;
         }
@@ -274,7 +278,7 @@ h1 {
     .info-container-header {
         h3, h4 {
             padding: 10px 20px;
-            font-size: 2.5em;
+            font-size: 2.3em;
         }
     }
 }
@@ -324,6 +328,29 @@ h1 {
     .contentDiv {
         width: 70%;
     }
+
+    .title {
+      font-size: 3em;
+    }
+
+    .tratamento-card {
+      img {
+        height: 210px !important;
+        width: 210px !important;
+      }
+
+      h4 {
+        font-size: 2em !important;
+      }
+
+      p {
+        font-size: 1.2em !important;
+      }
+    }
+
+    .title {
+      font-size: 3em;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -342,6 +369,7 @@ h1 {
     .infoContainerFlex {
         min-height: 30vh;
         margin-bottom: $margin-bottom;
+        // width: 75%;
     }
     .infoContainerBig {
         min-height: 100vh;
@@ -357,17 +385,52 @@ h1 {
         z-index: 2;
 
         h1 {
-            font-weight: bolder;
+            // font-weight: bolder;
+            font-weight: 300;
         }
     }
     .contentDiv {
         width: 50%;
     }
 
+    .title {
+      font-size: 3.5em;
+    }
+
+    .tratamento-card {
+      img {
+        height: 250px !important;
+        width: 250px !important;
+      }
+
+      h4 {
+        font-size: 2.5em !important;
+      }
+
+      p {
+        padding: 10px 20px !important;
+        font-size: 1.4em !important;
+      }
+    }
+
 }
 
 @media screen and (min-width: 1800px) {
+  .tratamento-card {
+    img {
+      height: 300px !important;
+      width: 300px !important;
+    }
 
+    h4 {
+      font-size: 2.5em !important;
+    }
+
+    p {
+      padding: 10px 20px !important;
+      font-size: 1.4em !important;
+    }
+  }
 }
 
 .swiper-container {
