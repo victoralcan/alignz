@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.png';
+import ChooseSmile from '../../content/images/pages/como-funciona/choose-smile.png';
 import { Col, Row } from 'reactstrap';
-import Passo1 from '../content/images/pages/como-funciona/passo1.png';
-import Passo2 from '../content/images/pages/como-funciona/passo2.png';
-import Passo3 from '../content/images/pages/como-funciona/passo3.png';
-import Beneficio1 from '../content/images/pages/como-funciona/beneficio1.png';
-import Beneficio2 from '../content/images/pages/como-funciona/beneficio2.png';
-import Beneficio3 from '../content/images/pages/como-funciona/beneficio3.png';
-import SorrisoGarantido from '../content/images/pages/como-funciona/sorrisoGarantido.png';
-import Duvidas from '../shared/components/Duvidas';
+import Passo1 from '../../content/images/pages/como-funciona/passo1.png';
+import Passo2 from '../../content/images/pages/como-funciona/passo2.png';
+import Passo3 from '../../content/images/pages/como-funciona/passo3.png';
+import Beneficio1 from '../../content/images/pages/como-funciona/beneficio1.png';
+import Beneficio2 from '../../content/images/pages/como-funciona/beneficio2.png';
+import Beneficio3 from '../../content/images/pages/como-funciona/beneficio3.png';
+import SorrisoGarantido from '../../content/images/pages/como-funciona/sorrisoGarantido.png';
+import Duvidas from '../../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
-import ReadySetSmile from '../shared/components/readySetSmile';
-import ReadySetSmileImgLeft from '../content/images/readySetSmileLeft.png';
-import '../styles/pages/comoFunciona.scss';
+import ReadySetSmile from '../../shared/components/readySetSmile';
+import ReadySetSmileImgLeft from '../../content/images/readySetSmileLeft.png';
+import '../../styles/pages/comoFunciona.scss';
 
 function ComoFunciona() {
   const content = document.getElementById('root');
@@ -26,7 +26,7 @@ function ComoFunciona() {
       {/*Escolha Sorrir*/}
       <section className="infoContainer80">
         <div id="chooseSmileImg">
-          <FittedImage src={ChooseSmile} fit="cover"/>
+          <FittedImage src={ChooseSmile} fit="cover" />
         </div>
         <div id="chooseSmileText">
           <Col xs={12} md={6} className="centerTextImg">
@@ -148,10 +148,10 @@ function ComoFunciona() {
         <div>
           <h1 className="font-weight-bold title pr-5 pl-5">3 SIMPLES PASSOS PARA A MUDANÇA</h1>
         </div>
-        <br/>
+        <br />
         <Row className="pb-5 mb-5 pr-5 pl-5">
           <Col md={7} className="border-image">
-            <FittedImage fit="cover" src={Passo1}/>
+            <FittedImage fit="cover" src={Passo1} />
           </Col>
           <Col md={5} className="center-elements">
             <div className="m-auto w-75">
@@ -162,7 +162,7 @@ function ComoFunciona() {
                     Para começar, você pode visitar nosso espaço AlignerZ físico para fazer o escaneamento dos seus
                     dentes e tirar algumas fotos para registro.
                   </p>
-                  <div className="clear"/>
+                  <div className="clear" />
                 </li>
               </ul>
             </div>
@@ -172,7 +172,7 @@ function ComoFunciona() {
           {mobile ? (
             <>
               <Col md={7} className="border-image">
-                <FittedImage fit="cover" src={Passo2}/>
+                <FittedImage fit="cover" src={Passo2} />
               </Col>
               <Col md={5} className="center-elements">
                 <div className="m-auto w-75">
@@ -206,14 +206,14 @@ function ComoFunciona() {
                 </div>
               </Col>
               <Col md={7} className="border-image">
-                <FittedImage fit="cover" src={Passo2}/>
+                <FittedImage fit="cover" src={Passo2} />
               </Col>
             </>
           )}
         </Row>
         <Row className="pb-5 mb-5 pr-5 pl-5">
           <Col md={7} className="border-image">
-            <FittedImage fit="cover" src={Passo3}/>
+            <FittedImage fit="cover" src={Passo3} />
           </Col>
           <Col md={5} className="center-elements">
             <div className="m-auto w-75">
