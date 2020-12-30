@@ -28,9 +28,9 @@ function ComoFunciona() {
         <div className="bgImg">
           <FittedImage src={ChooseSmile} fit="cover" />
         </div>
-        <div className="bgText">
+        <div className="bgText h-100">
           <Col xs={12} md={6} className="centerTextImg">
-            <div className="m-auto-w-50">
+            <div className="m-auto-w-75">
               <h1 className="display-4 font-weight-bold">Escolha sorrir.</h1>
               <ul>
                 <li>
@@ -97,7 +97,7 @@ function ComoFunciona() {
           ) : (
             <>
               <Col xs={12} md={6} className="center-elements">
-                <div className="m-auto-w-75">
+                <div className="bgText m-auto-w-75">
                   <ul>
                     <li>
                       <h2>Exercício do bom humor</h2>
