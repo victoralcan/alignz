@@ -15,28 +15,30 @@ function Header() {
   const mobile = contentWidth <= 992;
   return (
     <Navbar expand="lg" className="header-container sticky-top shadow">
-      <Brand />
+      <div onClick={toggle}>
+        <Brand/>
+      </div>
       <NavbarToggler
         onClick={toggle}
         style={{ backgroundColor: ColorPallet.orange, color: ColorPallet.white, padding: '10px' }}
         className="text-white"
       >
-        <FontAwesomeIcon icon={faGripLines} color="white" />
+        <FontAwesomeIcon icon={faGripLines} color="white"/>
       </NavbarToggler>
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>
-          <Link className="header-option" to="/como-funciona" style={{ textDecoration: 'none' }}>
+          <Link className="header-option" to="/como-funciona" onClick={toggle} style={{ textDecoration: 'none' }}>
             <h6>COMO FUNCIONA</h6>
           </Link>
-          <Link className="header-option" to="/valores" style={{ textDecoration: 'none' }}>
+          <Link className="header-option" to="/valores" onClick={toggle} style={{ textDecoration: 'none' }}>
             <h6>VALORES</h6>
           </Link>
-          <Link className="header-option" to="/preavaliacao" style={{ textDecoration: 'none' }}>
+          <Link className="header-option" to="/preavaliacao" onClick={toggle} style={{ textDecoration: 'none' }}>
             <h6>PRÉ-AVALIAÇÃO</h6>
           </Link>
         </Nav>
         <Col>
-          <Button tag={Link} to="/preavaliacao" className={`general-button ${mobile ? '' : 'float-right'}`}>
+          <Button tag={Link} to="/preavaliacao" onClick={toggle} className={`general-button ${mobile ? '' : 'float-right'}`}>
             <h6 className="text-white m-0">SOU UM CANDIDATO?</h6>
           </Button>
         </Col>
