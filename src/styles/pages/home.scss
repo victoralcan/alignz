@@ -28,6 +28,15 @@
     margin-bottom: 40px;
 }
 
+.mais-razoes {
+  width: 65%;
+  margin: auto;
+}
+
+.comparacao {
+  width: 75%;
+}
+
 #tratamento-section {
 
     .tratamento-content {
@@ -71,10 +80,45 @@
     }
 }
 
+span {
+  font-size: 21px !important;
+}
+
+.mais-razoes {
+  p {
+    font-size: 21px;
+  }
+}
+
 @media screen and (max-width: 599px) {
+  .comparacao {
+    width: 100%;
+  }
+
+  .mais-razoes {
+    width: 100%;
+
+    h2 {
+      padding: 20px 0px 10px 0px;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    p {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 20px !important;
+    }
+
+    .info-razao {
+      margin-bottom: 20px;
+    }
+  }
+
     #tratamento-section {
         .tratamento-content {
             .tratamento-card {
+
                 h4 {
                     font-size: 4em;
                 }
@@ -89,9 +133,7 @@
 }
 
 
-span {
-    font-size: 21px !important;
-}
+
 
 .z-index-2 {
     position: relative;

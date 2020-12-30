@@ -2,6 +2,8 @@ import React from 'react';
 import { Collapse } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import '../../styles/components/duvidas.scss';
+
 interface IDuvidasState {
   collapseControl: boolean[];
 }
@@ -33,7 +35,7 @@ class Duvidas extends React.Component<IDuvidasProps, IDuvidasState> {
     const { title } = this.props;
     return (
       <section className="infoContainerFlex d-flex flex-column p-4">
-        <div className="mr-auto ml-auto w-65">
+        <div className="main-div">
           <h1 className="pb-5 display-4 font-weight-bold">{title ? title : 'Dúvidas Frequentes'}</h1>
           <h6 onClick={() => this.toggleDuvida(0)} className="pb-3">
             <FontAwesomeIcon icon={collapseControl[0] ? 'minus' : 'plus'} />
