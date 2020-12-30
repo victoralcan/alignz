@@ -64,7 +64,7 @@ $xxl: 1600px;
   .w-75-flex {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 75% !important;
     margin-right: auto;
     margin-left: auto;
   }
