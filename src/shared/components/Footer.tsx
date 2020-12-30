@@ -13,7 +13,7 @@ import { Brand } from './header/header-components';
 function Footer() {
   return (
     <Row style={{ backgroundColor: ColorPallet.pinkLight }} className="p-3">
-      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0">
+      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0 footer-content">
         <ul className="d-flex flex-column">
           <li className="m-auto">
             <Brand />
@@ -23,7 +23,7 @@ function Footer() {
             <br />
           </li>
           <li>
-            <h6 className="text-center">Fique ligado nas nossas mídias</h6>
+            <h6>Fique ligado nas nossas mídias</h6>
           </li>
           <li className="m-auto">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
@@ -36,10 +36,10 @@ function Footer() {
           </li>
         </ul>
       </Col>
-      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0">
+      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0  footer-content">
         <ul>
           <li>
-            <h3>SOBRE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+            <h3>SOBRE</h3>
             <br />
           </li>
           <li>
@@ -56,7 +56,7 @@ function Footer() {
           </li>
         </ul>
       </Col>
-      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0">
+      <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0  footer-content">
         <ul>
           <li>
             <h3>ATENDIMENTO</h3>
