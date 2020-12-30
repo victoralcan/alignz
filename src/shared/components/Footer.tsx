@@ -6,7 +6,6 @@ import { ColorPallet } from '../model/enum/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
 import { Brand } from './header/header-components';
 
@@ -26,13 +25,17 @@ function Footer() {
             <h6>Fique ligado nas nossas mídias</h6>
           </li>
           <li className="m-auto">
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
+            <FontAwesomeIcon icon={faInstagram}
+                             onClick={() => window.open("https://instagram.com/aligner.z?igshid=1x6cgcw63bvym", "_blank")}
+                             size="2x"/>
             &nbsp;&nbsp;
-            <FontAwesomeIcon icon={faFacebook} size="2x" />
+            <FontAwesomeIcon icon={faFacebook}
+                             onClick={() => window.open("https://www.facebook.com/AlignerZ-102803528333062", "_blank")}
+                             size="2x"/>
             &nbsp;&nbsp;
-            <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-            &nbsp;&nbsp;
-            <FontAwesomeIcon icon={faYoutube} size="2x" />
+            <FontAwesomeIcon icon={faWhatsapp}
+                             onClick={() => window.open("https://api.whatsapp.com/send?phone=5561984436135", "_blank")}
+                             size="2x"/>
           </li>
         </ul>
       </Col>
