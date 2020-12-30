@@ -4,3 +4,31 @@ li a {
     text-decoration: none;
   }
 }
+
+h6 {
+  text-align: center;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 599px) {
+  .footer-content {
+    h3 {
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    h6 {
+      font-size: 0.8em;
+      margin-bottom: 20px;
+    }
+    li {
+      text-align: center;
+      font-size: 2.2em !important;
+    }
+  }
+
+
+}
