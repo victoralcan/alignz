@@ -7,6 +7,7 @@ import Cruzada from '../../../../content/images/pages/preavaliacao/mordidaCruzad
 import Protuida from '../../../../content/images/pages/preavaliacao/mordidaProtuida.png';
 import Retraida from '../../../../content/images/pages/preavaliacao/mordidaRetraida.png';
 import FittedImage from 'react-fitted-image';
+import { setMordida } from 'pages/preavaliacao/preavaliacao.reducer';
 
 interface ISelectOption {
   label: string;
@@ -32,8 +33,13 @@ class Step6 extends React.Component<IStep6Props, IStep6State> {
     };
   }
 
-  handleSubmit = (event, errors, values) => {
-    event.preventDefault();
+  handleSubmit = (event, errors) => {
+    const { respostas } = this.state;
+    event.persist();
+    if (errors.length > 0) return;
+    const selected = respostas.find(resposta => resposta.selected === true);
+    this.props.setMordida(selected.label);
+    document.getElementById('nextStepButton').click()
   };
 
   setResposta = (index) => {
@@ -59,13 +65,14 @@ class Step6 extends React.Component<IStep6Props, IStep6State> {
                 {respostas.map((resposta, index) => {
                   return (
                     <Col key={index} xs={12} sm={6} md={4} className="center-elements mb-3">
-                      <Button type="submit" className="d-none"></Button>
-                      <div
-                        className={`optionImage wrapper ${resposta.selected && 'selectedImg'}`}
-                        onClick={() => this.setResposta(index)}
-                      >
-                        <FittedImage src={resposta.src} fit="contain" />
-                      </div>
+                      <Button type="submit" className="btnImg">
+                        <div
+                          className={`optionImage ${resposta.selected && 'selectedImg'}`}
+                          onClick={() => this.setResposta(index)}
+                        >
+                          <FittedImage src={resposta.src} fit="contain"/>
+                        </div>
+                      </Button>
                     </Col>
                   );
                 })}
@@ -79,7 +86,9 @@ class Step6 extends React.Component<IStep6Props, IStep6State> {
 }
 
 const mapStateToProps = (store: IRootState) => ({});
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  setMordida
+};
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
