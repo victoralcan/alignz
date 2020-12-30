@@ -306,6 +306,11 @@ $layout-spacer-x: 1.5rem;
   }
 }
 
+.btn-secondary.disabled, .btn-secondary:disabled {
+  background-color: var(--orange) !important;
+  border-color: var(--orange) !important;
+}
+
 @media screen and (max-width: 575px) {
   .forms-wizard-alt {
     width: 100%;

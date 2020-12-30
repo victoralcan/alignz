@@ -1,4 +1,5 @@
 import IFormulario, { IPessoa } from 'shared/model/formulario.model';
+import { AxiosPromise } from "axios";
 
 export const ACTION_TYPES = {
   SET_MOTIVACAO: 'preavaliacao/SET_MOTIVACAO',
@@ -9,11 +10,24 @@ export const ACTION_TYPES = {
   SET_FRASE: 'preavaliacao/SET_FRASE',
   SET_TEMPO: 'preavaliacao/SET_TEMPO',
   SET_PESSOA: 'preavaliacao/SET_PESSOA',
+  SEND_EMAIL: 'preavaliacao/SEND_EMAIL',
+  ENVIANDO: 'preavaliacao/ENVIANDO',
+  ENVIO_SUCESSO: 'preavaliacao/ENVIO_SUCESSO',
+  ENVIO_FALHOU: 'preavaliacao/ENVIO_FALHOU',
   RESET: 'preavaliacao/RESET',
 };
 
+export interface IPayload<T> {
+  type: string;
+  payload: AxiosPromise<T>;
+}
+export type IPayloadResult<T> = ((dispatch: any) => IPayload<T> | Promise<IPayload<T>>);
+
 const initialState = {
   formulario: {} as IFormulario,
+  enviando: false,
+  enviado: false,
+  falhou: false
 };
 
 export type PreAvaliacaoState = Readonly<typeof initialState>;
@@ -92,6 +106,23 @@ export default (state: PreAvaliacaoState = initialState, action): PreAvaliacaoSt
           },
         },
       };
+    case ACTION_TYPES.ENVIANDO:
+      return {
+        ...state,
+        enviando: true
+      };
+    case ACTION_TYPES.ENVIO_SUCESSO:
+      return {
+        ...state,
+        enviado: true,
+        enviando: false
+      };
+    case ACTION_TYPES.ENVIO_FALHOU:
+      return {
+        ...state,
+        falhou: true,
+        enviando: false
+      };
     case ACTION_TYPES.RESET:
       return {
         ...initialState,
@@ -141,6 +172,49 @@ export const setTempo = (tempo) => ({
 export const setPessoa = (pessoa: IPessoa) => ({
   type: ACTION_TYPES.SET_PESSOA,
   payload: pessoa,
+});
+
+export const sendEmail = (formulario: IFormulario) => async dispatch => {
+  const { frase, mordida, desalinhamento, espacamento, usouAparelho, motivacao, pessoa, tempo } = formulario;
+  dispatch(setEnviando())
+  return await dispatch({
+    type: ACTION_TYPES.SEND_EMAIL,
+    // @ts-ignore
+    payload: window.emailjs
+      .send(
+        'default_service',
+        'template_qayttcv',
+        {
+          ...pessoa,
+          frase,
+          mordida,
+          desalinhamento,
+          espacamento,
+          usouAparelho,
+          motivacao,
+          tempo
+        },
+        'user_SX082T8UQjjxvEZtrrw32'
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          dispatch(setSuccess())
+        }
+      })
+      .catch(() => dispatch(setFalhou()))
+  });
+};
+
+export const setFalhou = () => ({
+  type: ACTION_TYPES.ENVIO_FALHOU,
+});
+
+export const setEnviando = () => ({
+  type: ACTION_TYPES.ENVIANDO,
+});
+
+export const setSuccess = () => ({
+  type: ACTION_TYPES.ENVIO_SUCESSO,
 });
 
 export const reset = () => ({
