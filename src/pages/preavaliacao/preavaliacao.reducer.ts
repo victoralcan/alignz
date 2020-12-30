@@ -1,26 +1,26 @@
 import IFormulario, { IPessoa } from 'shared/model/formulario.model';
 
 export const ACTION_TYPES = {
-  SET_MOTIVACAO: 'comoFunciona/SET_MOTIVACAO',
-  SET_USOU_APARELHO: 'comoFunciona/SET_USOU_APARELHO',
-  SET_ESPACAMENTO: 'comoFunciona/SET_ESPACAMENTO',
-  SET_DESALINHAMENTO: 'comoFunciona/SET_DESALINHAMENTO',
-  SET_MORDIDA: 'comoFunciona/SET_MORDIDA',
-  SET_FRASE: 'comoFunciona/SET_FRASE',
-  SET_TEMPO: 'comoFunciona/SET_TEMPO',
-  SET_PESSOA: 'comoFunciona/SET_PESSOA',
-  RESET: 'comoFunciona/RESET',
+  SET_MOTIVACAO: 'preavaliacao/SET_MOTIVACAO',
+  SET_USOU_APARELHO: 'preavaliacao/SET_USOU_APARELHO',
+  SET_ESPACAMENTO: 'preavaliacao/SET_ESPACAMENTO',
+  SET_DESALINHAMENTO: 'preavaliacao/SET_DESALINHAMENTO',
+  SET_MORDIDA: 'preavaliacao/SET_MORDIDA',
+  SET_FRASE: 'preavaliacao/SET_FRASE',
+  SET_TEMPO: 'preavaliacao/SET_TEMPO',
+  SET_PESSOA: 'preavaliacao/SET_PESSOA',
+  RESET: 'preavaliacao/RESET',
 };
 
 const initialState = {
   formulario: {} as IFormulario,
 };
 
-export type ComoFuncionaState = Readonly<typeof initialState>;
+export type PreAvaliacaoState = Readonly<typeof initialState>;
 
 // Reducer
 
-export default (state: ComoFuncionaState = initialState, action): ComoFuncionaState => {
+export default (state: PreAvaliacaoState = initialState, action): PreAvaliacaoState => {
   switch (action.type) {
     case ACTION_TYPES.SET_MOTIVACAO:
       return {

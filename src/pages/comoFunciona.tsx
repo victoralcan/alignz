@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import ChooseSmile from '../../content/images/pages/como-funciona/choose-smile.png';
+import ChooseSmile from '../content/images/pages/como-funciona/choose-smile.png';
 import { Col, Row } from 'reactstrap';
-import Passo1 from '../../content/images/pages/como-funciona/passo1.png';
-import Passo2 from '../../content/images/pages/como-funciona/passo2.png';
-import Passo3 from '../../content/images/pages/como-funciona/passo3.png';
-import Beneficio1 from '../../content/images/pages/como-funciona/beneficio1.png';
-import Beneficio2 from '../../content/images/pages/como-funciona/beneficio2.png';
-import Beneficio3 from '../../content/images/pages/como-funciona/beneficio3.png';
-import SorrisoGarantido from '../../content/images/pages/como-funciona/sorrisoGarantido.png';
-import Duvidas from '../../shared/components/Duvidas';
+import Passo1 from '../content/images/pages/como-funciona/passo1.png';
+import Passo2 from '../content/images/pages/como-funciona/passo2.png';
+import Passo3 from '../content/images/pages/como-funciona/passo3.png';
+import Beneficio1 from '../content/images/pages/como-funciona/beneficio1.png';
+import Beneficio2 from '../content/images/pages/como-funciona/beneficio2.png';
+import Beneficio3 from '../content/images/pages/como-funciona/beneficio3.png';
+import SorrisoGarantido from '../content/images/pages/como-funciona/sorrisoGarantido.png';
+import Duvidas from '../shared/components/Duvidas';
 import FittedImage from 'react-fitted-image';
-import ReadySetSmile from '../../shared/components/readySetSmile';
-import ReadySetSmileImgLeft from '../../content/images/readySetSmileLeft.png';
-import '../../styles/pages/comoFunciona.scss';
+import ReadySetSmile from '../shared/components/readySetSmile';
+import ReadySetSmileImgLeft from '../content/images/readySetSmileLeft.png';
+import '../styles/pages/comoFunciona.scss';
 
 function ComoFunciona() {
   const content = document.getElementById('root');
