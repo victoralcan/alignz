@@ -53,10 +53,10 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
       <>
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <div className="d-flex">
-              <Row form className="text-center w-65 m-auto">
+            <div className="bgText d-flex">
+              <Row form className="text-center m-auto-w-75">
                 <Col xs={12}>
-                  <h2 className="mb-5">Qual sua principal motivação para melhorar seu sorriso?</h2>
+                  <h1 className="titleStep text-black mb-5">Qual sua principal motivação para melhorar seu sorriso?</h1>
                 </Col>
                 {motivacoes.map((motivacao, index) => {
                   return (
@@ -66,7 +66,7 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
                         className={`w-100 m-2 optionButton ${motivacao.selected && 'selected'}`}
                         onClick={() => this.setMotivacao(index)}
                       >
-                        <h5>{motivacao.label}</h5>
+                        <h4>{motivacao.label}</h4>
                       </Button>
                     </Col>
                   );

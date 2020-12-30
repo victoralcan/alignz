@@ -35,16 +35,16 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
             <div className="d-flex">
-              <Row form className="text-center w-50 m-auto">
+              <Row form className="text-center m-auto w-75">
                 <Col xs={12}>
-                  <h3 className="mb-3">Avaliação completa!</h3>
-                  <h5 className="mb-5 font-weight-light">
+                  <h1 className="titleStep text-black mb-3">Avaliação completa!</h1>
+                  <h4 className="mb-5 font-weight-light">
                     Agora, preencha seus dados e vamos te enviar o seu resultado no e-mail informado dentro de instantes
-                  </h5>
+                  </h4>
                 </Col>
                 <Col xs={12}>
                   <AvField
-                    className="inputForm"
+                    className="inputForm p-4"
                     name="nome"
                     id="nome"
                     placeholder="Nome completo"
@@ -65,7 +65,7 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
                 </Col>
                 <Col xs={12}>
                   <AvField
-                    className="inputForm"
+                    className="inputForm p-4"
                     name="email"
                     id="email"
                     placeholder="E-mail"
@@ -81,7 +81,7 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
                 </Col>
                 <Col xs={12}>
                   <AvField
-                    className="inputForm"
+                    className="inputForm p-4"
                     name="telefone"
                     id="telefone"
                     placeholder="Telefone"
@@ -99,7 +99,7 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
                 </Col>
                 <Col xs={12}>
                   <AvField
-                    className="inputForm"
+                    className="inputForm p-4"
                     name="cep"
                     id="cep"
                     placeholder="CEP"
@@ -113,7 +113,7 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
                 </Col>
                 <Col xs={12}>
                   <AvField
-                    className="inputForm"
+                    className="inputForm p-4"
                     name="idade"
                     id="idade"
                     placeholder="Idade"
@@ -131,7 +131,7 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
             <br/>
             <div className="d-flex">
               <Button className="general-button p-3 m-auto" disabled={enviado || enviando}>
-                <h5 className="text-white">Ver meu resultado</h5>
+                <h4 className="text-white">Ver meu resultado</h4>
               </Button>
             </div>
             <br/>

@@ -51,10 +51,10 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
       <>
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <div className="d-flex">
-              <Row form className="text-center w-50 m-auto">
+            <div className="bgText d-flex">
+              <Row form className="text-center m-auto-w-75">
                 <Col xs={12}>
-                  <h3 className="mb-5">Você já usou aparelho?</h3>
+                  <h1 className="titleStep text-black mb-5">Você já usou aparelho?</h1>
                 </Col>
                 {respostas.map((resposta, index) => {
                   return (
@@ -64,7 +64,7 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
                         className={`w-100 m-2 optionButton ${resposta.selected && 'selected'}`}
                         onClick={() => this.setResposta(index)}
                       >
-                        <h5>{resposta.label}</h5>
+                        <h4>{resposta.label}</h4>
                       </Button>
                     </Col>
                   );

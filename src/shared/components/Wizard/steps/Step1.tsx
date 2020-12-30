@@ -18,12 +18,12 @@ class Step2 extends React.Component<IStep1Props, IStep1State> {
               <FittedImage src={Boca} fit="contain" />
             </div>
           </div>
-          <h1 className="pt-4 text-center">Avaliação online</h1>
-          <h1 className="pb-4 text-black text-center">de 1 minuto</h1>
+          <h1 className="display-4 titleMobile pt-4 text-center">Avaliação online</h1>
+          <h1 className="display-4 titleMobile pb-4 text-black text-center">de 1 minuto</h1>
           <div className="d-flex">
-            <h4 className="text-center w-75 m-auto pb-5">
+            <h3 className="text-center w-75 m-auto pb-5">
               Responda algumas perguntas e veja se AlignerZ é o tratamento certo pra você.
-            </h4>
+            </h3>
           </div>
         </div>
       </>

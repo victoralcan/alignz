@@ -57,10 +57,10 @@ class Step6 extends React.Component<IStep6Props, IStep6State> {
       <>
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <div className="d-flex">
-              <Row className="text-center w-75 m-auto">
+            <div className="bgText d-flex">
+              <Row className="text-center m-auto-w-75">
                 <Col xs={12}>
-                  <h3 className="mb-5">Como é a sua mordida?</h3>
+                  <h1 className="titleStep text-black mb-5">Como é a sua mordida?</h1>
                 </Col>
                 {respostas.map((resposta, index) => {
                   return (
