@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import comoFunciona, { ComoFuncionaState } from 'pages/comoFunciona/comoFunciona.reducer';
+import preavaliacao, { PreAvaliacaoState } from 'pages/preavaliacao/preavaliacao.reducer';
 
 export interface IRootState {
-  readonly comoFunciona: ComoFuncionaState;
+  readonly preavaliacao: PreAvaliacaoState;
 }
 
-const rootReducer = combineReducers<IRootState>({ comoFunciona });
+const rootReducer = combineReducers<IRootState>({ preavaliacao });
 
 export default rootReducer;

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Wizard from '../shared/components/Wizard/Wizard';
+import Wizard from '../../shared/components/Wizard/Wizard';
 
 function Preavaliacao() {
   useEffect(() => {
@@ -8,7 +8,7 @@ function Preavaliacao() {
   return (
     <>
       <section className="infoContainerFlex">
-        <Wizard/>
+        <Wizard />
       </section>
     </>
   );

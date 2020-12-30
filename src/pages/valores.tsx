@@ -28,7 +28,7 @@ class Valores extends React.Component {
         {/*Acessível para todos*/}
         <section className="infoContainer">
           <div className="bgImg">
-            <FittedImage src={Valores1} fit="cover"/>
+            <FittedImage src={Valores1} fit="cover" />
           </div>
           <div className="bgText">
             <Col md={6} className="h-100 center-elements pt-5">
@@ -53,7 +53,9 @@ class Valores extends React.Component {
             <Row className="h-100">
               <Col md={4} className="h-100"></Col>
               <Col md={8} className="h-100 center-elements">
-                <h1 className="titleMobile title font-weight-bold text-black w-75">Quer saber se você é um candidato?</h1>
+                <h1 className="titleMobile title font-weight-bold text-black w-75">
+                  Quer saber se você é um candidato?
+                </h1>
                 <div className="contentDiv">
                   <Row>
                     <Col md={12}>

@@ -52,7 +52,7 @@ class Home extends React.Component {
         {/*Conheça o Futuro*/}
         <section className="infoContainer">
           <div className="bgImg">
-            <FittedImage src={Home1} fit="cover"/>
+            <FittedImage src={Home1} fit="cover" />
           </div>
           <div className="bgText">
             <Row>
@@ -63,7 +63,7 @@ class Home extends React.Component {
                     Apresento-lhes os alinhadores transparentes! Alinhe os seus dentes com segurança, sem bráquetes e
                     até 3x mais rápido que os tratamentos convencionais com essas plaquinhas mágicas
                   </h4>
-                  <div className="clear"/>
+                  <div className="clear" />
                   <div>
                     <Button tag={Link} to="/preavaliacao" className="general-button">
                       Sou um candidato?

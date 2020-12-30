@@ -16,11 +16,11 @@ function Footer() {
       <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0">
         <ul className="d-flex flex-column">
           <li className="m-auto">
-            <Brand/>
+            <Brand />
           </li>
           <li>
-            <br/>
-            <br/>
+            <br />
+            <br />
           </li>
           <li>
             <h6 className="text-center">Fique ligado nas nossas mídias</h6>
