@@ -57,10 +57,10 @@ class Step5 extends React.Component<IStep5Props, IStep5State> {
       <>
         <div className="form-wizard-content">
           <AvForm onSubmit={this.handleSubmit} model={{}}>
-            <div className="d-flex">
-              <Row className="text-center w-75 m-auto">
+            <div className="bgText d-flex">
+              <Row className="text-center m-auto-w-75">
                 <Col xs={12}>
-                  <h3 className="mb-5">Qual o nível de desalinhamento dos seus dentes?</h3>
+                  <h1 className="titleStep text-black mb-5">Qual o nível de desalinhamento dos seus dentes?</h1>
                 </Col>
                 {respostas.map((resposta, index) => {
                   return (

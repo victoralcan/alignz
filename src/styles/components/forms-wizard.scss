@@ -320,12 +320,18 @@ $layout-spacer-x: 1.5rem;
     width: 80px;
   }
   .optionImage {
-    width: 80px;
-    height: 80px
+    width: 120px;
+    height: 120px
   }
   .formImage {
-    width: 130px;
-    height: 92px;
+    width: 156px;
+    height: 110px;
+  }
+  .titleStep {
+      font-size: 3.6em !important;
+  }
+  .w-75-mobile {
+    width: 75% !important;
   }
 }
 
@@ -338,7 +344,7 @@ $layout-spacer-x: 1.5rem;
 
 @media (min-width: 992px) {
   .forms-wizard-alt {
-    width: 50%;
+    width: 78%;
     padding: 6em;
   }
   #alignerzLogo {
@@ -346,11 +352,11 @@ $layout-spacer-x: 1.5rem;
     width: 200px;
   }
   .optionImage {
-    width: 100px;
-    height: 100px
+    width: 150px;
+    height: 150px;
   }
   .formImage {
-    width: 187px;
-    height: 132px;
+    width: 224px;
+    height: 158px;
   }
 }
