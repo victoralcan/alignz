@@ -289,6 +289,23 @@ $layout-spacer-x: 1.5rem;
   border: 3px solid var(--pink-light);
 }
 
+.btnImg {
+  border: 0;
+  background-color: #fff;
+
+  &:hover {
+    background-color: var(--orange);
+  }
+
+  &:active {
+    background-color: var(--orange) !important;
+  }
+
+  &:focus {
+    background-color: var(--orange) !important;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .forms-wizard-alt {
     width: 100%;

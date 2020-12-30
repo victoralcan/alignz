@@ -1,8 +1,10 @@
 import React from 'react';
-import { Col, Row } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import { AvField, AvForm } from 'availity-reactstrap-validation';
 import { IRootState } from '../../../reducers';
 import { connect } from 'react-redux';
+import { setPessoa } from 'pages/preavaliacao/preavaliacao.reducer';
+import { IPessoa } from "../../../model/formulario.model";
 
 export interface IStep9Props extends StateProps, DispatchProps {}
 
@@ -10,7 +12,17 @@ export interface IStep9State {}
 
 class Step9 extends React.Component<IStep9Props, IStep9State> {
   handleSubmit = (event, errors, values) => {
-    event.preventDefault();
+    event.persist();
+    console.log(values);
+    if (errors.length > 0) return;
+    const pessoa: IPessoa = {
+      nome: values.nome,
+      email: values.email,
+      telefone: values.telefone,
+      cep: values.cep,
+      idade: values.idade
+    };
+    this.props.setPessoa(pessoa);
   };
 
   render() {
@@ -29,8 +41,8 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
                 <Col xs={12}>
                   <AvField
                     className="inputForm"
-                    name="name"
-                    id="name"
+                    name="nome"
+                    id="nome"
                     placeholder="Nome completo"
                     validate={{
                       required: {
@@ -112,6 +124,12 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
                 </Col>
               </Row>
             </div>
+            <br/>
+            <div className="d-flex">
+              <Button className="general-button p-3 m-auto">
+                <h5 className="text-white">Ver meu resultado</h5>
+              </Button>
+            </div>
           </AvForm>
         </div>
       </>
@@ -120,7 +138,9 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
 }
 
 const mapStateToProps = (store: IRootState) => ({});
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  setPessoa
+};
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
