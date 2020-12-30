@@ -17,10 +17,19 @@ import '../styles/pages/home.scss';
 import { Link } from 'react-router-dom';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
+import { reset as resetHeader } from "../shared/components/header/header.reducer";
+import { reset as resetFooter } from "../shared/components/footer/footer.reducer";
+import { connect } from "react-redux";
 
-class Home extends React.Component {
+interface IHomeProps extends StateProps, DispatchProps {
+
+}
+
+class Home extends React.Component<IHomeProps> {
   componentDidMount() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.props.resetHeader();
+    this.props.resetFooter();
   }
 
   render() {
@@ -231,4 +240,12 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = () => ({});
+const mapDispatchToProps = {
+  resetHeader, resetFooter
+};
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

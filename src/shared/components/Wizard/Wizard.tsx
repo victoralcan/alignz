@@ -16,6 +16,9 @@ import Step9 from './steps/Step9';
 import { ColorPallet } from '../../model/enum/colors';
 import Logo from '../../../content/images/logo-alignerz-removebg.png';
 import FittedImage from 'react-fitted-image';
+import { hide as hideHeader } from "../header/header.reducer";
+import { hide as hideFooter } from "../footer/footer.reducer";
+import history from "../../../config/history";
 
 export interface IWizardProps extends StateProps, DispatchProps {}
 
@@ -38,6 +41,11 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
     };
 
     this.onCheckboxBtnClick = this.onCheckboxBtnClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.hideHeader();
+    this.props.hideFooter();
   }
 
   onMouseEnter() {
@@ -93,7 +101,7 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
         <Col md="12">
           <Card className="main-card h-100" style={{ backgroundColor: ColorPallet.pastelOpac }}>
             <CardBody className="center-elements">
-              <div id="alignerzLogo">
+              <div id="alignerzLogo" onClick={() => history.push('/')}>
                 <FittedImage src={Logo} alt="AlignerZ" fit="contain" />
               </div>
               <div className="forms-wizard-alt p-5 border border-light" style={{ backgroundColor: ColorPallet.white }}>
@@ -108,7 +116,9 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
 }
 
 const mapStateToProps = () => ({});
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  hideHeader, hideFooter
+};
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;

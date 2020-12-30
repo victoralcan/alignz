@@ -6,15 +6,22 @@ import { Button, Col, Collapse, Nav, Navbar, NavbarToggler } from 'reactstrap';
 import { ColorPallet } from '../../model/enum/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripLines } from '@fortawesome/free-solid-svg-icons';
+import history from "../../../config/history";
+import { connect } from "react-redux";
+import { IRootState } from "../../reducers";
 
-function Header() {
+interface IHeaderProps extends StateProps, DispatchProps {
+
+}
+
+function Header(props: IHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const content = document.getElementById('root');
   const contentWidth = content ? content.clientWidth : 1024;
   const mobile = contentWidth <= 992;
   return (
-    <Navbar expand="lg" className="header-container sticky-top shadow">
+    <Navbar expand="lg" className={`header-container sticky-top shadow ${props.hide && 'd-none'}`}>
       <div onClick={mobile ? toggle : () => {}}>
         <Brand/>
       </div>
@@ -47,4 +54,12 @@ function Header() {
   );
 }
 
-export default Header;
+const mapStateToProps = (store: IRootState) => ({
+  hide: store.header.hide
+});
+const mapDispatchToProps = {};
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
