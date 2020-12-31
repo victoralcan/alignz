@@ -288,7 +288,47 @@ h1 {
     }
 }
 
+@media screen and (max-width: 399px) {
+  .titleMobile {
+    font-size: 3em !important;
+  }
+
+  .contentDiv h4 {
+    font-size: 2em;
+  }
+
+  .comparacao h4 {
+    font-size: 2em;
+  }
+
+  .tratamento-title {
+    h3 {
+      font-size: 2em;
+    }
+  }
+
+  .tratamento-card {
+    margin-bottom: 25px;
+
+    img {
+      height: 230px !important;
+      width: 230px !important;
+    }
+
+    h4 {
+      font-size: 3em !important;
+    }
+
+    p {
+      font-size: 1.9em !important;
+    }
+  }
+}
+
 @media screen and (max-width: 599px) {
+  .tratamento-card {
+    margin-bottom: 30px;
+  }
 
 }
 
@@ -337,8 +377,13 @@ h1 {
     .title {
       font-size: 3em;
     }
+    
+    .swiper-pagination {
+      display: none;
+    }
 
     .tratamento-card {
+
       img {
         height: 210px !important;
         width: 210px !important;
