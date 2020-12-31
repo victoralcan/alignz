@@ -37,9 +37,9 @@ class Step4 extends React.Component<IStep4Props, IStep4State> {
     const { respostas } = this.state;
     event.persist();
     if (errors.length > 0) return;
-    const selected = respostas.find(resposta => resposta.selected === true);
+    const selected = respostas.find((resposta) => resposta.selected === true);
     this.props.setEspacamento(selected.label);
-    document.getElementById('nextStepButton').click()
+    document.getElementById('nextStepButton').click();
   };
 
   setResposta = (index) => {
@@ -66,12 +66,12 @@ class Step4 extends React.Component<IStep4Props, IStep4State> {
                   return (
                     <Col key={index} xs={12} sm={6} md={4} className="center-elements mb-3">
                       <Button type="submit" className="btnImg">
-                      <div
-                        className={`optionImage ${resposta.selected && 'selectedImg'}`}
-                        onClick={() => this.setResposta(index)}
-                      >
-                        <FittedImage src={resposta.src} fit="contain" />
-                      </div>
+                        <div
+                          className={`optionImage ${resposta.selected && 'selectedImg'}`}
+                          onClick={() => this.setResposta(index)}
+                        >
+                          <FittedImage src={resposta.src} fit="contain" />
+                        </div>
                       </Button>
                     </Col>
                   );
@@ -87,7 +87,7 @@ class Step4 extends React.Component<IStep4Props, IStep4State> {
 
 const mapStateToProps = (store: IRootState) => ({});
 const mapDispatchToProps = {
-  setEspacamento
+  setEspacamento,
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

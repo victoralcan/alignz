@@ -2,15 +2,13 @@ import React from 'react';
 import { Button, Col, Row } from 'reactstrap';
 import { AvField, AvForm } from 'availity-reactstrap-validation';
 import { sendEmail, setPessoa } from 'pages/preavaliacao/preavaliacao.reducer';
-import { IPessoa } from "../../../model/formulario.model";
-import { IRootState } from "../../../reducers";
+import { IPessoa } from '../../../model/formulario.model';
+import { IRootState } from '../../../reducers';
 import { connect } from 'react-redux';
 
-export interface IStep9Props extends StateProps, DispatchProps {
-}
+export interface IStep9Props extends StateProps, DispatchProps {}
 
-export interface IStep9State {
-}
+export interface IStep9State {}
 
 class Step9 extends React.Component<IStep9Props, IStep9State> {
   handleSubmit = (event, errors, values) => {
@@ -22,7 +20,7 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
       email: values.email,
       telefone: values.telefone,
       cep: values.cep,
-      idade: values.idade
+      idade: values.idade,
     };
     this.props.setPessoa(pessoa);
     this.props.sendEmail({ ...this.props.formulario, pessoa });
@@ -128,20 +126,22 @@ class Step9 extends React.Component<IStep9Props, IStep9State> {
                 </Col>
               </Row>
             </div>
-            <br/>
+            <br />
             <div className="d-flex">
               <Button className="general-button p-3 m-auto" disabled={enviado || enviando}>
                 <h4 className="text-white">Ver meu resultado</h4>
               </Button>
             </div>
-            <br/>
-            {enviando ?
+            <br />
+            {enviando ? (
               <h5 className="text-center">Aguarde, estamos enviando seus dados...</h5>
-              :
-              enviado ?
-                <h5 className="text-center">Dados enviados com sucesso!</h5> :
-                falhou ?
-                  <h5 className="text-center">Ocorreu um erro. Por favor, tente novamente</h5> : ('')}
+            ) : enviado ? (
+              <h5 className="text-center">Dados enviados com sucesso!</h5>
+            ) : falhou ? (
+              <h5 className="text-center">Ocorreu um erro. Por favor, tente novamente</h5>
+            ) : (
+              ''
+            )}
           </AvForm>
         </div>
       </>
@@ -153,11 +153,11 @@ const mapStateToProps = (store: IRootState) => ({
   formulario: store.preavaliacao.formulario,
   enviado: store.preavaliacao.enviado,
   enviando: store.preavaliacao.enviando,
-  falhou: store.preavaliacao.falhou
+  falhou: store.preavaliacao.falhou,
 });
 const mapDispatchToProps = {
   setPessoa,
-  sendEmail
+  sendEmail,
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

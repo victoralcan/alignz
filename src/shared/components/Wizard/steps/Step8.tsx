@@ -33,7 +33,7 @@ class Step8 extends React.Component<IStep8Props, IStep8State> {
     const { respostas } = this.state;
     event.persist();
     if (errors.length > 0) return;
-    const selected = respostas.find(resposta => resposta.selected === true);
+    const selected = respostas.find((resposta) => resposta.selected === true);
     this.props.setTempo(selected.label);
     document.getElementById('nextStepButton').click();
   };
@@ -82,7 +82,7 @@ class Step8 extends React.Component<IStep8Props, IStep8State> {
 
 const mapStateToProps = (store: IRootState) => ({});
 const mapDispatchToProps = {
-  setTempo
+  setTempo,
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

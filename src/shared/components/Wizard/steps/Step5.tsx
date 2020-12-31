@@ -37,9 +37,9 @@ class Step5 extends React.Component<IStep5Props, IStep5State> {
     const { respostas } = this.state;
     event.persist();
     if (errors.length > 0) return;
-    const selected = respostas.find(resposta => resposta.selected === true);
+    const selected = respostas.find((resposta) => resposta.selected === true);
     this.props.setDesalinhamento(selected.label);
-    document.getElementById('nextStepButton').click()
+    document.getElementById('nextStepButton').click();
   };
 
   setResposta = (index) => {
@@ -70,7 +70,7 @@ class Step5 extends React.Component<IStep5Props, IStep5State> {
                           className={`optionImage ${resposta.selected && 'selectedImg'}`}
                           onClick={() => this.setResposta(index)}
                         >
-                          <FittedImage src={resposta.src} fit="contain"/>
+                          <FittedImage src={resposta.src} fit="contain" />
                         </div>
                       </Button>
                     </Col>

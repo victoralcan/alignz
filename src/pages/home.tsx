@@ -17,13 +17,11 @@ import '../styles/pages/home.scss';
 import { Link } from 'react-router-dom';
 import Duvidas from '../shared/components/Duvidas';
 import ReadySetSmile from '../shared/components/readySetSmile';
-import { reset as resetHeader } from "../shared/components/header/header.reducer";
-import { reset as resetFooter } from "../shared/components/footer/footer.reducer";
-import { connect } from "react-redux";
+import { reset as resetHeader } from '../shared/components/header/header.reducer';
+import { reset as resetFooter } from '../shared/components/footer/footer.reducer';
+import { connect } from 'react-redux';
 
-interface IHomeProps extends StateProps, DispatchProps {
-
-}
+interface IHomeProps extends StateProps, DispatchProps {}
 
 class Home extends React.Component<IHomeProps> {
   componentDidMount() {
@@ -90,7 +88,7 @@ class Home extends React.Component<IHomeProps> {
         <section>
           <div className="infoContainerFlex d-flex flex-column mr-auto ml-auto comparacao">
             <div className="info-container-header">
-              <h1 className="title titleMobile" >Comparativo</h1>
+              <h1 className="title titleMobile">Comparativo</h1>
               <br />
               <h4>
                 Você sabe a diferença entre os aparelhos convencionais e os alinhadores? Veja o quadro e escolha o que
@@ -148,7 +146,7 @@ class Home extends React.Component<IHomeProps> {
               </div>
             </Row>
             <Row>
-              { mobile ? (
+              {mobile ? (
                 <>
                   <Col md={6}>
                     <FittedImage fit="cover" src={Motivo2} />
@@ -157,9 +155,7 @@ class Home extends React.Component<IHomeProps> {
                     <div className="m-auto w-75 info-razao">
                       <h2 className="font-weight-bold">Removível, fácil de colocar e tirar</h2>
                       <div>
-                        <p>
-                          Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal
-                        </p>
+                        <p>Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal</p>
                         <div className="clear" />
                       </div>
                     </div>
@@ -172,7 +168,9 @@ class Home extends React.Component<IHomeProps> {
                       <h2 className="font-weight-bold">Removível, fácil de colocar e tirar</h2>
                       <ul>
                         <li>
-                          <span>Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal</span>
+                          <span>
+                            Você pode removê-los facilmente para escovar os dentes, sem alterar sua higiene bucal
+                          </span>
                           <div className="clear" />
                         </li>
                       </ul>
@@ -242,7 +240,8 @@ class Home extends React.Component<IHomeProps> {
 
 const mapStateToProps = () => ({});
 const mapDispatchToProps = {
-  resetHeader, resetFooter
+  resetHeader,
+  resetFooter,
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

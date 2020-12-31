@@ -102,7 +102,9 @@ class Valores extends React.Component {
               <div className="contentDiv m-auto">
                 <ul>
                   <li>
-                    <h2 className="titleMobile">Trabalhamos direto da fábrica com os pacientes, evitando custos desnecessários.</h2>
+                    <h2 className="titleMobile">
+                      Trabalhamos direto da fábrica com os pacientes, evitando custos desnecessários.
+                    </h2>
                     <div className="clear" />
                   </li>
                 </ul>

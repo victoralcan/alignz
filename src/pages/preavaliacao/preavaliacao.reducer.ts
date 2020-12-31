@@ -1,5 +1,5 @@
 import IFormulario, { IPessoa } from 'shared/model/formulario.model';
-import { AxiosPromise } from "axios";
+import { AxiosPromise } from 'axios';
 
 export const ACTION_TYPES = {
   SET_MOTIVACAO: 'preavaliacao/SET_MOTIVACAO',
@@ -21,13 +21,13 @@ export interface IPayload<T> {
   type: string;
   payload: AxiosPromise<T>;
 }
-export type IPayloadResult<T> = ((dispatch: any) => IPayload<T> | Promise<IPayload<T>>);
+export type IPayloadResult<T> = (dispatch: any) => IPayload<T> | Promise<IPayload<T>>;
 
 const initialState = {
   formulario: {} as IFormulario,
   enviando: false,
   enviado: false,
-  falhou: false
+  falhou: false,
 };
 
 export type PreAvaliacaoState = Readonly<typeof initialState>;
@@ -109,19 +109,19 @@ export default (state: PreAvaliacaoState = initialState, action): PreAvaliacaoSt
     case ACTION_TYPES.ENVIANDO:
       return {
         ...state,
-        enviando: true
+        enviando: true,
       };
     case ACTION_TYPES.ENVIO_SUCESSO:
       return {
         ...state,
         enviado: true,
-        enviando: false
+        enviando: false,
       };
     case ACTION_TYPES.ENVIO_FALHOU:
       return {
         ...state,
         falhou: true,
-        enviando: false
+        enviando: false,
       };
     case ACTION_TYPES.RESET:
       return {
@@ -174,9 +174,9 @@ export const setPessoa = (pessoa: IPessoa) => ({
   payload: pessoa,
 });
 
-export const sendEmail = (formulario: IFormulario) => async dispatch => {
+export const sendEmail = (formulario: IFormulario) => async (dispatch) => {
   const { frase, mordida, desalinhamento, espacamento, usouAparelho, motivacao, pessoa, tempo } = formulario;
-  dispatch(setEnviando())
+  dispatch(setEnviando());
   return await dispatch({
     type: ACTION_TYPES.SEND_EMAIL,
     // @ts-ignore
@@ -192,16 +192,16 @@ export const sendEmail = (formulario: IFormulario) => async dispatch => {
           espacamento,
           usouAparelho,
           motivacao,
-          tempo
+          tempo,
         },
-        'user_MZIRASYGB78T7Afd6BXYJ'
+        'user_MZIRASYGB78T7Afd6BXYJ',
       )
       .then((res) => {
         if (res.status === 200) {
-          dispatch(setSuccess())
+          dispatch(setSuccess());
         }
       })
-      .catch(() => dispatch(setFalhou()))
+      .catch(() => dispatch(setFalhou())),
   });
 };
 
