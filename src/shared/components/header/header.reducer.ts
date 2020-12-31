@@ -4,7 +4,7 @@ export const ACTION_TYPES = {
 };
 
 const initialState = {
-  hide: false
+  hide: false,
 };
 
 export type HeaderState = Readonly<typeof initialState>;
@@ -16,7 +16,7 @@ export default (state: HeaderState = initialState, action): HeaderState => {
     case ACTION_TYPES.HIDE:
       return {
         ...state,
-        hide: true
+        hide: true,
       };
     case ACTION_TYPES.RESET:
       return {

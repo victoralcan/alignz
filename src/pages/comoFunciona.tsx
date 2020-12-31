@@ -151,7 +151,7 @@ function ComoFunciona() {
         <br />
         <Row className="pb-5 mb-5 pr-3 pl-3">
           <Col xs={12} md={7}>
-            <FittedImage fit="cover" src={Passo1}/>
+            <FittedImage fit="cover" src={Passo1} />
           </Col>
           <Col xs={12} md={5} className="center-elements">
             <div className="bgText m-auto-w-75">
@@ -172,7 +172,7 @@ function ComoFunciona() {
           {mobile ? (
             <>
               <Col xs={12} md={7}>
-                <FittedImage fit="cover" src={Passo2}/>
+                <FittedImage fit="cover" src={Passo2} />
               </Col>
               <Col xs={12} md={5} className="center-elements">
                 <div className="bgText m-auto-w-75">
@@ -200,20 +200,20 @@ function ComoFunciona() {
                         Fazemos uma imagem 3D do seu sorriso, que nos mostrará o que está acontecendo. Então, um de
                         nossos dentistas monta, analisa e aprova seu plano de tratamento totalmente personalizado.
                       </p>
-                      <div className="clear"/>
+                      <div className="clear" />
                     </li>
                   </ul>
                 </div>
               </Col>
               <Col xs={12} md={7}>
-                <FittedImage fit="cover" src={Passo2}/>
+                <FittedImage fit="cover" src={Passo2} />
               </Col>
             </>
           )}
         </Row>
         <Row className="pb-5 mb-5 pr-3 pl-3">
           <Col xs={12} md={7}>
-            <FittedImage fit="cover" src={Passo3}/>
+            <FittedImage fit="cover" src={Passo3} />
           </Col>
           <Col xs={12} md={5} className="center-elements">
             <div className="bgText m-auto-w-75">

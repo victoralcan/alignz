@@ -8,12 +8,10 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons/faWhatsapp';
 import { Brand } from '../header/header-components';
-import { IRootState } from "../../reducers";
-import { connect } from "react-redux";
+import { IRootState } from '../../reducers';
+import { connect } from 'react-redux';
 
-interface IFooterProps extends StateProps, DispatchProps {
-
-}
+interface IFooterProps extends StateProps, DispatchProps {}
 
 function Footer(props: IFooterProps) {
   return (
@@ -21,27 +19,33 @@ function Footer(props: IFooterProps) {
       <Col md={4} xs={12} className="d-flex align-items-center justify-content-center pb-4 pb-md-0 footer-content">
         <ul className="d-flex flex-column">
           <li className="m-auto">
-            <Brand/>
+            <Brand />
           </li>
           <li>
-            <br/>
-            <br/>
+            <br />
+            <br />
           </li>
           <li>
             <h6>Fique ligado nas nossas mídias</h6>
           </li>
           <li className="m-auto">
-            <FontAwesomeIcon icon={faInstagram}
-                             onClick={() => window.open("https://instagram.com/aligner.z?igshid=1x6cgcw63bvym", "_blank")}
-                             size="2x"/>
+            <FontAwesomeIcon
+              icon={faInstagram}
+              onClick={() => window.open('https://instagram.com/aligner.z?igshid=1x6cgcw63bvym', '_blank')}
+              size="2x"
+            />
             &nbsp;&nbsp;
-            <FontAwesomeIcon icon={faFacebook}
-                             onClick={() => window.open("https://www.facebook.com/AlignerZ-102803528333062", "_blank")}
-                             size="2x"/>
+            <FontAwesomeIcon
+              icon={faFacebook}
+              onClick={() => window.open('https://www.facebook.com/AlignerZ-102803528333062', '_blank')}
+              size="2x"
+            />
             &nbsp;&nbsp;
-            <FontAwesomeIcon icon={faWhatsapp}
-                             onClick={() => window.open("https://api.whatsapp.com/send?phone=5561984436135", "_blank")}
-                             size="2x"/>
+            <FontAwesomeIcon
+              icon={faWhatsapp}
+              onClick={() => window.open('https://api.whatsapp.com/send?phone=5561984436135', '_blank')}
+              size="2x"
+            />
           </li>
         </ul>
       </Col>
@@ -82,7 +86,7 @@ function Footer(props: IFooterProps) {
 }
 
 const mapStateToProps = (store: IRootState) => ({
-  hide: store.footer.hide
+  hide: store.footer.hide,
 });
 const mapDispatchToProps = {};
 

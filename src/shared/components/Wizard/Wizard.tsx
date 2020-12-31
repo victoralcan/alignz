@@ -16,9 +16,9 @@ import Step9 from './steps/Step9';
 import { ColorPallet } from '../../model/enum/colors';
 import Logo from '../../../content/images/logo-alignerz-removebg.png';
 import FittedImage from 'react-fitted-image';
-import { hide as hideHeader } from "../header/header.reducer";
-import { hide as hideFooter } from "../footer/footer.reducer";
-import history from "../../../config/history";
+import { hide as hideHeader } from '../header/header.reducer';
+import { hide as hideFooter } from '../footer/footer.reducer';
+import history from '../../../config/history';
 
 export interface IWizardProps extends StateProps, DispatchProps {}
 
@@ -117,7 +117,8 @@ class Wizard extends React.Component<IWizardProps, IWizardState> {
 
 const mapStateToProps = () => ({});
 const mapDispatchToProps = {
-  hideHeader, hideFooter
+  hideHeader,
+  hideFooter,
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

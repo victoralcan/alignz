@@ -33,9 +33,9 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
     const { motivacoes } = this.state;
     event.persist();
     if (errors.length > 0) return;
-    const selected = motivacoes.find(motivacao => motivacao.selected === true);
+    const selected = motivacoes.find((motivacao) => motivacao.selected === true);
     this.props.setMotivacao(selected.label);
-    document.getElementById('nextStepButton').click()
+    document.getElementById('nextStepButton').click();
   };
 
   setMotivacao = (index) => {
@@ -82,7 +82,7 @@ class Step2 extends React.Component<IStep2Props, IStep2State> {
 
 const mapStateToProps = (store: IRootState) => ({});
 const mapDispatchToProps = {
-  setMotivacao
+  setMotivacao,
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

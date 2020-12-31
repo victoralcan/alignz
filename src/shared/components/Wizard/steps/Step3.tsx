@@ -31,9 +31,9 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
     const { respostas } = this.state;
     event.persist();
     if (errors.length > 0) return;
-    const selected = respostas.find(resposta => resposta.selected === true);
+    const selected = respostas.find((resposta) => resposta.selected === true);
     this.props.setUsouAparelho(selected.label);
-    document.getElementById('nextStepButton').click()
+    document.getElementById('nextStepButton').click();
   };
 
   setResposta = (index) => {
@@ -80,7 +80,7 @@ class Step3 extends React.Component<IStep3Props, IStep3State> {
 
 const mapStateToProps = (store: IRootState) => ({});
 const mapDispatchToProps = {
-  setUsouAparelho
+  setUsouAparelho,
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
