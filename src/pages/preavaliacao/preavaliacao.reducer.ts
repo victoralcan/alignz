@@ -183,7 +183,7 @@ export const sendEmail = (formulario: IFormulario) => async (dispatch) => {
     payload: window.emailjs
       .send(
         'default_service',
-        'template_qayttcv',
+        'template_90xomsy',
         {
           ...pessoa,
           frase,
