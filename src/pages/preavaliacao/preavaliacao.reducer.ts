@@ -174,6 +174,21 @@ export const setPessoa = (pessoa: IPessoa) => ({
   payload: pessoa,
 });
 
+export const sendOnlyEmail = (email: string) => async (dispatch) => {
+  return await dispatch({
+    type: ACTION_TYPES.SEND_EMAIL,
+    // @ts-ignore
+    payload: window.emailjs.send(
+      'default_service',
+      'template_i39peyw',
+      {
+        email,
+      },
+      'user_MZIRASYGB78T7Afd6BXYJ',
+    ),
+  });
+};
+
 export const sendEmail = (formulario: IFormulario) => async (dispatch) => {
   const { frase, mordida, desalinhamento, espacamento, usouAparelho, motivacao, pessoa, tempo } = formulario;
   dispatch(setEnviando());

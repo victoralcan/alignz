@@ -13,8 +13,12 @@ import { ColorPallet } from '../shared/model/enum/colors';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { sendOnlyEmail } from './preavaliacao/preavaliacao.reducer';
+import { connect } from 'react-redux';
 
-class Valores extends React.Component {
+interface IValoresProps extends StateProps, DispatchProps {}
+
+class Valores extends React.Component<IValoresProps> {
   componentDidMount() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -62,8 +66,21 @@ class Valores extends React.Component {
                       <ul>
                         <li className="d-flex">
                           <div className="d-flex w-100 m-auto">
-                            <Input placeholder="Preencha seu email" style={{ backgroundColor: ColorPallet.pastel }} />
-                            <Button className="btn-dark">
+                            <Input
+                              id="onlyEmail"
+                              placeholder="Preencha seu email"
+                              style={{ backgroundColor: ColorPallet.pastel }}
+                            />
+                            <Button
+                              className="btn-dark"
+                              onClick={() => {
+                                // @ts-ignore
+                                const email = document.getElementById('onlyEmail').value;
+                                if (email) {
+                                  this.props.sendOnlyEmail(email);
+                                }
+                              }}
+                            >
                               <FontAwesomeIcon icon={faChevronRight} color="white" />
                             </Button>
                           </div>
@@ -136,4 +153,13 @@ class Valores extends React.Component {
   }
 }
 
-export default Valores;
+const mapStateToProps = () => ({});
+const mapDispatchToProps = {
+  sendOnlyEmail,
+};
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+// @ts-ignore
+export default connect(mapStateToProps, mapDispatchToProps)(Valores);
