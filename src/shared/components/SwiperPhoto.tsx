@@ -36,6 +36,7 @@ class SwiperPhoto extends React.Component<ISwiperPhotoProps> {
           <div className="cards-container">
             <Swiper
               spaceBetween={10}
+              pagination
               slidesPerView={1}
               breakpoints={{
                 600: {
